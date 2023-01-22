@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import UnderConstructionLogo from '../assets/services/underConstructionLogo';
 
-function UnderConstructionPage () {
+function UnderConstructionPage(): JSX.Element {
     return (
         <div>
             <Helmet>

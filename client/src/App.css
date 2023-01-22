@@ -19,3 +19,23 @@ body {
   width: 56%;
   height: 46%;
 }
+
+
+/*ANIMATION*/
+.anim-show-slow {
+  animation: 1s show-slow ease;
+}
+
+@keyframes show-slow {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.anim-show-slow2 {
+  animation: 6s show-slow2 ease;
+}
+
+@keyframes show-slow2 {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
