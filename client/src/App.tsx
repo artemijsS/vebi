@@ -1,16 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { UnderConstructionPage } from './pages';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </header>
-    </div>
+      <BrowserRouter>
+          <Routes>
+            <Route path={"/"} element={ <UnderConstructionPage/> }/>
+            <Route path={"*"} element={ <Navigate to={"/"}/> }/>
+          </Routes>
+      </BrowserRouter>
   );
 }
 
