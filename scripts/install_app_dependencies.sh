@@ -1,5 +1,5 @@
 #!/bin/bash
-export PATH="$(npm bin -g):$PATH"
+source /home/ec2-user/.bash_profile
 cd /home/ec2-user/vebi
 whereis npm
 npm install
