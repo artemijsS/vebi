@@ -1,6 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { UnderConstructionPage } from './pages';
+import setCssProperties from './utils/cssProperties'
+
+setCssProperties();
 
 function App() {
   return (
