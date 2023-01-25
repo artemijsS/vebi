@@ -1,5 +1,6 @@
 #!/bin/bash
 source /home/ec2-user/.bash_profile
+sudo chmod -R 777 /home/ec2-user/vebi
 cd /home/ec2-user/vebi
-sudo npm install
-sudo npm run build
+npm install
+npm run build
