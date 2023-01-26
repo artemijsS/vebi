@@ -1,19 +1,19 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { UnderConstructionPage } from './pages';
-import setCssProperties from './utils/cssProperties'
+import { BrowserRouter } from 'react-router-dom';
+import setCssProperties from './utils/cssProperties';
+import { useRoutes } from './routes';
 
 setCssProperties();
 
 function App() {
-  return (
+
+    const routes: JSX.Element = useRoutes();
+
+    return (
       <BrowserRouter>
-          <Routes>
-            <Route path={"/"} element={ <UnderConstructionPage/> }/>
-            <Route path={"*"} element={ <Navigate to={"/"}/> }/>
-          </Routes>
+          { routes }
       </BrowserRouter>
-  );
+    );
 }
 
 export default App;

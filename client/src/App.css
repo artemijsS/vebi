@@ -1,12 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #8D8D8D;
 }
 
+.minusHeader {
+  height: 125px;
+}
+
+.wrapper {
+  max-width: 1524px;
+  margin: auto;
+  height: inherit;
+}
+
+.secondWrapper {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+/*MAIN PAGE*/
+.section {
+  margin-top: 143px;
+  width: 100%;
+  font-size: 2em;
+  position: relative;
+}
+.section:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1px;
+  width: 7%;
+  min-width: 100px;
+  border-bottom: 2px solid #3C3C3C;
+}
+.section h1 {
+  padding-top: 118px;
+  color: white;
+  font-size: 3em;
+  margin-bottom: 138px;
+}
+.section .blocks {
+  display: flex;
+  justify-content: space-between;
+  gap: 34px;
+}
+.section .blocks .block {
+  flex: 1;
+  height: 465px;
+  background-color: #D9D9D9;
+  position: relative;
+}
+
+.section .reverse {
+  height: 590px;
+}
+.section .reverse .block {
+  height: 590px;
+  padding: 0;
+}
+.section .blocks .blocks-reverse {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+.section .blocks .blocks-reverse .block-reverse {
+  flex: 1;
+  width: 100%;
+  background-color: #D9D9D9;
+}
+
+
+.section .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+  justify-content: center;
+}
+.section .list .group {
+  display: flex;
+  justify-content: space-between;
+  gap: 34px;
+}
+.section .list .group .item {
+  width: 340px;
+  height: 90px;
+  background-color: #D9D9D9;
+}
+
+.section .blocks.blog .block {
+  max-width: 340px;
+  max-height: 340px;
+}
+
+.section .blocks.contacts .block {
+  max-width: 465px;
+  height: 342px;
+}
+
+
+/*stuff*/
 .all-screen {
   width: 100vw;
   height: 100vh;
@@ -21,6 +121,71 @@ body {
   height: 46%;
 }
 
+.link:hover {
+  cursor: pointer;
+}
+
+
+/*BORDERS*/
+.b-full-bottom:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -11px;
+  height: 11px;
+  width: 100%;
+  border-bottom: 11px solid #3C3C3C;
+}
+.b-30-bottom:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -11px;
+  height: 11px;
+  width: 30%;
+  border-bottom: 11px solid #3C3C3C;
+}
+.b-55-bottom:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -11px;
+  height: 11px;
+  width: 55%;
+  border-bottom: 11px solid #3C3C3C;
+}
+.b-45-top-right:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -22px;
+  height: 11px;
+  width: 45%;
+  border-bottom: 11px solid #3C3C3C;
+}
+.b-55-top-right:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -22px;
+  height: 11px;
+  width: 55%;
+  border-bottom: 11px solid #3C3C3C;
+}
+
+/*MARGIN*/
+.mb300 {
+  margin-bottom: 300px !important;
+}
+
+
+/*FLEX*/
+.f2 {
+  flex: 2 !important;
+}
+.f14 {
+  flex: 1.4 !important;
+}
 
 /*ANIMATION*/
 .anim-show-slow {
