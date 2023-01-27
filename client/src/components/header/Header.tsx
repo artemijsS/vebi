@@ -2,7 +2,12 @@ import React from 'react';
 import './header.css'
 import Logo from '../../assets/logo/logo';
 
-function Header(): JSX.Element {
+interface HeaderProps {
+    activeSection: string,
+    onSectionClick: (section: string) => void
+}
+
+function Header({ activeSection, onSectionClick }:HeaderProps): JSX.Element {
     return (
         <header>
             <div className="wrapper">
@@ -16,11 +21,11 @@ function Header(): JSX.Element {
                         <div className="line"/>
                     </div>
                     <nav>
-                        <div className="link active">Home</div>
-                        <div className="link">About</div>
-                        <div className="link">Services</div>
-                        <div className="link">Blog</div>
-                        <div className="link">Contact</div>
+                        <div onClick={() => onSectionClick("home")} className={activeSection === "home" ? "active link" : " link"}>Home</div>
+                        <div onClick={() => onSectionClick("about")} className={activeSection === "about" ? "active link" : " link"}>About</div>
+                        <div onClick={() => onSectionClick("services")} className={activeSection === "services" ? "active link" : " link"}>Services</div>
+                        <div onClick={() => onSectionClick("blog")} className={activeSection === "blog" ? "active link" : " link"}>Blog</div>
+                        <div onClick={() => onSectionClick("contacts")} className={activeSection === "contacts" ? "active link" : " link"}>Contacts</div>
                     </nav>
                 </div>
             </div>
