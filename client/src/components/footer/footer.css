@@ -14,6 +14,29 @@ footer {
     background-color: #3C3C3C;
 }
 
+@media screen and (max-width: 1000px) {
+    footer {
+        height: 178px;
+    }
+    .footer1-block {
+        height: 70px;
+    }
+    .footer2-block {
+        height: 108px;
+    }
+}
+@media screen and (max-width: 600px) {
+    footer {
+        height: 109px;
+    }
+    .footer1-block {
+        height: 40px;
+    }
+    .footer2-block {
+        height: 69px;
+    }
+}
+
 .footer1 {
     height: 100%;
     display: flex;
@@ -61,4 +84,48 @@ footer {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .footer1 .logo svg {
+        width: 67px;
+    }
+    .footer1 .socials {
+        gap: 30px;
+    }
+    .footer1 .socials a {
+        width: 35px;
+        height: 35px;
+    }
+    .footer1 .socials a img {
+        width: 35px;
+        height: 35px;
+    }
+    .footer2 {
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .footer1 {
+        padding: 0 10px;
+    }
+    .footer1 .socials a {
+        width: 17px;
+        height: 17px;
+    }
+    .footer1 .socials a img {
+        width: 17px;
+        height: 17px;
+    }
+    .footer1 .socials {
+        gap: 8px;
+    }
+    .footer2 {
+        padding: 0 10px;
+        font-size: 4px;
+    }
+    .footer2 .terms {
+        gap: 4px;
+    }
 }

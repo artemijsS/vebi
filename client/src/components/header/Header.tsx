@@ -10,6 +10,11 @@ function Header(): JSX.Element {
                     <div className="logo">
                         <Logo />
                     </div>
+                    <div className="burger">
+                        <div className="line"/>
+                        <div className="line"/>
+                        <div className="line"/>
+                    </div>
                     <nav>
                         <div className="link active">Home</div>
                         <div className="link">About</div>

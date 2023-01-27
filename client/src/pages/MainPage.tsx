@@ -14,7 +14,7 @@ function MainPage(): JSX.Element {
                 <div className="secondWrapper">
                     <section className={"section"}>
                         <h1>Digitally driven<br/>agency team.</h1>
-                        <div className="blocks">
+                        <div className="blocks cubes">
                             <div className="block b-full-bottom"/>
                             <div className="block"/>
                             <div className="block b-30-bottom"/>
@@ -26,41 +26,33 @@ function MainPage(): JSX.Element {
                             <div className="block f2 b-45-top-right"/>
                             <div className="blocks-reverse">
                                 <div className="block-reverse"/>
-                                <div className="block-reverse f14"/>
+                                <div className="block-reverse"/>
                             </div>
                         </div>
                     </section>
                     <section className={"section"}>
                         <h1>Services</h1>
                         <div className="list">
-                            <div className="group">
-                                <div className="item"/>
-                                <div className="item"/>
-                            </div>
-                            <div className="group">
-                                <div className="item"/>
-                                <div className="item"/>
-                            </div>
-                            <div className="group">
-                                <div className="item"/>
-                                <div className="item"/>
-                            </div>
-                            <div className="group">
-                                <div className="item"/>
-                                <div className="item"/>
-                            </div>
+                            <div className="item"/>
+                            <div className="item"/>
+                            <div className="item"/>
+                            <div className="item"/>
+                            <div className="item"/>
+                            <div className="item"/>
+                            <div className="item"/>
+                            <div className="item"/>
                         </div>
                     </section>
                     <section className={"section"}>
                         <h1>Blog</h1>
-                        <div className="blocks blog">
+                        <div className="blocks blog cubes">
                             <div className="block b-full-bottom"/>
                             <div className="block"/>
                             <div className="block b-30-bottom"/>
                             <div className="block"/>
                         </div>
                     </section>
-                    <section className={"section mb300"}>
+                    <section className={"section"}>
                         <h1>Contacts</h1>
                         <div className="blocks contacts">
                             <div className="block b-55-bottom"/>
