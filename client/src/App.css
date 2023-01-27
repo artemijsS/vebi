@@ -169,7 +169,7 @@ body {
 
 @media screen and (min-width: 1525px) {
   .section .list {
-    gap: 34px;
+    gap: 29px;
   }
   .section .list .item {
     width: 340px;
@@ -185,7 +185,7 @@ body {
 }
 @media screen and (max-width: 1256px) {
   .section .list {
-    gap: 15px;
+    gap: 8px;
   }
   .section .list .item {
     width: 230px;
@@ -196,22 +196,30 @@ body {
     gap: 8px;
   }
   .section .list .item {
-    width: 190px;
+    width: 200px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .section .list {
+    gap: 8px;
+  }
+  .section .list .item {
+    width: 180px;
   }
 }
 @media screen and (max-width: 845px) {
   .section .list .item {
-    width: 160px;
+    width: 150px;
   }
 }
 @media screen and (max-width: 725px) {
   .section .list .item {
-    width: 130px;
+    width: 120px;
   }
 }
 @media screen and (max-width: 609px) {
   .section .list .item {
-    width: 110px;
+    width: 105px;
   }
 }
 @media screen and (max-width: 486px) {
