@@ -4,7 +4,7 @@ import setCssProperties from './utils/cssProperties';
 import { useRoutes } from './routes';
 import ReactGA from 'react-ga';
 
-const TRACKING_ID = "G-BQECK9TV3W";
+const TRACKING_ID = "UA-255528452-1";
 ReactGA.initialize(TRACKING_ID);
 
 setCssProperties();
