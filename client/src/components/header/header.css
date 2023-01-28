@@ -82,6 +82,10 @@ nav .link {
     position: relative;
 }
 
+nav .link.active:before {
+    animation: 0.5s draw-slow ease !important;
+}
+
 nav .link.active:before, nav .link.active:hover:before {
     content : "";
     position: absolute;

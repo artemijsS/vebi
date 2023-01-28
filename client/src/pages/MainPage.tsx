@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Header, Footer } from '../components';
+import ReactGA from 'react-ga';
 
 function MainPage(): JSX.Element {
 
@@ -18,6 +19,10 @@ function MainPage(): JSX.Element {
             window.removeEventListener('scroll', onScroll);
         };
     }, [])
+
+    useEffect(() => {
+        ReactGA.pageview("/" + activeSection);
+    }, [activeSection])
 
     const onScroll = (e: Event) => {
         const window = e.currentTarget as Window;
