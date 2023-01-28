@@ -89,7 +89,7 @@ footer {
 
 @media screen and (max-width: 1000px) {
     .footer1 .logo svg {
-        width: 67px;
+        width: 91px;
     }
     .footer1 .socials {
         gap: 30px;
@@ -107,19 +107,28 @@ footer {
     }
 }
 @media screen and (max-width: 600px) {
+    footer {
+        height: 111px;
+    }
+    .footer1-block {
+        height: 80px;
+    }
     .footer1 {
         padding: 0 10px;
     }
     .footer1 .socials a {
-        width: 17px;
-        height: 17px;
+        width: 33px;
+        height: 33px;
     }
     .footer1 .socials a img {
-        width: 17px;
-        height: 17px;
+        width: 33px;
+        height: 33px;
     }
     .footer1 .socials {
-        gap: 8px;
+        gap: 23px;
+    }
+    .footer2-block {
+        height: 31px;
     }
     .footer2 {
         padding: 0 10px;
@@ -127,5 +136,18 @@ footer {
     }
     .footer2 .terms {
         gap: 4px;
+    }
+    .footer2 {
+        justify-content: center;
+        align-items: center;
+    }
+    .footer2 .copyRight {
+        font-size: 14px;
+    }
+    .footer2 .mail {
+        display: none;
+    }
+    .footer2 .terms {
+        display: none;
     }
 }
