@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import setCssProperties from './utils/cssProperties';
 import { useRoutes } from './routes';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
-const TRACKING_ID = "UA-255528452-1";
+const TRACKING_ID = "G-16M7F4ZJL2";
 ReactGA.initialize(TRACKING_ID);
 
 setCssProperties();

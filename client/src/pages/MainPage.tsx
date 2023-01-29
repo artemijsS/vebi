@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Header, Footer } from '../components';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 function MainPage(): JSX.Element {
 
@@ -21,7 +21,7 @@ function MainPage(): JSX.Element {
     }, [])
 
     useEffect(() => {
-        ReactGA.pageview("/" + activeSection);
+        ReactGA.send({ hitType: "pageview", page: "/" + activeSection });
     }, [activeSection])
 
     const onScroll = (e: Event) => {
