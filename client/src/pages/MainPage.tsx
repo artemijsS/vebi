@@ -68,7 +68,7 @@ function MainPage(): JSX.Element {
     return (
         <div>
             <Helmet>
-                <title>vebi</title>
+                <title>VEBI</title>
             </Helmet>
             <div className="minusHeader"/>
             <Header activeSection={activeSection} onSectionClick={onHeaderSectionClick}/>
@@ -77,9 +77,9 @@ function MainPage(): JSX.Element {
                     <section ref={homeRef} className={"section"}>
                         <h1>Digitally driven<br/>agency team.</h1>
                         <div className="blocks cubes">
-                            <div className="block b-full-bottom"/>
+                            <div className="block pink b-full-bottom"/>
                             <div className="block"/>
-                            <div className="block b-30-bottom last"/>
+                            <div className="block b-30-bottom b-30-top last"/>
                         </div>
                     </section>
                     <section ref={aboutRef} className={"section"}>
@@ -88,7 +88,7 @@ function MainPage(): JSX.Element {
                             <div className="block f2 b-45-top-right"/>
                             <div className="blocks-reverse">
                                 <div className="block-reverse"/>
-                                <div className="block-reverse"/>
+                                <div className="block-reverse pink"/>
                             </div>
                         </div>
                     </section>
@@ -125,9 +125,9 @@ function MainPage(): JSX.Element {
                         <h1>Blog</h1>
                         <div className="about">
                             <div className="blocks blog cubes">
-                                <div className="block b-full-bottom mob-l"/>
+                                <div className="block b-75-top mob-l"/>
                                 <div className="block del"/>
-                                <div className="block b-30-bottom"/>
+                                <div className="block b-60-bottom"/>
                                 <div className="block mob-r"/>
                             </div>
                         </div>

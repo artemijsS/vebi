@@ -1,5 +1,5 @@
 header {
-    background-color: #D2D2D2;
+    background-color: #272727;
     position: fixed;
     z-index: 5;
     width: 100%;
@@ -28,10 +28,10 @@ header {
 
 @media screen and (max-width: 800px) {
     .header {
-        height: 70px;
+        height: 80px;
     }
     .header .logo svg {
-        width: 67px;
+        width: 92px;
     }
     nav {
         font-size: 15px !important;
@@ -40,13 +40,13 @@ header {
 
 .burger {
     display: none;
-    width: 17px;
-    height: 13px;
+    width: 42px;
+    height: 30px;
 }
 
 @media screen and (max-width: 600px) {
     .header {
-        height: 40px;
+        height: 80px;
         padding: 0 10px;
     }
     nav {
@@ -59,8 +59,8 @@ header {
     }
     .burger .line {
         width: 100%;
-        height: 3px;
-        background-color: #868686;
+        height: 6.92px;
+        background-color: #FFFFFF;
     }
 }
 
@@ -73,7 +73,7 @@ nav {
 }
 
 nav .link {
-    color: #5F5F5F;
+    color: #FFFFFF;
     height: 50px;
     display: flex;
     align-items: center;
@@ -93,7 +93,7 @@ nav .link.active:before, nav .link.active:hover:before {
     bottom  : 0;
     height  : 1px;
     width   : 70%;
-    border-bottom: 2px solid #3C3C3C;
+    border-bottom: 2px solid #E43172;
     animation: none;
 }
 
@@ -104,7 +104,7 @@ nav .link:hover:before {
     bottom  : 0;
     height  : 1px;
     width   : 70%;
-    border-bottom: 2px solid #8D8D8D;
+    border-bottom: 2px solid #E43172;
     animation: 0.5s draw-slow ease;
 }
 

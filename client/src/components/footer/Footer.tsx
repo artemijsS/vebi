@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import './footer.css'
-import Logo from '../../assets/logo/logo';
+import Icon from '../../assets/logo/icon';
 import { Discord, LinkedIn, GitHub } from '../../assets/socials';
 
 function Footer(): JSX.Element {
@@ -18,7 +18,10 @@ function Footer(): JSX.Element {
                 <div className="wrapper">
                     <div className="footer1">
                         <div className="logo">
-                            <Logo/>
+                            <Icon/>
+                            <div className="slogan">
+                                Your <span className={"cl-pink"}>success</span> <span className={"capLetter-mobile"}>is</span> our <span className={"cl-pink-mobile"}>aim</span>
+                            </div>
                         </div>
                         <div className="socials">
                             <a href="https://github.com/vebi-lv" target="_blank" rel="noreferrer"><img src={GitHub} alt="error"/></a>
