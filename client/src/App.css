@@ -91,6 +91,9 @@ body {
   .section:last-of-type {
     margin-bottom: 80px;
   }
+  .section:before {
+    border-bottom: 1px solid #E43172;
+  }
 }
 
 .section h1 {
