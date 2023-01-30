@@ -79,17 +79,17 @@ body {
   min-width: 30px;
   border-bottom: 3px solid #E43172;
 }
-.section:last-of-type {
-  margin-bottom: 300px;
+footer {
+  margin-top: 300px !important;
 }
 @media screen and (max-width: 1000px) {
-  .section:last-of-type {
-    margin-bottom: 150px;
+  footer {
+    margin-top: 150px !important;
   }
 }
 @media screen and (max-width: 600px) {
-  .section:last-of-type {
-    margin-bottom: 80px;
+  footer {
+    margin-top: 80px !important;
   }
   .section:before {
     border-bottom: 1px solid #E43172;
@@ -317,7 +317,7 @@ body {
 
 
 @media screen and (max-width: 600px) {
-  .about {
+  .blog-mob {
     height: 300px;
     position: relative;
     overflow: hidden;
@@ -365,7 +365,7 @@ body {
   }
 }
 @media screen and (max-width: 430px) {
-  .about {
+  .blog-mob {
     height: 200px;
   }
   .section .blocks.contacts .block {

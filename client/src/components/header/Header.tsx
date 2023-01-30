@@ -1,15 +1,54 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './header.css'
 import Logo from '../../assets/logo/logo';
 
 interface HeaderProps {
-    activeSection: string,
-    onSectionClick: (section: string) => void
+    refs: {
+        [home: string]: React.RefObject<HTMLElement>,
+        about: React.RefObject<HTMLElement>,
+        services: React.RefObject<HTMLElement>,
+        blog: React.RefObject<HTMLElement>,
+        contacts: React.RefObject<HTMLElement>
+    }
 }
 
-function Header({ activeSection, onSectionClick }:HeaderProps): JSX.Element {
+function Header({refs}:HeaderProps): JSX.Element {
+
+    const [activeSection, setActiveSection] = useState('home');
+    const headerRef = useRef<HTMLElement>(null);
+
+
+    useEffect(() => {
+        window.addEventListener('scroll', onScroll)
+        console.log(1)
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
+
+    const onScroll = (e: Event) => {
+        const window = e.currentTarget as Window;
+        const scrollY = window.scrollY;
+        if (scrollY < Number(refs.about.current?.offsetTop) - Number(headerRef.current?.offsetHeight)) {
+            setActiveSection("home")
+        } else if (scrollY <= Number(refs.services.current?.offsetTop) - Number(headerRef.current?.offsetHeight)) {
+            setActiveSection("about")
+        } else if (scrollY <= Number(refs.blog.current?.offsetTop) - Number(headerRef.current?.offsetHeight)) {
+            setActiveSection("services")
+        } else if (scrollY <= Number(refs.contacts.current?.offsetTop) - Number(headerRef.current?.offsetHeight)) {
+            setActiveSection("blog")
+        } else if (scrollY >= Number(refs.contacts.current?.offsetTop) - Number(headerRef.current?.offsetHeight)) {
+            setActiveSection("contacts")
+        }
+    }
+
+    const onSectionClick = (section: string) => {
+        window.scrollTo(0, Number(refs[section].current?.offsetTop) - Number(headerRef.current?.offsetHeight));
+    }
+
     return (
-        <header>
+        <header ref={headerRef}>
             <div className="wrapper">
                 <div className={"header"}>
                     <div className="logo">

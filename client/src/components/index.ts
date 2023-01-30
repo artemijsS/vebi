@@ -1,2 +1,7 @@
 export { default as Header } from "./header/Header"
 export { default as Footer } from "./footer/Footer"
+export { default as About } from "./main/About"
+export { default as Blog } from "./main/Blog"
+export { default as Contacts } from "./main/Contacts"
+export { default as Home } from "./main/Home"
+export { default as Services } from "./main/Services"
