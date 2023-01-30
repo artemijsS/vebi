@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Header, Footer } from '../components';
-import {log} from "util";
 
 function MainPage(): JSX.Element {
 
@@ -24,11 +23,11 @@ function MainPage(): JSX.Element {
         const window = e.currentTarget as Window;
         const scrollY = window.scrollY;
         const breakPoints = {
-            home: homeRef.current ? homeRef.current.offsetTop * 0.75 : 0,
-            about: aboutRef.current ? aboutRef.current.offsetTop * 0.75 : 0,
-            services: servicesRef.current ? servicesRef.current.offsetTop * 0.75 : 0,
-            blog: blogRef.current ? blogRef.current.offsetTop * 0.70 : 0,
-            contacts: contactsRef.current ? contactsRef.current.offsetTop * 0.75 : 0
+            home: homeRef.current ? homeRef.current.offsetTop : 0,
+            about: aboutRef.current ? aboutRef.current.offsetTop : 0,
+            services: servicesRef.current ? servicesRef.current.offsetTop : 0,
+            blog: blogRef.current ? blogRef.current.offsetTop : 0,
+            contacts: contactsRef.current ? contactsRef.current.offsetTop : 0
         }
         console.log(scrollY, breakPoints)
         if (scrollY < breakPoints.about - 100) {
@@ -47,19 +46,19 @@ function MainPage(): JSX.Element {
     const onHeaderSectionClick = (section: string): void => {
         switch (section) {
             case "home":
-                homeRef.current && window.scrollTo(0, homeRef.current.offsetTop * 0.75 - 90);
+                homeRef.current && window.scrollTo(0, homeRef.current.offsetTop - 90);
                 break;
             case "about":
-                aboutRef.current && window.scrollTo(0, aboutRef.current.offsetTop * 0.75 - 90);
+                aboutRef.current && window.scrollTo(0, aboutRef.current.offsetTop - 90);
                 break;
             case "services":
-                servicesRef.current && window.scrollTo(0, servicesRef.current.offsetTop * 0.75 - 90);
+                servicesRef.current && window.scrollTo(0, servicesRef.current.offsetTop - 90);
                 break;
             case "blog":
-                blogRef.current && window.scrollTo(0, blogRef.current.offsetTop * 0.75 - 90);
+                blogRef.current && window.scrollTo(0, blogRef.current.offsetTop - 90);
                 break;
             case "contacts":
-                contactsRef.current && window.scrollTo(0, contactsRef.current.offsetTop * 0.75 - 90);
+                contactsRef.current && window.scrollTo(0, contactsRef.current.offsetTop - 90);
                 break;
             default:
                 break;
@@ -78,7 +77,7 @@ function MainPage(): JSX.Element {
                     <section ref={homeRef} className={"section"}>
                         <h1>Digitally driven<br/>agency team.</h1>
                         <div className="blocks cubes">
-                            <div className="block pink b-full-bottom"/>
+                            <div className="block pink"/>
                             <div className="block"/>
                             <div className="block b-30-bottom b-30-top last"/>
                         </div>

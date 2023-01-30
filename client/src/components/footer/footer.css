@@ -1,17 +1,17 @@
 footer {
-    height: 358px;
+    height: 295px;
     color: #FFFFFF;
 }
 
 .footer1-block {
     width: 100%;
-    height: 160px;
+    height: 120px;
     background-color: #272727;
 }
 
 .footer2-block {
     width: 100%;
-    height: 233px;
+    height: 175px;
     background-color: #383838;
 }
 
@@ -47,30 +47,33 @@ footer {
 
 .footer1 .logo {
     display: flex;
-    gap: 55px;
+    gap: 40px;
     justify-content: space-between;
     align-items: center;
 }
+.footer1 .logo svg {
+    width: 44px;
+}
 .footer1 .logo .slogan {
     font-weight: 300;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .footer1 .socials {
     display: flex;
-    gap: 63px;
+    gap: 47px;
 }
 
 .footer1 .socials a {
     border-radius: 50%;
-    width: 63px;
-    height: 63px;
+    width: 50px;
+    height: 50px;
 }
 
 .footer1 .socials a img {
     border-radius: 50%;
-    width: 63px;
-    height: 63px;
+    width: 50px;
+    height: 50px;
     z-index: 2;
     position: relative;
 }
@@ -82,7 +85,7 @@ footer {
 .footer2 {
     display: flex;
     height: 93%;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: lighter;
     color: white;
     padding: 0 30px;
