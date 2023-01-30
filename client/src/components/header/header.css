@@ -76,6 +76,7 @@ nav {
 }
 
 nav .link {
+    cursor: pointer;
     color: #FFFFFF;
     height: 35px;
     display: flex;
