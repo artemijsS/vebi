@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Header, Footer, Home, About, Services, Blog, Contacts } from '../components';
+import { Header, Footer, Home, About, Services, Blog, Contacts, Test } from '../components';
 
 function MainPage(): JSX.Element {
 
@@ -24,6 +24,7 @@ function MainPage(): JSX.Element {
             <Services ref={refs.services}/>
             <Blog ref={refs.blog}/>
             <Contacts ref={refs.contacts}/>
+            <Test/>
             <Footer/>
         </div>
     )

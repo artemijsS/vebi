@@ -20,7 +20,6 @@ function Header({refs}:HeaderProps): JSX.Element {
 
     useEffect(() => {
         window.addEventListener('scroll', onScroll)
-        console.log(1)
         return () => {
             window.removeEventListener('scroll', onScroll);
         };
