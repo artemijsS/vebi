@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Header, Footer, Home, About, Services, Blog, Contacts, Test } from '../components';
+import { Header, Footer, Home, About, Services, Blog, Contacts } from '../components';
 
 function MainPage(): JSX.Element {
 
