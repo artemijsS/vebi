@@ -24,7 +24,6 @@ function MainPage(): JSX.Element {
             <Services ref={refs.services}/>
             <Blog ref={refs.blog}/>
             <Contacts ref={refs.contacts}/>
-            {/*<Test/>*/}
             <Footer/>
         </div>
     )

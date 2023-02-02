@@ -283,6 +283,15 @@ footer {
   }
 }
 
+.section .blocks.contacts .block {
+  max-width: 348px;
+}
+.section .blocks.contacts .block:after {
+  content: "";
+  display: block;
+  padding-bottom: 73%;
+}
+
 .section.blog .block:nth-child(1) {
   background-color: #CDCDCD;
 }
