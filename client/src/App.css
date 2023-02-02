@@ -116,9 +116,6 @@ footer {
   min-width: 141px;
   max-width: 348px;
 }
-.section .blocks.cubes.blog .block {
-  min-width: 67px;
-}
 
 .section .blocks.cubes .block:after {
   content: "";
@@ -286,56 +283,21 @@ footer {
   }
 }
 
-
-
-.section .blocks.blog .block {
-  max-width: 255px;
-  max-height: 255px;
-}
-
-.section .blocks.contacts .block {
-  max-width: 348px;
-}
-.section .blocks.contacts .block:after {
-  content: "";
-  display: block;
-  padding-bottom: 73%;
-}
-
-.section .blocks.blog .block:nth-child(1) {
+.section.blog .block:nth-child(1) {
   background-color: #CDCDCD;
 }
-.section .blocks.blog .block:nth-child(2) {
+.section.blog .block:nth-child(2) {
   background-color: #B3B3B3;
 }
-.section .blocks.blog .block:nth-child(3) {
+.section.blog .block:nth-child(3) {
   background-color: #757575;
 }
-.section .blocks.blog .block:nth-child(4) {
+.section.blog .block:nth-child(4) {
   background-color: #434343;
 }
 
 
 @media screen and (max-width: 600px) {
-  .blog-mob {
-    height: 300px;
-    position: relative;
-    overflow: hidden;
-
-  }
-  .section .blocks.cubes.blog {
-    position: absolute;
-    justify-content: center;
-    /*position: relative;*/
-    overflow: hidden;
-    width: 200%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%)
-  }
-  .section .blocks.cubes.blog .block.del {
-    display: none;
-  }
 
   .section .blocks.contacts {
     flex-wrap: wrap;
@@ -365,9 +327,6 @@ footer {
   }
 }
 @media screen and (max-width: 430px) {
-  .blog-mob {
-    height: 200px;
-  }
   .section .blocks.contacts .block {
     min-width: 130px;
   }
@@ -397,10 +356,13 @@ footer {
 .slide-show .blocks.cubes .block {
   min-width: 250px;
   height: 100%;
+  flex: 0 !important;
+  max-width: 250px !important;
 }
 @media screen and (max-width: 600px) {
   .section h1.slide-show-title {
-    padding-bottom: 250px !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 190px !important;
   }
   .slide-show {
     position: absolute;
@@ -409,11 +371,13 @@ footer {
     width: 100vw;
   }
   .slide-show .blocks {
-    gap: 8px;
+    gap: 15px !important;
   }
   .slide-show .blocks.cubes .block {
+    min-width: 150px;
     flex: 0;
     width: 150px !important;
+    height: 150px !important;
   }
 }
 

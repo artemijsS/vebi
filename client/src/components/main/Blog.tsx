@@ -1,20 +1,22 @@
 import React, { forwardRef } from 'react';
+import { Slider } from '../index';
 
 
 const Blog = forwardRef<HTMLElement>((props, ref) => {
     return (
         <div className="wrapper">
             <div className="secondWrapper">
-                <section ref={ref} className={"section"}>
-                    <h1>Blog</h1>
-                    <div className="blog-mob">
-                        <div className="blocks blog cubes">
-                            <div className="block b-75-top mob-l"/>
-                            <div className="block del"/>
-                            <div className="block b-60-bottom"/>
-                            <div className="block mob-r"/>
-                        </div>
-                    </div>
+                <section ref={ref} className={"section blog"}>
+                    <h1 className={"slide-show-title"}>Blog</h1>
+                    <Slider>
+                        <div id={"1"} className={"block"}>1</div>
+                        <div id={"2"} className={"block"}>2</div>
+                        <div id={"3"} className={"block"}>3</div>
+                        <div id={"4"} className={"block"}>4</div>
+                        <div id={"5"} className={"block"}>5</div>
+                        <div id={"5"} className={"block"}>6</div>
+                        <div id={"5"} className={"block"}>7</div>
+                    </Slider>
                 </section>
             </div>
         </div>

@@ -1,36 +1,22 @@
-import React, {forwardRef, useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Draggable, {DraggableData, DraggableEvent } from "react-draggable";
 
+interface SliderProps {
+    autoScrollTimeMS?: number,
+    autoRevivePCTimeMS?: number,
+    autoReviveMBTimeMS?: number,
+    mobScreenWidthPX?: number,
+    children?: React.ReactNode
+}
 
-const blocksInfo:any = [
-    {id: '1'},
-    {id: '2'},
-    {id: '3'},
-    {id: '4'},
-    {id: '5'},
-    {id: '6'},
-    {id: '7'},
-    {id: '8'},
-    {id: '9'}
-]
+const Slider = ({ children, autoScrollTimeMS = 2500, autoRevivePCTimeMS = 500, autoReviveMBTimeMS = 2000, mobScreenWidthPX= 600}: SliderProps) => {
 
-const Test = forwardRef<HTMLElement>((props, ref) => {
+    const [blockWidth, setBlockWidth] = useState(0);
+    const [gap, setGap] = useState(0);
 
-    const [blocks, setBlocks] = useState(blocksInfo);
-
-    const [sliderWidth, setSliderWidth] = useState(1100);
-    const [sliderFullWidth, setSliderFullWidth] = useState(0);
-    const [blockWidth, setBlockWidth] = useState(250);
-    const [gap, setGap] = useState(28);
-
-    const [pcGap] = useState(28);
-    const [pcBlockWidth] = useState(250);
-    const [pcAutoScrollTimeRevive] = useState(500);
-
-    const [mobileScreenWidth] = useState(600);
-    const [mobileBlockWidth] = useState(250);
-    const [mobileGap] = useState(8);
-    const [mobileAutoScrollTimeRevive] = useState(2000);
+    const [pcAutoScrollTimeRevive] = useState(autoRevivePCTimeMS);
+    const [mobileScreenWidth] = useState(mobScreenWidthPX);
+    const [mobileAutoScrollTimeRevive] = useState(autoReviveMBTimeMS);
 
     const [bounds, setBounds] = useState({
         left: 0,
@@ -44,8 +30,8 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
     const mouseOverRef = useRef<Boolean>(false);
     const dragStatusRef = useRef<Boolean>(false);
 
-    const [autoScrollTime, setAutoScrollTime] = useState(2500)
-    const [autoScrollTimeRevive, setAutoScrollTimeRevive] = useState(500)
+    const [autoScrollTime] = useState(autoScrollTimeMS)
+    const [autoScrollTimeRevive, setAutoScrollTimeRevive] = useState(autoRevivePCTimeMS)
     const autoScrollTimeReviveTimerRef = useRef<any>(null)
 
     const [ticker, setTicker] = useState(0)
@@ -65,29 +51,38 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
     const onWidthChange = () => {
         let blockWidthCurrent: number;
         let gapCurrent: number;
-        if (window.innerWidth < mobileScreenWidth) {
-            blockWidthCurrent = mobileBlockWidth;
-            setBlockWidth(mobileBlockWidth);
-            gapCurrent = mobileGap;
-            setGap(mobileGap);
-            setAutoScrollTimeRevive(mobileAutoScrollTimeRevive);
-            setSliderDir(-1);
-        } else {
-            blockWidthCurrent = pcBlockWidth;
-            setBlockWidth(pcBlockWidth);
-            gapCurrent = pcGap;
-            setGap(pcGap);
-            setAutoScrollTimeRevive(pcAutoScrollTimeRevive);
+        let block: Element;
+        if (sliderRef.current) {
+            block = sliderRef.current.children[0]
+            blockWidthCurrent = block.clientWidth;
+            setBlockWidth(blockWidthCurrent);
+            gapCurrent = Number(window.getComputedStyle(sliderRef.current).gap.split('px')[0]);
+            setGap(gapCurrent)
+
+            if (window.innerWidth < mobileScreenWidth) {
+                setAutoScrollTimeRevive(mobileAutoScrollTimeRevive);
+                setSliderDir(-1);
+            } else {
+                setAutoScrollTimeRevive(pcAutoScrollTimeRevive);
+            }
+
+            const sliderWidth = sliderRef.current?.offsetWidth || 0;
+            const sliderFullWidth = ((blockWidthCurrent * React.Children.count(children)) + (gapCurrent * (React.Children.count(children) - 1)))
+
+            if (sliderWidth >= sliderFullWidth) {
+                moveSliderStatus.current = true;
+                coordinates.current = { x: 0, y: 0 };
+            }
+            else {
+                moveSliderStatus.current = false;
+            }
+
+            const bounds = (sliderFullWidth/2) - (sliderWidth/2);
+            setBounds({
+                left: -bounds,
+                right: bounds
+            });
         }
-        const sliderWidth = sliderRef.current?.offsetWidth || 0;
-        const sliderFullWidth = ((blockWidthCurrent * blocks.length) + (gapCurrent * (blocks.length - 1)))
-        const bounds = (sliderFullWidth/2) - (sliderWidth/2);
-        setBounds({
-            left: -bounds,
-            right: bounds
-        });
-        setSliderWidth(sliderWidth);
-        setSliderFullWidth(sliderFullWidth);
     }
 
     useEffect(() => {
@@ -97,6 +92,7 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
         return () => {
             window.removeEventListener("resize", onWidthChange);
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const moveSlider = () => {
@@ -176,6 +172,7 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
                 moveSlider();
         }, autoScrollTime);
         return () => clearTimeout(timer);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [ticker])
 
     const onDragAction = () => {
@@ -202,38 +199,25 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
     }
 
     return (
-        <>
-            <div className="wrapper">
-                <div className="secondWrapper">
-                    <section ref={ref} className={"section"}>
-                        <h1 className={"slide-show-title"}>Blog</h1>
-                        <div className="slide-show"
-                             onMouseEnter={() => mouseOverRef.current = true}
-                             onMouseLeave={() => {mouseOverRef.current = false; reviveSlide()}}
-                        >
-                            <Draggable
-                                axis={"x"}
-                                bounds={{ top: -0, left: bounds.left, right: bounds.right, bottom: 0 }}
-                                onDrag={onDrag}
-                                onStart={onDragAction}
-                                onStop={onDragAction}
-                                position={coordinates.current}
+        <div className="slide-show"
+             onMouseEnter={() => mouseOverRef.current = true}
+             onMouseLeave={() => {mouseOverRef.current = false; reviveSlide()}}
+        >
+            <Draggable
+                axis={"x"}
+                bounds={{ top: -0, left: bounds.left, right: bounds.right, bottom: 0 }}
+                onDrag={onDrag}
+                onStart={onDragAction}
+                onStop={onDragAction}
+                position={coordinates.current}
 
-                            >
-                                <div ref={sliderRef} className="blocks cubes">
-                                    {
-                                        blocks.map((block:any, i:any) => (
-                                            <div id={block.id} key={i} className={"block"}>{block.id}</div>
-                                        ))
-                                    }
-                                </div>
-                            </Draggable>
-                        </div>
-                    </section>
+            >
+                <div ref={sliderRef} className="blocks cubes">
+                    { children }
                 </div>
-            </div>
-        </>
+            </Draggable>
+        </div>
     )
-})
+};
 
-export default Test;
+export default Slider;
