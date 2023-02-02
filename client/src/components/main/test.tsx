@@ -44,6 +44,10 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
 
 
     const onDrag = (e: DraggableEvent, ui:DraggableData) => {
+        if (sliderX < ui.x)
+            setSliderDir(1)
+        if (sliderX > ui.x)
+            setSliderDir(-1)
         setSliderX(ui.x)
         coordinates.current.x = ui.x
     }
@@ -54,7 +58,7 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
         if (window.innerWidth < 600) {
             gapCurrent = 8;
             setGap(8);
-            setAutoScrollTimeRevive(1000);
+            setAutoScrollTimeRevive(2000);
         } else {
             gapCurrent = 28;
             setGap(28);
@@ -147,8 +151,8 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
             return;
 
         const timer = setTimeout(() => {
-            // if (!mouseOverRef.current && !dragStatusRef.current)
-            //     moveSlider();
+            if (!mouseOverRef.current && !dragStatusRef.current && !autoScrollTimeReviveTimerRef.current)
+                moveSlider();
         }, autoScrollTime);
         return () => clearTimeout(timer);
     }, [ticker])
