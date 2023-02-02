@@ -23,6 +23,15 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
     const [blockWidth, setBlockWidth] = useState(250);
     const [gap, setGap] = useState(28);
 
+    const [pcGap] = useState(28);
+    const [pcBlockWidth] = useState(250);
+    const [pcAutoScrollTimeRevive] = useState(500);
+
+    const [mobileScreenWidth] = useState(600);
+    const [mobileBlockWidth] = useState(250);
+    const [mobileGap] = useState(8);
+    const [mobileAutoScrollTimeRevive] = useState(2000);
+
     const [bounds, setBounds] = useState({
         left: 0,
         right: 0
@@ -30,6 +39,7 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
     const [sliderX, setSliderX] = useState(0);
     const [sliderDir, setSliderDir] = useState(1);
     const sliderRef = useRef<HTMLDivElement>(null);
+    const moveSliderStatus = useRef<Boolean>(false);
 
     const mouseOverRef = useRef<Boolean>(false);
     const dragStatusRef = useRef<Boolean>(false);
@@ -53,15 +63,21 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
     }
 
     const onWidthChange = () => {
-        let blockWidthCurrent = blockWidth;
+        let blockWidthCurrent: number;
         let gapCurrent: number;
-        if (window.innerWidth < 600) {
-            gapCurrent = 8;
-            setGap(8);
-            setAutoScrollTimeRevive(2000);
+        if (window.innerWidth < mobileScreenWidth) {
+            blockWidthCurrent = mobileBlockWidth;
+            setBlockWidth(mobileBlockWidth);
+            gapCurrent = mobileGap;
+            setGap(mobileGap);
+            setAutoScrollTimeRevive(mobileAutoScrollTimeRevive);
+            setSliderDir(-1);
         } else {
-            gapCurrent = 28;
-            setGap(28);
+            blockWidthCurrent = pcBlockWidth;
+            setBlockWidth(pcBlockWidth);
+            gapCurrent = pcGap;
+            setGap(pcGap);
+            setAutoScrollTimeRevive(pcAutoScrollTimeRevive);
         }
         const sliderWidth = sliderRef.current?.offsetWidth || 0;
         const sliderFullWidth = ((blockWidthCurrent * blocks.length) + (gapCurrent * (blocks.length - 1)))
@@ -89,8 +105,7 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
             return;
         }
 
-        // @ts-ignore
-        sliderRef.current.style.transition = 'all 0.5s linear';
+        moveSliderStatus.current = true;
 
         let pxOutOfScreen: number;
         if (sliderDir > 0) {
@@ -134,24 +149,30 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
             pxToEndOfNextBlock = bounds.right;
         }
 
-
-        // @ts-ignore
-        sliderRef.current.style.transform = `translate(${pxToEndOfNextBlock}px)`;
-        setTimeout(() => {
+        if (!mouseOverRef.current && !dragStatusRef.current) {
             // @ts-ignore
-            sliderRef.current.style.transition = 'none';
-            setTicker(ticker + 1);
-            setSliderX(pxToEndOfNextBlock)
-            coordinates.current.x = pxToEndOfNextBlock
-        }, 500)
+            sliderRef.current.style.transition = 'all 0.5s linear';
+            // @ts-ignore
+            sliderRef.current.style.transform = `translate(${pxToEndOfNextBlock}px)`;
+            setTimeout(() => {
+                // @ts-ignore
+                sliderRef.current.style.transition = 'none';
+                setTicker(ticker + 1);
+                setSliderX(pxToEndOfNextBlock)
+                coordinates.current.x = pxToEndOfNextBlock
+                moveSliderStatus.current = false;
+            }, 500)
+        } else {
+            moveSliderStatus.current = false;
+        }
     }
 
     useEffect(() => {
-        if (mouseOverRef.current || dragStatusRef.current)
+        if (mouseOverRef.current || dragStatusRef.current || moveSliderStatus.current)
             return;
 
         const timer = setTimeout(() => {
-            if (!mouseOverRef.current && !dragStatusRef.current && !autoScrollTimeReviveTimerRef.current)
+            if (!mouseOverRef.current && !dragStatusRef.current && !autoScrollTimeReviveTimerRef.current && !moveSliderStatus.current)
                 moveSlider();
         }, autoScrollTime);
         return () => clearTimeout(timer);
@@ -164,7 +185,7 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
     }
 
     const reviveSlide = () => {
-        if (mouseOverRef.current || dragStatusRef.current)
+        if (mouseOverRef.current || dragStatusRef.current || moveSliderStatus.current)
             return;
         if (!autoScrollTimeReviveTimerRef.current) {
             autoScrollTimeReviveTimerRef.current = setTimeout(() => {
@@ -197,6 +218,7 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
                                 onStart={onDragAction}
                                 onStop={onDragAction}
                                 position={coordinates.current}
+
                             >
                                 <div ref={sliderRef} className="blocks cubes">
                                     {
