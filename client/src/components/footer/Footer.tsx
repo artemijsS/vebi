@@ -34,7 +34,7 @@ function Footer(): JSX.Element {
             <div className="footer2-block">
                 <div className="wrapper">
                     <div className="footer2">
-                        <div className="copyRight">© {year} Vebi. All rights are reserved</div>
+                        <div className="copyRight">© {year} Vebi. All rights reserved</div>
                         <div className="mail"><a href="mailto:info@vebi.lv">info@vebi.lv</a></div>
                         <div className="terms">
                             <Link to={"/"}>Terms of use</Link>
