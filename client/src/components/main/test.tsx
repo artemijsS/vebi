@@ -167,6 +167,12 @@ const Test = forwardRef<HTMLElement>((props, ref) => {
                 moveSlider()
                 autoScrollTimeReviveTimerRef.current = null;
             }, autoScrollTimeRevive);
+        } else {
+            window.clearTimeout(autoScrollTimeReviveTimerRef.current)
+            autoScrollTimeReviveTimerRef.current = setTimeout(() => {
+                moveSlider()
+                autoScrollTimeReviveTimerRef.current = null;
+            }, autoScrollTimeRevive);
         }
     }
 
