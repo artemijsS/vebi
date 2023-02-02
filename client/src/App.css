@@ -399,9 +399,17 @@ footer {
   height: 100%;
 }
 @media screen and (max-width: 600px) {
+  .section h1.slide-show-title {
+    padding-bottom: 250px !important;
+  }
+  .slide-show {
+    position: absolute;
+    left: -10px;
+    top: 101px;
+    width: 100vw;
+  }
   .slide-show .blocks {
     gap: 8px;
-    justify-content: flex-start;
   }
   .slide-show .blocks.cubes .block {
     flex: 0;
