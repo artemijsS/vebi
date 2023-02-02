@@ -6,7 +6,7 @@ function UnderConstructionPage(): JSX.Element {
     return (
         <div>
             <Helmet>
-                <title>vebi | Under construction</title>
+                <title>VEBI | Under construction</title>
             </Helmet>
             <div className={"all-screen"}>
                 <div className="center-info fl-center">
