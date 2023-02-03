@@ -29,15 +29,15 @@ function Header({refs}:HeaderProps): JSX.Element {
     const onScroll = (e: Event) => {
         const window = e.currentTarget as Window;
         const scrollY = window.scrollY;
-        if (scrollY < Number(refs.about.current?.offsetTop) - Number(headerRef.current?.offsetHeight)) {
+        if (scrollY < Number(refs.about.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
             setActiveSection("home")
-        } else if (scrollY <= Number(refs.services.current?.offsetTop) - Number(headerRef.current?.offsetHeight)) {
+        } else if (scrollY <= Number(refs.services.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
             setActiveSection("about")
-        } else if (scrollY <= Number(refs.blog.current?.offsetTop) - Number(headerRef.current?.offsetHeight)) {
+        } else if (scrollY <= Number(refs.blog.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
             setActiveSection("services")
-        } else if (scrollY <= Number(refs.contacts.current?.offsetTop) - Number(headerRef.current?.offsetHeight)) {
+        } else if (scrollY <= Number(refs.contacts.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
             setActiveSection("blog")
-        } else if (scrollY >= Number(refs.contacts.current?.offsetTop) - Number(headerRef.current?.offsetHeight)) {
+        } else if (scrollY >= Number(refs.contacts.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
             setActiveSection("contacts")
         }
     }

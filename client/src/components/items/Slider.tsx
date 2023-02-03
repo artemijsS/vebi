@@ -212,7 +212,7 @@ const Slider = ({ children, autoScrollTimeMS = 2500, autoRevivePCTimeMS = 500, a
                 position={coordinates.current}
 
             >
-                <div ref={sliderRef} className="blocks cubes">
+                <div ref={sliderRef} className="blocks">
                     { children }
                 </div>
             </Draggable>
