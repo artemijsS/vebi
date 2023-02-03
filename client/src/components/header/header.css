@@ -121,6 +121,7 @@ nav .link:hover:before {
 }
 
 .burgerOpen {
+    display: none;
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -205,4 +206,10 @@ nav .link:hover:before {
 }
 .burgerOpen nav .terms a:last-of-type:before {
     display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .burgerOpen {
+        display: block;
+    }
 }

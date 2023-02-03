@@ -53,11 +53,11 @@ function Header({refs}:HeaderProps): JSX.Element {
 
     const widthCheck = () => {
         if (burgerStatusRef.current && window.innerWidth > 600)
-            onBurgerClick()
+            onBurgerClick(true)
     }
 
-    const onBurgerClick = () => {
-        if (burgerStatus) {
+    const onBurgerClick = (close: Boolean = false) => {
+        if (burgerStatus || close) {
             document.documentElement.style.scrollBehavior = "smooth"
             window.onscroll = function() {};
         } else {
@@ -68,8 +68,8 @@ function Header({refs}:HeaderProps): JSX.Element {
                 window.scrollTo(scrollLeft, scrollTop);
             };
         }
-        setBurgerStatus(!burgerStatus);
         burgerStatusRef.current = !burgerStatus;
+        setBurgerStatus(!burgerStatus);
     }
 
     const onSectionBurgerClick = (section: string) => {
@@ -84,7 +84,7 @@ function Header({refs}:HeaderProps): JSX.Element {
                     <div className="logo">
                         <Logo />
                     </div>
-                    <div className="burger" onClick={onBurgerClick}>
+                    <div className="burger" onClick={() => onBurgerClick()}>
                         <div className="line"/>
                         <div className="line"/>
                         <div className="line"/>
