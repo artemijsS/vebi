@@ -22,8 +22,10 @@ function Header({refs}:HeaderProps): JSX.Element {
 
     useEffect(() => {
         window.addEventListener('scroll', onScroll)
+        window.addEventListener('resize', widthCheck)
         return () => {
             window.removeEventListener('scroll', onScroll);
+            window.removeEventListener('resize', widthCheck)
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
@@ -46,6 +48,11 @@ function Header({refs}:HeaderProps): JSX.Element {
 
     const onSectionClick = (section: string) => {
         window.scrollTo(0, Number(refs[section].current?.offsetTop) - Number(headerRef.current?.offsetHeight));
+    }
+
+    const widthCheck = () => {
+        if (burgerStatus && window.innerWidth > 600)
+            onBurgerClick()
     }
 
     const onBurgerClick = () => {
