@@ -18,6 +18,7 @@ function Header({refs}:HeaderProps): JSX.Element {
     const [activeSection, setActiveSection] = useState('home');
     const [burgerStatus, setBurgerStatus] = useState<Boolean>(false);
     const headerRef = useRef<HTMLElement>(null);
+    const burgerStatusRef = useRef<Boolean>(burgerStatus);
 
 
     useEffect(() => {
@@ -51,7 +52,7 @@ function Header({refs}:HeaderProps): JSX.Element {
     }
 
     const widthCheck = () => {
-        if (burgerStatus && window.innerWidth > 600)
+        if (burgerStatusRef.current && window.innerWidth > 600)
             onBurgerClick()
     }
 
@@ -68,6 +69,7 @@ function Header({refs}:HeaderProps): JSX.Element {
             };
         }
         setBurgerStatus(!burgerStatus);
+        burgerStatusRef.current = !burgerStatus;
     }
 
     const onSectionBurgerClick = (section: string) => {
