@@ -37,7 +37,7 @@ function Footer(): JSX.Element {
                         <div className="copyRight">© {year} Vebi. All rights reserved</div>
                         <div className="mail"><a href="mailto:info@vebi.lv">info@vebi.lv</a></div>
                         <div className="terms">
-                            <Link to={"/"}>Terms of use</Link>
+                            <Link to={"/"}>Privacy Policy</Link>
                             <Link to={"/"}>User Agreement</Link>
                             <Link to={"/"}>Cookie Policy</Link>
                         </div>

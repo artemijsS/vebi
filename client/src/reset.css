@@ -48,3 +48,12 @@ a {
 a:hover {
     cursor: pointer;
 }
+button {
+    text-transform: none;
+    text-outline: none;
+    border: none;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+}

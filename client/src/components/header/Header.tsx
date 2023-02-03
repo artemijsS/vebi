@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './header.css'
 import Logo from '../../assets/logo/logo';
+import {Link} from "react-router-dom";
 
 interface HeaderProps {
     refs: {
@@ -15,6 +16,7 @@ interface HeaderProps {
 function Header({refs}:HeaderProps): JSX.Element {
 
     const [activeSection, setActiveSection] = useState('home');
+    const [burgerStatus, setBurgerStatus] = useState<Boolean>(false);
     const headerRef = useRef<HTMLElement>(null);
 
 
@@ -46,6 +48,26 @@ function Header({refs}:HeaderProps): JSX.Element {
         window.scrollTo(0, Number(refs[section].current?.offsetTop) - Number(headerRef.current?.offsetHeight));
     }
 
+    const onBurgerClick = () => {
+        if (burgerStatus) {
+            document.documentElement.style.scrollBehavior = "smooth"
+            window.onscroll = function() {};
+        } else {
+            document.documentElement.style.scrollBehavior = "unset"
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+            window.onscroll = function() {
+                window.scrollTo(scrollLeft, scrollTop);
+            };
+        }
+        setBurgerStatus(!burgerStatus);
+    }
+
+    const onSectionBurgerClick = (section: string) => {
+        onBurgerClick();
+        onSectionClick(section);
+    }
+
     return (
         <header ref={headerRef}>
             <div className="wrapper">
@@ -53,20 +75,39 @@ function Header({refs}:HeaderProps): JSX.Element {
                     <div className="logo">
                         <Logo />
                     </div>
-                    <div className="burger">
+                    <div className="burger" onClick={onBurgerClick}>
                         <div className="line"/>
                         <div className="line"/>
                         <div className="line"/>
                     </div>
                     <nav>
-                        <div onClick={() => onSectionClick("home")} className={activeSection === "home" ? "active link" : " link"}>Home</div>
-                        <div onClick={() => onSectionClick("about")} className={activeSection === "about" ? "active link" : " link"}>About</div>
-                        <div onClick={() => onSectionClick("services")} className={activeSection === "services" ? "active link" : " link"}>Services</div>
-                        <div onClick={() => onSectionClick("blog")} className={activeSection === "blog" ? "active link" : " link"}>Blog</div>
-                        <div onClick={() => onSectionClick("contacts")} className={activeSection === "contacts" ? "active link" : " link"}>Contacts</div>
+                        <button onClick={() => onSectionClick("home")} className={activeSection === "home" ? "active link" : " link"}>Home</button>
+                        <button onClick={() => onSectionClick("about")} className={activeSection === "about" ? "active link" : " link"}>About</button>
+                        <button onClick={() => onSectionClick("services")} className={activeSection === "services" ? "active link" : " link"}>Services</button>
+                        <button onClick={() => onSectionClick("blog")} className={activeSection === "blog" ? "active link" : " link"}>Blog</button>
+                        <button onClick={() => onSectionClick("contacts")} className={activeSection === "contacts" ? "active link" : " link"}>Contacts</button>
                     </nav>
                 </div>
             </div>
+            {burgerStatus &&
+                <div className={"burgerOpen"}>
+                    <div className="wrapper">
+                        <div className="secondWrapper">
+                            <nav>
+                                <div onClick={() => onSectionBurgerClick("about")} className={activeSection === "about" ? "active link" : " link"}>About</div>
+                                <div onClick={() => onSectionBurgerClick("services")} className={activeSection === "services" ? "active link" : " link"}>Services</div>
+                                <div onClick={() => onSectionBurgerClick("blog")} className={activeSection === "blog" ? "active link" : " link"}>Blog</div>
+                                <div onClick={() => onSectionBurgerClick("contacts")} className={activeSection === "contacts" ? "active link" : " link"}>Contacts</div>
+                                <div className="terms">
+                                    <Link to={"/"}>Cookie Policy</Link>
+                                    <Link to={"/"}>User Agreement</Link>
+                                    <Link to={"/"}>Privacy Policy</Link>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            }
         </header>
     )
 }

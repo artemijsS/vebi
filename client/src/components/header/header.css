@@ -43,8 +43,8 @@ header {
 
 .burger {
     display: none;
-    width: 42px;
-    height: 30px;
+    width: 37px;
+    height: 26.7px;
 }
 
 @media screen and (max-width: 600px) {
@@ -60,9 +60,12 @@ header {
         flex-direction: column;
         justify-content: space-between;
     }
+    .burger:hover {
+        cursor: pointer;
+    }
     .burger .line {
         width: 100%;
-        height: 6.92px;
+        height: 6px;
         background-color: #FFFFFF;
     }
 }
@@ -115,4 +118,91 @@ nav .link:hover:before {
 @keyframes draw-slow {
     from { width: 0; }
     to { width: 70%; }
+}
+
+.burgerOpen {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+    z-index: 50;
+}
+
+.burgerOpen nav {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 0;
+}
+.burgerOpen nav .link {
+    text-transform: uppercase;
+    font-size: 1.7em;
+    font-weight: 600;
+    padding: 25px 0;
+}
+.burgerOpen nav .link:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    border-top: 1px solid #E43172;
+    left: 0;
+    top: 0;
+}
+
+.burgerOpen nav .link:active {
+    text-transform: uppercase;
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
+.burgerOpen nav .link.active {
+    color: #E43172;
+}
+.burgerOpen nav .link:hover:before, .burgerOpen nav .link.active:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    border-top: 1px solid #E43172;
+    left: 0;
+    top: 0;
+    bottom: unset;
+    height: unset;
+    border-bottom: unset;
+    animation: unset !important;
+}
+
+.burgerOpen nav .terms {
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding-top: 35px;
+    position: relative;
+}
+.burgerOpen nav .terms:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    border-top: 1px solid #E43172;
+    left: 0;
+    top: 0;
+}
+.burgerOpen nav .terms a {
+    padding: 10px 0;
+    position: relative;
+}
+.burgerOpen nav .terms a:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    border-bottom: 1px solid #E43172;
+    left: 0;
+    bottom: 0;
+}
+.burgerOpen nav .terms a:last-of-type:before {
+    display: none;
 }

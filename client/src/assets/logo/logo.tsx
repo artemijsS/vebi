@@ -1,8 +1,13 @@
 import React from "react";
 
 export default function Logo() {
+
+    const onLogoClick = () => {
+        window.scrollTo(0,0);
+    }
+
     return (
-        <svg width="143" height="71" viewBox="0 0 143 71" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <svg onClick={onLogoClick} width="143" height="71" viewBox="0 0 143 71" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <rect width="143" height="71" fill="url(#pattern0)"/>
             <defs>
                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
