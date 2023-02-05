@@ -1,3 +1,3 @@
-export { default as Discord } from "./discord.png"
 export { default as LinkedIn } from "./linkedIn.png"
-export { default as GitHub } from "./gitHub.png"
+export { default as Telegram } from "./telegram.png"
+export { default as Facebook } from "./facebook.png"

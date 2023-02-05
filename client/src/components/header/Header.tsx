@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './header.css'
+import { useTranslation } from 'react-i18next';
+import i18next from "i18next";
 import Logo from '../../assets/logo/logo';
-import {Link} from "react-router-dom";
+import { Ru, Lv, En } from '../../assets/languages';
+import { Link } from "react-router-dom";
+
+import './header.css'
 
 interface HeaderProps {
     refs: {
@@ -17,9 +21,11 @@ function Header({refs}:HeaderProps): JSX.Element {
 
     const [activeSection, setActiveSection] = useState('home');
     const [burgerStatus, setBurgerStatus] = useState<Boolean>(false);
+    const [currentLanguage, setCurrentLanguage] = useState<string>(i18next.language);
     const headerRef = useRef<HTMLElement>(null);
     const burgerStatusRef = useRef<Boolean>(burgerStatus);
 
+    const { t } = useTranslation();
 
     useEffect(() => {
         window.addEventListener('scroll', onScroll)
@@ -30,6 +36,10 @@ function Header({refs}:HeaderProps): JSX.Element {
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
+
+    useEffect(() => {
+        i18next.changeLanguage(currentLanguage);
+    }, [currentLanguage])
 
     const onScroll = (e: Event) => {
         const window = e.currentTarget as Window;
@@ -84,18 +94,30 @@ function Header({refs}:HeaderProps): JSX.Element {
                     <div className="logo">
                         <Logo />
                     </div>
+                    {burgerStatus &&
+                        <div className={"mob-language-select"}>
+                            <div onClick={() => setCurrentLanguage("lv")} className="language" style={{ display: currentLanguage.includes("lv") ? "none" : "block" }}>LV</div>
+                            <div onClick={() => setCurrentLanguage("en")} className="language" style={{ display: currentLanguage.includes("en") ? "none" : "block" }}>EN</div>
+                            <div onClick={() => setCurrentLanguage("ru")} className="language" style={{ display: currentLanguage.includes("ru") ? "none" : "block" }}>RU</div>
+                        </div>
+                    }
                     <div className="burger" onClick={() => onBurgerClick()}>
                         <div className="line"/>
                         <div className="line"/>
                         <div className="line"/>
                     </div>
                     <nav>
-                        <button onClick={() => onSectionClick("home")} className={activeSection === "home" ? "active link" : " link"}>Home</button>
-                        <button onClick={() => onSectionClick("about")} className={activeSection === "about" ? "active link" : " link"}>About</button>
-                        <button onClick={() => onSectionClick("services")} className={activeSection === "services" ? "active link" : " link"}>Services</button>
-                        <button onClick={() => onSectionClick("blog")} className={activeSection === "blog" ? "active link" : " link"}>Blog</button>
-                        <button onClick={() => onSectionClick("contacts")} className={activeSection === "contacts" ? "active link" : " link"}>Contacts</button>
+                        <button onClick={() => onSectionClick("home")} className={activeSection === "home" ? "active link" : " link"}>{t("header:home")}</button>
+                        <button onClick={() => onSectionClick("about")} className={activeSection === "about" ? "active link" : " link"}>{t("header:about")}</button>
+                        <button onClick={() => onSectionClick("services")} className={activeSection === "services" ? "active link" : " link"}>{t("header:services")}</button>
+                        <button onClick={() => onSectionClick("blog")} className={activeSection === "blog" ? "active link" : " link"}>{t("header:blog")}</button>
+                        <button onClick={() => onSectionClick("contacts")} className={activeSection === "contacts" ? "active link" : " link"}>{t("header:contacts")}</button>
                     </nav>
+                    <div className="language-select">
+                        <button onClick={() => setCurrentLanguage("lv")} style={{ display: currentLanguage.includes("lv") ? "none" : "block" }}><img src={Lv} alt="LV"/></button>
+                        <button onClick={() => setCurrentLanguage("en")} style={{ display: currentLanguage.includes("en") ? "none" : "block" }}><img src={En} alt="EN"/></button>
+                        <button onClick={() => setCurrentLanguage("ru")} style={{ display: currentLanguage.includes("ru") ? "none" : "block" }}><img src={Ru} alt="RU"/></button>
+                    </div>
                 </div>
             </div>
             {burgerStatus &&
@@ -103,14 +125,14 @@ function Header({refs}:HeaderProps): JSX.Element {
                     <div className="wrapper">
                         <div className="secondWrapper">
                             <nav>
-                                <div onClick={() => onSectionBurgerClick("about")} className={activeSection === "about" ? "active link" : " link"}>About</div>
-                                <div onClick={() => onSectionBurgerClick("services")} className={activeSection === "services" ? "active link" : " link"}>Services</div>
-                                <div onClick={() => onSectionBurgerClick("blog")} className={activeSection === "blog" ? "active link" : " link"}>Blog</div>
-                                <div onClick={() => onSectionBurgerClick("contacts")} className={activeSection === "contacts" ? "active link" : " link"}>Contacts</div>
+                                <div onClick={() => onSectionBurgerClick("about")} className={activeSection === "about" ? "active link" : " link"}>{t("header:about")}</div>
+                                <div onClick={() => onSectionBurgerClick("services")} className={activeSection === "services" ? "active link" : " link"}>{t("header:services")}</div>
+                                <div onClick={() => onSectionBurgerClick("blog")} className={activeSection === "blog" ? "active link" : " link"}>{t("header:blog")}</div>
+                                <div onClick={() => onSectionBurgerClick("contacts")} className={activeSection === "contacts" ? "active link" : " link"}>{t("header:contacts")}</div>
                                 <div className="terms">
-                                    <Link to={"/"}>Cookie Policy</Link>
-                                    <Link to={"/"}>User Agreement</Link>
-                                    <Link to={"/"}>Privacy Policy</Link>
+                                    <Link to={"/"}>{t("header:cookie")}</Link>
+                                    <Link to={"/"}>{t("header:userAgreement")}</Link>
+                                    <Link to={"/"}>{t("header:privacyPolicy")}</Link>
                                 </div>
                             </nav>
                         </div>

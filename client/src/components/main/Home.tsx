@@ -1,12 +1,16 @@
 import React, { forwardRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Future, Wishes, Solutions } from '../../assets/home';
 
 const Home = forwardRef<HTMLElement>((props, ref) => {
+
+    const { t } = useTranslation();
+
     return (
         <div className="wrapper">
             <div className="secondWrapper">
                 <section ref={ref} className={"section"}>
-                    <h1>Digitally driven<br/>agency team.</h1>
+                    <h1 dangerouslySetInnerHTML={{__html: t('home:title', {interpolation: {escapeValue: false}})}}/>
                     <div className="blocks cubes">
                         <div className="block pink">
                             <div className="home-block">

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import './footer.css'
 import Icon from '../../assets/logo/icon';
-import { Discord, LinkedIn, GitHub } from '../../assets/socials';
+import { LinkedIn, Telegram, Facebook } from '../../assets/socials';
 
 function Footer(): JSX.Element {
 
@@ -24,9 +24,9 @@ function Footer(): JSX.Element {
                             </div>
                         </div>
                         <div className="socials">
-                            <a href="https://github.com/vebi-lv" target="_blank" rel="noreferrer"><img src={GitHub} alt="error"/></a>
-                            <a href="https://discord.gg/MtyWYn7d" target="_blank" rel="noreferrer"><img src={Discord} alt="error"/></a>
-                            <a href="https://www.linkedin.com/in/artemijs-semjannikovs/" target="_blank" rel="noreferrer"><img src={LinkedIn} alt="error"/></a>
+                            <a href="https://www.linkedin.com/company/vebi" target="_blank" rel="noreferrer"><img src={LinkedIn} alt="error"/></a>
+                            <a href="https://t.me/vebilv" target="_blank" rel="noreferrer"><img src={Telegram} alt="error"/></a>
+                            <a href="http://facebook.com/vebi.lv" target="_blank" rel="noreferrer"><img src={Facebook} alt="error"/></a>
                         </div>
                     </div>
                 </div>
