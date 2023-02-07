@@ -1,3 +1,15 @@
 {
-  "title": "Digitals uzņemums<br/>komanda."
+  "title": "Digitāli vadīta<br/>aģentūras komanda.",
+  "firstBlock": {
+    "title": "VEBI Misija",
+    "text": "Nodrošiniet visaptverošu pakalpojumu klāstu ar individualizētu pieeju un augstu kvalitāti, lai palīdzētu uzņēmējiem un privātpersonām sasniegt savus personīgos stratēģiskos mērķus."
+  },
+  "secondBlock": {
+    "title": "Garantija",
+    "text": "Kods, ko mēs jums uzrakstīsim, tiks nodrošināts ar divu gadu garantiju."
+  },
+  "thirdBlock": {
+    "title": "Elastīgs maksājums",
+    "text": "Jūsu rezultāts mums ir ļoti svarīgs, un mēs saprotam, ka elastīgas norēķinu iespējas var jums palīdzēt, tāpēc mēs tās piedāvājam."
+  }
 }

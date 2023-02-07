@@ -1,3 +1,15 @@
 {
-  "title": "Digitally driven<br/>agency team."
+  "title": "Digitally driven<br/>agency team.",
+  "firstBlock": {
+    "title": "VEBI’s Mission",
+    "text": "Provide a comprehensive range of services with individualized approach and high quality, to help entrepreneurs & individuals achieve their personal strategic goals."
+  },
+  "secondBlock": {
+    "title": "Warranty",
+    "text": "The code we will write for you will come with a two-year warranty."
+  },
+  "thirdBlock": {
+    "title": "Flexible Payment",
+    "text": "Your outcome is very important to us, and we understand that flexible payment options can help you, so we offer them."
+  }
 }

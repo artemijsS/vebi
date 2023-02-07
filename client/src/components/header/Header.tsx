@@ -12,7 +12,7 @@ interface HeaderProps {
         [home: string]: React.RefObject<HTMLElement>,
         about: React.RefObject<HTMLElement>,
         services: React.RefObject<HTMLElement>,
-        blog: React.RefObject<HTMLElement>,
+        info: React.RefObject<HTMLElement>,
         contacts: React.RefObject<HTMLElement>
     }
 }
@@ -48,10 +48,10 @@ function Header({refs}:HeaderProps): JSX.Element {
             setActiveSection("home")
         } else if (scrollY <= Number(refs.services.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
             setActiveSection("about")
-        } else if (scrollY <= Number(refs.blog.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
+        } else if (scrollY <= Number(refs.info.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
             setActiveSection("services")
         } else if (scrollY <= Number(refs.contacts.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
-            setActiveSection("blog")
+            setActiveSection("info")
         } else if (scrollY >= Number(refs.contacts.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
             setActiveSection("contacts")
         }
@@ -110,7 +110,7 @@ function Header({refs}:HeaderProps): JSX.Element {
                         <button onClick={() => onSectionClick("home")} className={activeSection === "home" ? "active link" : " link"}>{t("header:home")}</button>
                         <button onClick={() => onSectionClick("about")} className={activeSection === "about" ? "active link" : " link"}>{t("header:about")}</button>
                         <button onClick={() => onSectionClick("services")} className={activeSection === "services" ? "active link" : " link"}>{t("header:services")}</button>
-                        <button onClick={() => onSectionClick("blog")} className={activeSection === "blog" ? "active link" : " link"}>{t("header:blog")}</button>
+                        <button onClick={() => onSectionClick("info")} className={activeSection === "info" ? "active link" : " link"}>{t("header:info")}</button>
                         <button onClick={() => onSectionClick("contacts")} className={activeSection === "contacts" ? "active link" : " link"}>{t("header:contacts")}</button>
                     </nav>
                     <div className="language-select">
@@ -127,7 +127,7 @@ function Header({refs}:HeaderProps): JSX.Element {
                             <nav>
                                 <div onClick={() => onSectionBurgerClick("about")} className={activeSection === "about" ? "active link" : " link"}>{t("header:about")}</div>
                                 <div onClick={() => onSectionBurgerClick("services")} className={activeSection === "services" ? "active link" : " link"}>{t("header:services")}</div>
-                                <div onClick={() => onSectionBurgerClick("blog")} className={activeSection === "blog" ? "active link" : " link"}>{t("header:blog")}</div>
+                                <div onClick={() => onSectionBurgerClick("info")} className={activeSection === "info" ? "active link" : " link"}>{t("header:info")}</div>
                                 <div onClick={() => onSectionBurgerClick("contacts")} className={activeSection === "contacts" ? "active link" : " link"}>{t("header:contacts")}</div>
                                 <div className="terms">
                                     <Link to={"/"}>{t("header:cookie")}</Link>

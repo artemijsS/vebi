@@ -2,7 +2,10 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from "i18next-browser-languagedetector";
 import { homeEN, homeLV, homeRU,
-    headerEN, headerLV, headerRU
+    headerEN, headerLV, headerRU,
+    aboutEN, aboutLV, aboutRU,
+    servicesEN, servicesLV, servicesRU,
+    infoEN, infoLV, infoRU
 } from './translate';
 
 i18n
@@ -17,15 +20,24 @@ i18n
         resources: {
             en: {
                 home: homeEN,
-                header: headerEN
+                header: headerEN,
+                about: aboutEN,
+                services: servicesEN,
+                info: infoEN
             },
             lv: {
                 home: homeLV,
-                header: headerLV
+                header: headerLV,
+                about: aboutLV,
+                services: servicesLV,
+                info: infoLV
             },
             ru: {
                 home: homeRU,
-                header: headerRU
+                header: headerRU,
+                about: aboutRU,
+                services: servicesRU,
+                info: infoRU
             },
         }
     });
