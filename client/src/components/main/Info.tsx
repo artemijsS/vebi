@@ -17,6 +17,9 @@ const Info = forwardRef<HTMLElement>((props, ref) => {
             window.open(vebiRU, '_blank');
         }
     }
+    const onInfoMobClick = (id: number) => {
+        window.open(vebiRU, '_blank');
+    }
 
     const onInfoDown = () => {
         sliderTransition.current = blockRef.current?.parentElement?.style.transform.split("px")[0].split("(")[1]
@@ -77,6 +80,56 @@ const Info = forwardRef<HTMLElement>((props, ref) => {
                             </div>
                         </div>
                     </Slider>
+                    <div className="mob">
+                        <div ref={blockRef} id={"1"} className={"block"}>
+                            <div className="pdf-card">
+                                <h3>{t("info:scaling")}</h3>
+                                <button onClick={() => onInfoMobClick(1)} className="button">
+                                    {t("info:read")}
+                                </button>
+                            </div>
+                        </div>
+                        <div id={"2"} className={"block"}>
+                            <div className="pdf-card">
+                                <h3>{t("info:it")}</h3>
+                                <button onClick={() => onInfoMobClick(2)} className="button">
+                                    {t("info:read")}
+                                </button>
+                            </div>
+                        </div>
+                        <div id={"3"} className={"block"}>
+                            <div className="pdf-card">
+                                <h3>{t("info:design")}</h3>
+                                <button onClick={() => onInfoMobClick(3)} className="button">
+                                    {t("info:read")}
+                                </button>
+                            </div>
+                        </div>
+                        <div id={"4"} className={"block"}>
+                            <div className="pdf-card">
+                                <h3>{t("info:web")}</h3>
+                                <button onClick={() => onInfoMobClick(4)} className="button">
+                                    {t("info:read")}
+                                </button>
+                            </div>
+                        </div>
+                        <div id={"5"} className={"block"}>
+                            <div className="pdf-card">
+                                <h3>{t("info:webUpdate")}</h3>
+                                <button onClick={() => onInfoMobClick(5)} className="button">
+                                    {t("info:read")}
+                                </button>
+                            </div>
+                        </div>
+                        <div id={"6"} className={"block"}>
+                            <div className="pdf-card">
+                                <h3>{t("info:about")}</h3>
+                                <button onClick={() => onInfoMobClick(6)} className="button">
+                                    {t("info:read")}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
