@@ -9,8 +9,7 @@ function RedirectPage({ page }: RedirectPageProps): JSX.Element {
 
     useEffect(() => {
         window.location.replace(page);
-        // eslint-disable-next-line
-    }, [])
+    }, [page])
 
     return (
         <div>
