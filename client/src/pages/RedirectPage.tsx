@@ -9,7 +9,7 @@ function RedirectPage({ page }: RedirectPageProps): JSX.Element {
 
     useEffect(() => {
         window.location.replace(page);
-    }, [])
+    }, [page])
 
     return (
         <div>
