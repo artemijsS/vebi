@@ -9,7 +9,15 @@ const Info = forwardRef<HTMLElement>((props, ref) => {
     const blockRef = useRef<HTMLDivElement>(null);
 
     const onInfoClick = (filename: string) => {
-        window.open(`${process.env.REACT_APP_SERVER ? process.env.REACT_APP_SERVER : ""}/api/pdf?file=${filename}&language=${i18n.language}`, '_blank');
+        let language;
+        if (i18n.language.includes("lv"))
+            language = "lv"
+        else if (i18n.language.includes("ru"))
+            language = "ru"
+        else
+            language = "en"
+
+        window.open(`${process.env.REACT_APP_SERVER ? process.env.REACT_APP_SERVER : ""}/api/pdf?file=${filename}&language=${language}`, '_blank');
     }
 
     return (
