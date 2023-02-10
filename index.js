@@ -11,6 +11,10 @@ app.use(express.json({ extended: true }));
 const PORT = process.env.PORT || 5000;
 
 
+// pdf
+app.use('/api/pdf', require('./routes/pdf.routes'));
+
+
 //**************************
 //  REACT APP
 //**************************
