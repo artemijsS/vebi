@@ -1,6 +1,0 @@
-export { default as Design } from "./design.png"
-export { default as CmsCrm } from "./cmsCrm.png"
-export { default as Automation } from "./automation.png"
-export { default as Scripts } from "./scripts.png"
-export { default as Bots } from "./bots.png"
-export { default as Programming } from "./programming.png"

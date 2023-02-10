@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Design, CmsCrm, Automation, Scripts, Bots, Programming } from '../../assets/services';
 
 const Services = forwardRef<HTMLElement>((props, ref) => {
 
@@ -125,38 +124,6 @@ const Services = forwardRef<HTMLElement>((props, ref) => {
                                         <path d="M30.9807 9.73146C30.9807 9.27927 30.6211 8.90689 30.1535 8.90689H25.4958V6.05195C25.4958 2.93102 22.8612 0.395264 19.6601 0.395264H3.64584V4.65108H19.4803C19.8849 4.65108 20.3705 5.14759 20.3705 5.54657V8.90689H1.70362C1.23605 8.90689 0.858398 9.27927 0.858398 9.73146V24.8396V29.7781V30.78C0.858398 31.2322 1.23605 31.6046 1.70362 31.6046H30.1535C30.6211 31.6046 30.9807 31.2322 30.9807 30.78V25.0613L41.1414 28.1378V20.3178V12.4977L30.9807 15.5743V9.73146ZM21.1977 23.5363H20.2176H11.6485H10.5785C8.79811 23.5363 7.35044 22.1176 7.35044 20.3621C7.35044 18.6066 8.79811 17.188 10.5785 17.188C12.3588 17.188 13.8065 18.6243 13.8065 20.3799C13.8065 21.2665 13.4289 22.029 12.8354 22.6496H18.9408C18.3473 22.029 17.9697 21.2665 17.9697 20.3799C17.9697 18.6243 19.4174 17.1969 21.1977 17.1969C22.9781 17.1969 24.4258 18.6066 24.4258 20.3621C24.4258 22.1176 22.9781 23.5363 21.1977 23.5363Z" fill="white"/>
                                     </svg>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="list-mobile">
-                        <div className="group">
-                            <div className="item pink">
-                                <div className="bg" style={{ backgroundImage: `url(${Design})` }}/>
-                                <h1>DESIGN</h1>
-                            </div>
-                            <div className="item">
-                                <div className="bg" style={{ backgroundImage: `url(${Automation})` }}/>
-                                <h1>AUTOMATION</h1>
-                            </div>
-                        </div>
-                        <div className="group">
-                            <div className="item">
-                                <div className="bg" style={{ backgroundImage: `url(${Scripts})` }}/>
-                                <h1>SCRIPTS</h1>
-                            </div>
-                            <div className="item">
-                                <div className="bg" style={{ backgroundImage: `url(${CmsCrm})` }}/>
-                                <h1>CMS / CRM</h1>
-                            </div>
-                        </div>
-                        <div className="group">
-                            <div className="item">
-                                <div className="bg" style={{ backgroundImage: `url(${Bots})` }}/>
-                                <h1>BOTS</h1>
-                            </div>
-                            <div className="item">
-                                <div className="bg" style={{ backgroundImage: `url(${Programming})` }}/>
-                                <h1>PROGRAMMING</h1>
                             </div>
                         </div>
                     </div>

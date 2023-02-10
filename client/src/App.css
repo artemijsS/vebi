@@ -710,42 +710,6 @@ footer {
   .section .list .group .item .service svg {
     padding-left: min(4vw, 20px);
   }
-  /*.section .list-mobile {*/
-  /*  display: flex;*/
-  /*  flex-direction: column;*/
-  /*  gap: 8px;*/
-  /*}*/
-  /*.section .list-mobile .group {*/
-  /*  display: flex;*/
-  /*  justify-content: space-between;*/
-  /*  gap: 8px;*/
-  /*}*/
-  /*.section .list-mobile .group .item {*/
-  /*  flex: 1;*/
-  /*  height: 20vw;*/
-  /*  background-color: #595959;*/
-  /*  display: flex;*/
-  /*  align-items: center;*/
-  /*  justify-content: center;*/
-  /*  position: relative;*/
-  /*}*/
-  /*.section .list-mobile .group .item .bg {*/
-  /*  width: 100%;*/
-  /*  height: 100%;*/
-  /*  position: absolute;*/
-  /*  background-repeat: repeat;*/
-  /*  background-size: cover;*/
-  /*  opacity: 45%;*/
-  /*}*/
-  /*.section .list-mobile .group:first-of-type .item:first-of-type .bg {*/
-  /*  opacity: unset;*/
-  /*}*/
-  /*.section .list-mobile .group .item h1 {*/
-  /*  padding: 0 !important;*/
-  /*  margin: 0 !important;*/
-  /*  font-size: 5vw;*/
-  /*}*/
-
 }
 
 .section .blocks.contacts .block {
@@ -823,94 +787,79 @@ footer {
   }
 }
 
-.section.info .block .pdf-card {
+.section.info {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px 10%;
+}
+.section.info h1 {
   width: 100%;
-  height: 100%;
+  margin-bottom: 108px;
+}
+.section.info .block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45%;
+  height: 80px;
   color: #FFFFFF;
 }
-.section.info .block .pdf-card h3 {
-  height: 83%;
-  width: 95%;
-  margin: 0;
-  font-size: 25px;
-  text-align: center;
+.section.info .block .title {
+  padding-left: 7%;
+  margin: 0 0 0 10%;
+  width: 80%;
+  height: 80%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  border-left: 3px solid var(--pink);
+}
+.section.info .block .title h3 {
   font-weight: 300;
+  font-size: 1rem;
 }
-.section.info .block .pdf-card .button {
-  height: 17%;
-  width: 100%;
-  background-color: #CA2D63;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 23px;
-  color: #272727;
+.section.info .block button {
+  height: 70%;
 }
-.section.info .block .pdf-card .button:hover {
+.section.info.advantages .block svg {
+  width: 10%;
+}
+.section.info.pdf .block svg {
+  height: 100%;
   cursor: pointer;
 }
-.section.info .mob {
-  display: none;
+.section.info.pdf .block svg:hover path {
+  fill: #FFFFFF;
+}
+.section.info.pdf .block svg:hover {
+  transform: scale(1.2, 1.2);
+  transition: 0.3s;
 }
 
-.section.info .block:nth-of-type(2) {
-  background-image: url("assets/info/second.png");
-  background-size: cover;
+@media screen and (max-width: 800px) {
+  .section.info.advantages .block svg {
+    width: 15%;
+  }
 }
-.section.info .block:nth-of-type(3) {
-  background-image: url("assets/info/third.png");
-  background-size: cover;
-}
-
 @media screen and (max-width: 600px) {
-  .section.info .block .pdf-card h3 {
-    height: 75%;
-    font-size: 14px;
+  .section.info.advantages .block svg {
+    width: 16%;
+    max-height: 50px;
   }
-  .section.info .block .pdf-card .button {
-    height: 25%;
-    font-size: 16px;
+  .section.info {
+    gap: 10px 10%;
   }
-  .section.info .mob {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 10px;
+  .section.info h1 {
+    margin-bottom: 40px !important;
   }
-  .section.info .mob .block {
-    flex: 1;
-    min-width: 145px;
-    height: 150px;
-    background-color: #272727;
+  .section.info .block {
+    height: 50px;
   }
-  .section.info .block:nth-of-type(1) {
-    background-image: url("assets/info/second.png");
-    background-size: cover;
+  .section.info .block .title {
+    height: 60%;
+    border-left: 2px solid var(--pink);
   }
-  .section.info .block:nth-of-type(1) h3 {
-    /*font-weight: 600;*/
-    /*width: 100%;*/
-    /*backdrop-filter: blur(1px);*/
-  }
-  .section.info .block:nth-of-type(2) {
-    background-image: url("assets/info/third.png");
-    background-size: cover;
-  }
-  /*.section.info .block:nth-of-type(2) h3 {*/
-  /*  width: 100%;*/
-  /*  backdrop-filter: blur(1px) brightness(95%);*/
-  /*}*/
-  .section.info .block:nth-of-type(3) {
-    background-image: unset;
+  .section.info .block .title h3 {
+    font-size: 0.6rem;
   }
 }
 

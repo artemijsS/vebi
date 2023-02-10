@@ -29,7 +29,7 @@ header {
     cursor: pointer;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .header {
         height: 80px;
     }
@@ -41,6 +41,24 @@ header {
     }
     nav .link {
         font-size: 13px !important;
+    }
+}
+
+.burger {
+    display: none;
+    width: 37px;
+    height: 26.7px;
+}
+
+@media screen and (max-width: 710px) {
+    .header .logo svg {
+        width: 80px;
+    }
+    nav {
+        gap: 10px !important;
+    }
+    nav .link {
+        font-size: 11px !important;
     }
 }
 
@@ -137,15 +155,15 @@ nav .link:hover:before {
     display: flex !important;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 40px;
-    gap: 0;
+    gap: 0 !important;
 }
 .burgerOpen nav .link {
     text-transform: uppercase;
-    font-size: 1.7em !important;
+    font-size: 1.5em !important;
     font-weight: 600;
-    padding: 25px 0;
+    padding: 15px 0;
 }
 .burgerOpen nav .link:before {
     content: "";

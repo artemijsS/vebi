@@ -17,3 +17,7 @@ export { default as servicesRU } from "./ru/services.json"
 export { default as infoEN } from "./en/info.json"
 export { default as infoLV } from "./lv/info.json"
 export { default as infoRU } from "./ru/info.json"
+
+export { default as advantagesEN } from "./en/advantages.json"
+export { default as advantagesLV } from "./lv/advantages.json"
+export { default as advantagesRU } from "./ru/advantages.json"

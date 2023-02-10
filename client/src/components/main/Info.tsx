@@ -1,133 +1,122 @@
 import React, { forwardRef, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Slider } from '../index';
-import { vebiRU } from '../../assets/info/pdfs';
 
 
 const Info = forwardRef<HTMLElement>((props, ref) => {
 
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const blockRef = useRef<HTMLDivElement>(null);
-    const sliderTransition = useRef<string | undefined>(undefined);
 
-    const onInfoClick = (id: number) => {
-        if (blockRef.current?.parentElement?.style.transform.split("px")[0].split("(")[1] === sliderTransition.current) {
-            console.log(id)
-            window.open(vebiRU, '_blank');
-        }
-    }
-    const onInfoMobClick = (id: number) => {
-        window.open(vebiRU, '_blank');
-    }
-
-    const onInfoDown = () => {
-        sliderTransition.current = blockRef.current?.parentElement?.style.transform.split("px")[0].split("(")[1]
+    const onInfoClick = (filename: string) => {
+        window.open(`${process.env.REACT_APP_SERVER ? process.env.REACT_APP_SERVER : ""}/api/pdf?file=${filename}&language=${i18n.language}`, '_blank');
     }
 
     return (
         <div className="wrapper">
             <div className="secondWrapper">
-                <section ref={ref} className={"section info"}>
-                    <h1 className={"slide-show-title"}>{t("info:title")}</h1>
-                    <Slider>
-                        <div onMouseDown={onInfoDown} ref={blockRef} id={"1"} className={"block"}>
-                            <div className="pdf-card">
-                                <h3>{t("info:scaling")}</h3>
-                                <button onClick={() => onInfoClick(1)} className="button">
-                                    {t("info:read")}
-                                </button>
-                            </div>
+                <section ref={ref} className={"section info pdf"}>
+                    <h1>{t("info:title")}</h1>
+                    <div ref={blockRef} className={"block"}>
+                        <button onClick={() => onInfoClick("VEBI-Website-as-a-business-scaling-tool")}>
+                            <svg height="86" viewBox="0 0 64 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clipPath="url(#clip0_2560_2473)">
+                                    <path d="M30.3167 43.0168C29.4833 40.3293 29.5 35.1391 29.9833 35.1391C31.3833 35.1391 31.25 41.3371 30.3167 43.0168ZM30.0333 50.9449C28.75 54.3379 27.15 58.218 25.3 61.4766C28.35 60.3008 31.8 58.5875 35.7833 57.798C33.6667 56.1855 31.6333 53.8676 30.0333 50.9449ZM14.35 71.9074C14.35 72.0418 16.55 71.0004 20.1667 65.1551C19.05 66.2133 15.3167 69.2703 14.35 71.9074ZM41.3333 26.875H64V81.9688C64 84.2027 62.2167 86 60 86H4C1.78333 86 0 84.2027 0 81.9688V4.03125C0 1.79727 1.78333 0 4 0H37.3333V22.8438C37.3333 25.0609 39.1333 26.875 41.3333 26.875ZM40 55.732C36.6667 53.6828 34.45 50.8609 32.8833 46.6953C33.6333 43.5879 34.8167 38.868 33.9167 35.9117C33.1333 30.9734 26.85 31.4605 25.95 34.7695C25.1167 37.8434 25.8833 42.177 27.3 47.7031C25.3667 52.3391 22.5167 58.5539 20.5 62.1148C20.4833 62.1148 20.4833 62.1316 20.4667 62.1316C15.95 64.4664 8.2 69.6062 11.3833 73.5535C12.3167 74.7125 14.05 75.2332 14.9667 75.2332C17.95 75.2332 20.9167 72.2098 25.15 64.8527C29.45 63.425 34.1667 61.6445 38.3167 60.9559C41.9333 62.9379 46.1667 64.2312 48.9833 64.2312C53.85 64.2312 54.1833 58.8562 52.2667 56.9414C49.95 54.657 43.2167 55.3121 40 55.732ZM62.8333 17.6367L46.5 1.17578C45.75 0.419922 44.7333 0 43.6667 0H42.6667V21.5H64V20.4754C64 19.4172 63.5833 18.3926 62.8333 17.6367ZM50.4833 60.5191C51.1667 60.0656 50.0667 58.5203 43.35 59.0074C49.5333 61.6613 50.4833 60.5191 50.4833 60.5191Z" fill="#E53171"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2560_2473">
+                                        <rect width="64" height="86" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                        <div className="title">
+                            <h3>{t("info:scaling")}</h3>
                         </div>
-                        <div onMouseDown={onInfoDown} id={"2"} className={"block"}>
-                            <div className="pdf-card">
-                                <h3>{t("info:it")}</h3>
-                                <button onClick={() => onInfoClick(2)} className="button">
-                                    {t("info:read")}
-                                </button>
-                            </div>
+                    </div>
+                    <div id={"2"} className={"block"}>
+                        <button onClick={() => onInfoClick("VEBI-IT-solutions")}>
+                            <svg height="86" viewBox="0 0 64 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clipPath="url(#clip0_2560_2473)">
+                                    <path d="M30.3167 43.0168C29.4833 40.3293 29.5 35.1391 29.9833 35.1391C31.3833 35.1391 31.25 41.3371 30.3167 43.0168ZM30.0333 50.9449C28.75 54.3379 27.15 58.218 25.3 61.4766C28.35 60.3008 31.8 58.5875 35.7833 57.798C33.6667 56.1855 31.6333 53.8676 30.0333 50.9449ZM14.35 71.9074C14.35 72.0418 16.55 71.0004 20.1667 65.1551C19.05 66.2133 15.3167 69.2703 14.35 71.9074ZM41.3333 26.875H64V81.9688C64 84.2027 62.2167 86 60 86H4C1.78333 86 0 84.2027 0 81.9688V4.03125C0 1.79727 1.78333 0 4 0H37.3333V22.8438C37.3333 25.0609 39.1333 26.875 41.3333 26.875ZM40 55.732C36.6667 53.6828 34.45 50.8609 32.8833 46.6953C33.6333 43.5879 34.8167 38.868 33.9167 35.9117C33.1333 30.9734 26.85 31.4605 25.95 34.7695C25.1167 37.8434 25.8833 42.177 27.3 47.7031C25.3667 52.3391 22.5167 58.5539 20.5 62.1148C20.4833 62.1148 20.4833 62.1316 20.4667 62.1316C15.95 64.4664 8.2 69.6062 11.3833 73.5535C12.3167 74.7125 14.05 75.2332 14.9667 75.2332C17.95 75.2332 20.9167 72.2098 25.15 64.8527C29.45 63.425 34.1667 61.6445 38.3167 60.9559C41.9333 62.9379 46.1667 64.2312 48.9833 64.2312C53.85 64.2312 54.1833 58.8562 52.2667 56.9414C49.95 54.657 43.2167 55.3121 40 55.732ZM62.8333 17.6367L46.5 1.17578C45.75 0.419922 44.7333 0 43.6667 0H42.6667V21.5H64V20.4754C64 19.4172 63.5833 18.3926 62.8333 17.6367ZM50.4833 60.5191C51.1667 60.0656 50.0667 58.5203 43.35 59.0074C49.5333 61.6613 50.4833 60.5191 50.4833 60.5191Z" fill="#E53171"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2560_2473">
+                                        <rect width="64" height="86" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                        <div className="title">
+                            <h3>{t("info:it")}</h3>
                         </div>
-                        <div onMouseDown={onInfoDown} id={"3"} className={"block"}>
-                            <div className="pdf-card">
-                                <h3>{t("info:design")}</h3>
-                                <button onClick={() => onInfoClick(3)} className="button">
-                                    {t("info:read")}
-                                </button>
-                            </div>
+                    </div>
+                    <div id={"3"} className={"block"}>
+                        <button onClick={() => onInfoClick("VEBI-Design-solutions")}>
+                            <svg height="86" viewBox="0 0 64 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clipPath="url(#clip0_2560_2473)">
+                                    <path d="M30.3167 43.0168C29.4833 40.3293 29.5 35.1391 29.9833 35.1391C31.3833 35.1391 31.25 41.3371 30.3167 43.0168ZM30.0333 50.9449C28.75 54.3379 27.15 58.218 25.3 61.4766C28.35 60.3008 31.8 58.5875 35.7833 57.798C33.6667 56.1855 31.6333 53.8676 30.0333 50.9449ZM14.35 71.9074C14.35 72.0418 16.55 71.0004 20.1667 65.1551C19.05 66.2133 15.3167 69.2703 14.35 71.9074ZM41.3333 26.875H64V81.9688C64 84.2027 62.2167 86 60 86H4C1.78333 86 0 84.2027 0 81.9688V4.03125C0 1.79727 1.78333 0 4 0H37.3333V22.8438C37.3333 25.0609 39.1333 26.875 41.3333 26.875ZM40 55.732C36.6667 53.6828 34.45 50.8609 32.8833 46.6953C33.6333 43.5879 34.8167 38.868 33.9167 35.9117C33.1333 30.9734 26.85 31.4605 25.95 34.7695C25.1167 37.8434 25.8833 42.177 27.3 47.7031C25.3667 52.3391 22.5167 58.5539 20.5 62.1148C20.4833 62.1148 20.4833 62.1316 20.4667 62.1316C15.95 64.4664 8.2 69.6062 11.3833 73.5535C12.3167 74.7125 14.05 75.2332 14.9667 75.2332C17.95 75.2332 20.9167 72.2098 25.15 64.8527C29.45 63.425 34.1667 61.6445 38.3167 60.9559C41.9333 62.9379 46.1667 64.2312 48.9833 64.2312C53.85 64.2312 54.1833 58.8562 52.2667 56.9414C49.95 54.657 43.2167 55.3121 40 55.732ZM62.8333 17.6367L46.5 1.17578C45.75 0.419922 44.7333 0 43.6667 0H42.6667V21.5H64V20.4754C64 19.4172 63.5833 18.3926 62.8333 17.6367ZM50.4833 60.5191C51.1667 60.0656 50.0667 58.5203 43.35 59.0074C49.5333 61.6613 50.4833 60.5191 50.4833 60.5191Z" fill="#E53171"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2560_2473">
+                                        <rect width="64" height="86" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                        <div className="title">
+                            <h3>{t("info:design")}</h3>
                         </div>
-                        <div onMouseDown={onInfoDown} id={"4"} className={"block"}>
-                            <div className="pdf-card">
-                                <h3>{t("info:web")}</h3>
-                                <button onClick={() => onInfoClick(4)} className="button">
-                                    {t("info:read")}
-                                </button>
-                            </div>
+                    </div>
+                    <div id={"4"} className={"block"}>
+                        <button onClick={() => onInfoClick("VEBI-Website-creation-from-scratch")}>
+                            <svg height="86" viewBox="0 0 64 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clipPath="url(#clip0_2560_2473)">
+                                    <path d="M30.3167 43.0168C29.4833 40.3293 29.5 35.1391 29.9833 35.1391C31.3833 35.1391 31.25 41.3371 30.3167 43.0168ZM30.0333 50.9449C28.75 54.3379 27.15 58.218 25.3 61.4766C28.35 60.3008 31.8 58.5875 35.7833 57.798C33.6667 56.1855 31.6333 53.8676 30.0333 50.9449ZM14.35 71.9074C14.35 72.0418 16.55 71.0004 20.1667 65.1551C19.05 66.2133 15.3167 69.2703 14.35 71.9074ZM41.3333 26.875H64V81.9688C64 84.2027 62.2167 86 60 86H4C1.78333 86 0 84.2027 0 81.9688V4.03125C0 1.79727 1.78333 0 4 0H37.3333V22.8438C37.3333 25.0609 39.1333 26.875 41.3333 26.875ZM40 55.732C36.6667 53.6828 34.45 50.8609 32.8833 46.6953C33.6333 43.5879 34.8167 38.868 33.9167 35.9117C33.1333 30.9734 26.85 31.4605 25.95 34.7695C25.1167 37.8434 25.8833 42.177 27.3 47.7031C25.3667 52.3391 22.5167 58.5539 20.5 62.1148C20.4833 62.1148 20.4833 62.1316 20.4667 62.1316C15.95 64.4664 8.2 69.6062 11.3833 73.5535C12.3167 74.7125 14.05 75.2332 14.9667 75.2332C17.95 75.2332 20.9167 72.2098 25.15 64.8527C29.45 63.425 34.1667 61.6445 38.3167 60.9559C41.9333 62.9379 46.1667 64.2312 48.9833 64.2312C53.85 64.2312 54.1833 58.8562 52.2667 56.9414C49.95 54.657 43.2167 55.3121 40 55.732ZM62.8333 17.6367L46.5 1.17578C45.75 0.419922 44.7333 0 43.6667 0H42.6667V21.5H64V20.4754C64 19.4172 63.5833 18.3926 62.8333 17.6367ZM50.4833 60.5191C51.1667 60.0656 50.0667 58.5203 43.35 59.0074C49.5333 61.6613 50.4833 60.5191 50.4833 60.5191Z" fill="#E53171"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2560_2473">
+                                        <rect width="64" height="86" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                        <div className="title">
+                            <h3>{t("info:web")}</h3>
                         </div>
-                        <div onMouseDown={onInfoDown} id={"5"} className={"block"}>
-                            <div className="pdf-card">
-                                <h3>{t("info:webUpdate")}</h3>
-                                <button onClick={() => onInfoClick(5)} className="button">
-                                    {t("info:read")}
-                                </button>
-                            </div>
+                    </div>
+                    <div id={"5"} className={"block"}>
+                        <button onClick={() => onInfoClick("VEBI-Website-update")}>
+                            <svg height="86" viewBox="0 0 64 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clipPath="url(#clip0_2560_2473)">
+                                    <path d="M30.3167 43.0168C29.4833 40.3293 29.5 35.1391 29.9833 35.1391C31.3833 35.1391 31.25 41.3371 30.3167 43.0168ZM30.0333 50.9449C28.75 54.3379 27.15 58.218 25.3 61.4766C28.35 60.3008 31.8 58.5875 35.7833 57.798C33.6667 56.1855 31.6333 53.8676 30.0333 50.9449ZM14.35 71.9074C14.35 72.0418 16.55 71.0004 20.1667 65.1551C19.05 66.2133 15.3167 69.2703 14.35 71.9074ZM41.3333 26.875H64V81.9688C64 84.2027 62.2167 86 60 86H4C1.78333 86 0 84.2027 0 81.9688V4.03125C0 1.79727 1.78333 0 4 0H37.3333V22.8438C37.3333 25.0609 39.1333 26.875 41.3333 26.875ZM40 55.732C36.6667 53.6828 34.45 50.8609 32.8833 46.6953C33.6333 43.5879 34.8167 38.868 33.9167 35.9117C33.1333 30.9734 26.85 31.4605 25.95 34.7695C25.1167 37.8434 25.8833 42.177 27.3 47.7031C25.3667 52.3391 22.5167 58.5539 20.5 62.1148C20.4833 62.1148 20.4833 62.1316 20.4667 62.1316C15.95 64.4664 8.2 69.6062 11.3833 73.5535C12.3167 74.7125 14.05 75.2332 14.9667 75.2332C17.95 75.2332 20.9167 72.2098 25.15 64.8527C29.45 63.425 34.1667 61.6445 38.3167 60.9559C41.9333 62.9379 46.1667 64.2312 48.9833 64.2312C53.85 64.2312 54.1833 58.8562 52.2667 56.9414C49.95 54.657 43.2167 55.3121 40 55.732ZM62.8333 17.6367L46.5 1.17578C45.75 0.419922 44.7333 0 43.6667 0H42.6667V21.5H64V20.4754C64 19.4172 63.5833 18.3926 62.8333 17.6367ZM50.4833 60.5191C51.1667 60.0656 50.0667 58.5203 43.35 59.0074C49.5333 61.6613 50.4833 60.5191 50.4833 60.5191Z" fill="#E53171"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2560_2473">
+                                        <rect width="64" height="86" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                        <div className="title">
+                            <h3>{t("info:webUpdate")}</h3>
                         </div>
-                        <div onMouseDown={onInfoDown} id={"6"} className={"block"}>
-                            <div className="pdf-card">
-                                <h3>{t("info:about")}</h3>
-                                <button onClick={() => onInfoClick(6)} className="button">
-                                    {t("info:read")}
-                                </button>
-                            </div>
-                        </div>
-                    </Slider>
-                    <div className="mob">
-                        <div ref={blockRef} id={"1"} className={"block"}>
-                            <div className="pdf-card">
-                                <h3>{t("info:scaling")}</h3>
-                                <button onClick={() => onInfoMobClick(1)} className="button">
-                                    {t("info:read")}
-                                </button>
-                            </div>
-                        </div>
-                        <div id={"2"} className={"block"}>
-                            <div className="pdf-card">
-                                <h3>{t("info:it")}</h3>
-                                <button onClick={() => onInfoMobClick(2)} className="button">
-                                    {t("info:read")}
-                                </button>
-                            </div>
-                        </div>
-                        <div id={"3"} className={"block"}>
-                            <div className="pdf-card">
-                                <h3>{t("info:design")}</h3>
-                                <button onClick={() => onInfoMobClick(3)} className="button">
-                                    {t("info:read")}
-                                </button>
-                            </div>
-                        </div>
-                        <div id={"4"} className={"block"}>
-                            <div className="pdf-card">
-                                <h3>{t("info:web")}</h3>
-                                <button onClick={() => onInfoMobClick(4)} className="button">
-                                    {t("info:read")}
-                                </button>
-                            </div>
-                        </div>
-                        <div id={"5"} className={"block"}>
-                            <div className="pdf-card">
-                                <h3>{t("info:webUpdate")}</h3>
-                                <button onClick={() => onInfoMobClick(5)} className="button">
-                                    {t("info:read")}
-                                </button>
-                            </div>
-                        </div>
-                        <div id={"6"} className={"block"}>
-                            <div className="pdf-card">
-                                <h3>{t("info:about")}</h3>
-                                <button onClick={() => onInfoMobClick(6)} className="button">
-                                    {t("info:read")}
-                                </button>
-                            </div>
+                    </div>
+                    <div id={"6"} className={"block"}>
+                        <button onClick={() => onInfoClick("VEBI")}>
+                            <svg height="86" viewBox="0 0 64 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clipPath="url(#clip0_2560_2473)">
+                                    <path d="M30.3167 43.0168C29.4833 40.3293 29.5 35.1391 29.9833 35.1391C31.3833 35.1391 31.25 41.3371 30.3167 43.0168ZM30.0333 50.9449C28.75 54.3379 27.15 58.218 25.3 61.4766C28.35 60.3008 31.8 58.5875 35.7833 57.798C33.6667 56.1855 31.6333 53.8676 30.0333 50.9449ZM14.35 71.9074C14.35 72.0418 16.55 71.0004 20.1667 65.1551C19.05 66.2133 15.3167 69.2703 14.35 71.9074ZM41.3333 26.875H64V81.9688C64 84.2027 62.2167 86 60 86H4C1.78333 86 0 84.2027 0 81.9688V4.03125C0 1.79727 1.78333 0 4 0H37.3333V22.8438C37.3333 25.0609 39.1333 26.875 41.3333 26.875ZM40 55.732C36.6667 53.6828 34.45 50.8609 32.8833 46.6953C33.6333 43.5879 34.8167 38.868 33.9167 35.9117C33.1333 30.9734 26.85 31.4605 25.95 34.7695C25.1167 37.8434 25.8833 42.177 27.3 47.7031C25.3667 52.3391 22.5167 58.5539 20.5 62.1148C20.4833 62.1148 20.4833 62.1316 20.4667 62.1316C15.95 64.4664 8.2 69.6062 11.3833 73.5535C12.3167 74.7125 14.05 75.2332 14.9667 75.2332C17.95 75.2332 20.9167 72.2098 25.15 64.8527C29.45 63.425 34.1667 61.6445 38.3167 60.9559C41.9333 62.9379 46.1667 64.2312 48.9833 64.2312C53.85 64.2312 54.1833 58.8562 52.2667 56.9414C49.95 54.657 43.2167 55.3121 40 55.732ZM62.8333 17.6367L46.5 1.17578C45.75 0.419922 44.7333 0 43.6667 0H42.6667V21.5H64V20.4754C64 19.4172 63.5833 18.3926 62.8333 17.6367ZM50.4833 60.5191C51.1667 60.0656 50.0667 58.5203 43.35 59.0074C49.5333 61.6613 50.4833 60.5191 50.4833 60.5191Z" fill="#E53171"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2560_2473">
+                                        <rect width="64" height="86" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                        <div className="title">
+                            <h3>{t("info:about")}</h3>
                         </div>
                     </div>
                 </section>

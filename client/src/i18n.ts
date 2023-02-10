@@ -5,7 +5,8 @@ import { homeEN, homeLV, homeRU,
     headerEN, headerLV, headerRU,
     aboutEN, aboutLV, aboutRU,
     servicesEN, servicesLV, servicesRU,
-    infoEN, infoLV, infoRU
+    infoEN, infoLV, infoRU,
+    advantagesEN, advantagesLV, advantagesRU
 } from './translate';
 
 i18n
@@ -23,21 +24,24 @@ i18n
                 header: headerEN,
                 about: aboutEN,
                 services: servicesEN,
-                info: infoEN
+                info: infoEN,
+                advantages: advantagesEN
             },
             lv: {
                 home: homeLV,
                 header: headerLV,
                 about: aboutLV,
                 services: servicesLV,
-                info: infoLV
+                info: infoLV,
+                advantages: advantagesLV
             },
             ru: {
                 home: homeRU,
                 header: headerRU,
                 about: aboutRU,
                 services: servicesRU,
-                info: infoRU
+                info: infoRU,
+                advantages: advantagesRU
             },
         }
     });
