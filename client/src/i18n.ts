@@ -6,7 +6,8 @@ import { homeEN, homeLV, homeRU,
     aboutEN, aboutLV, aboutRU,
     servicesEN, servicesLV, servicesRU,
     infoEN, infoLV, infoRU,
-    advantagesEN, advantagesLV, advantagesRU
+    advantagesEN, advantagesLV, advantagesRU,
+    contactsEN, contactsLV, contactsRU
 } from './translate';
 
 i18n
@@ -25,7 +26,8 @@ i18n
                 about: aboutEN,
                 services: servicesEN,
                 info: infoEN,
-                advantages: advantagesEN
+                advantages: advantagesEN,
+                contacts: contactsEN
             },
             lv: {
                 home: homeLV,
@@ -33,7 +35,8 @@ i18n
                 about: aboutLV,
                 services: servicesLV,
                 info: infoLV,
-                advantages: advantagesLV
+                advantages: advantagesLV,
+                contacts: contactsLV
             },
             ru: {
                 home: homeRU,
@@ -41,7 +44,8 @@ i18n
                 about: aboutRU,
                 services: servicesRU,
                 info: infoRU,
-                advantages: advantagesRU
+                advantages: advantagesRU,
+                contacts: contactsRU
             },
         }
     });

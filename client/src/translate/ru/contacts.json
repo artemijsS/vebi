@@ -1,0 +1,21 @@
+{
+  "title": "Контакты",
+  "info": {
+    "title": "ИНФ<span class=\"info\">О</span>",
+    "text": "Мы с радостью ответим на любой ваш вопрос: <a href=\"mailto:info@vabi.lv\">info@vebi.lv</a>",
+    "tel": "+(371) 22045255",
+    "name": "Роберт К."
+  },
+  "support": {
+    "title": "ПОМ<span class=\"sup-o-rus\">О</span><span class=\"sup-sh\">Щ</span><span class=\"sup-b\">Ь</span>",
+    "text": "Если у вас возникнут какие-либо проблемы, не стесняйтесь обращаться к нам за технической поддержкой.",
+    "tel": "+(371) 22331502",
+    "name": "Артемий С."
+  },
+  "design": {
+    "title": "ДИ<span class=\"des-z-rus\">З</span><span class=\"des-a-rus\">А</span>ЙН",
+    "text": "Или вы хотели бы проконсультироваться по вопросу дизайна?",
+    "tel": "+(371) 29134792",
+    "name": "Анджей Р."
+  }
+}

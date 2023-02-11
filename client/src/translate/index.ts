@@ -21,3 +21,7 @@ export { default as infoRU } from "./ru/info.json"
 export { default as advantagesEN } from "./en/advantages.json"
 export { default as advantagesLV } from "./lv/advantages.json"
 export { default as advantagesRU } from "./ru/advantages.json"
+
+export { default as contactsEN } from "./en/contacts.json"
+export { default as contactsLV } from "./lv/contacts.json"
+export { default as contactsRU } from "./ru/contacts.json"
