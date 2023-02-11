@@ -1,3 +1,4 @@
+export { default as CookieNotify } from "./cookieNotify/CookieNotify"
 export { default as Header } from "./header/Header"
 export { default as Footer } from "./footer/Footer"
 export { default as About } from "./main/About"
