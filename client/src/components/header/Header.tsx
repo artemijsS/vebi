@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18next from "i18next";
+import { useDispatch } from "react-redux";
 import Logo from '../../assets/logo/logo';
 import { Ru, Lv, En } from '../../assets/languages';
-import { Link } from "react-router-dom";
+import { setPolitics } from "../../redux/actions/politics";
 
 import './header.css'
 
@@ -27,6 +28,7 @@ function Header({refs}:HeaderProps): JSX.Element {
     const burgerStatusRef = useRef<Boolean>(burgerStatus);
 
     const { t } = useTranslation();
+    const dispatch = useDispatch()
 
     useEffect(() => {
         window.addEventListener('scroll', onScroll)
@@ -90,6 +92,10 @@ function Header({refs}:HeaderProps): JSX.Element {
         onSectionClick(section);
     }
 
+    const onPoliticsClick = (politics: string) => {
+        dispatch(setPolitics(politics));
+    }
+
     return (
         <header ref={headerRef}>
             <div className="wrapper">
@@ -135,9 +141,9 @@ function Header({refs}:HeaderProps): JSX.Element {
                                 <div onClick={() => onSectionBurgerClick("info")} className={activeSection === "info" ? "active link" : " link"}>{t("header:info")}</div>
                                 <div onClick={() => onSectionBurgerClick("contacts")} className={activeSection === "contacts" ? "active link" : " link"}>{t("header:contacts")}</div>
                                 <div className="terms">
-                                    <Link to={"/"}>{t("header:cookie")}</Link>
-                                    <Link to={"/"}>{t("header:userAgreement")}</Link>
-                                    <Link to={"/"}>{t("header:privacyPolicy")}</Link>
+                                    <button onClick={() => onPoliticsClick("cookie")}>{t("header:cookie")}</button>
+                                    <button onClick={() => onPoliticsClick("userAg")}>{t("header:userAgreement")}</button>
+                                    <button onClick={() => onPoliticsClick("privacy")}>{t("header:privacyPolicy")}</button>
                                 </div>
                             </nav>
                         </div>

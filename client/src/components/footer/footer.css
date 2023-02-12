@@ -85,7 +85,7 @@ footer {
 .footer2 {
     display: flex;
     height: 93%;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: lighter;
     color: white;
     padding: 0 30px;
@@ -96,7 +96,12 @@ footer {
 .footer2 .terms {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 5px;
+}
+.footer2 .terms button {
+    font-size: inherit;
+    color: #FFFFFF;
+    cursor: pointer;
 }
 
 
@@ -116,7 +121,12 @@ footer {
         height: 35px;
     }
     .footer2 {
-        font-size: 11px;
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .footer2 {
+        font-size: 7px;
     }
 }
 @media screen and (max-width: 600px) {

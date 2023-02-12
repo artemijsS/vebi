@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import setCssProperties from './utils/cssProperties';
-import { CookieNotify } from './components';
+import { CookieNotify, Politics } from './components';
 import { useRoutes } from './routes';
 import ReactGA from 'react-ga4';
 
@@ -17,6 +17,7 @@ function App() {
     return (
         <>
             <CookieNotify/>
+            <Politics/>
             <BrowserRouter>
               { routes }
             </BrowserRouter>

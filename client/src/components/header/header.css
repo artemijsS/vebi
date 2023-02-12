@@ -213,12 +213,14 @@ nav .link:hover:before {
     left: 0;
     top: 0;
 }
-.burgerOpen nav .terms a {
+.burgerOpen nav .terms button {
     padding: 10px 0;
     position: relative;
     font-size: 0.8em;
+    color: #FFFFFF;
+    text-align: unset;
 }
-.burgerOpen nav .terms a:before {
+.burgerOpen nav .terms button:before {
     content: "";
     position: absolute;
     width: 50px;
@@ -226,7 +228,7 @@ nav .link:hover:before {
     left: 0;
     bottom: 0;
 }
-.burgerOpen nav .terms a:last-of-type:before {
+.burgerOpen nav .terms button:last-of-type:before {
     display: none;
 }
 

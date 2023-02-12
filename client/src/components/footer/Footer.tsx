@@ -1,16 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
 import './footer.css'
 import Icon from '../../assets/logo/icon';
 import { LinkedIn, Telegram, Facebook } from '../../assets/socials';
+import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
+import { setPolitics } from "../../redux/actions/politics";
+
 
 function Footer(): JSX.Element {
+
+    const { t } = useTranslation();
+    const dispatch = useDispatch()
 
     const [year, setYear] = useState<string>("2023");
 
     useEffect(() => {
         setYear(new Date().getFullYear().toString());
     }, [])
+
+    const onPoliticsClick = (politics: string) => {
+        dispatch(setPolitics(politics));
+    }
 
     return (
         <footer>
@@ -37,9 +47,9 @@ function Footer(): JSX.Element {
                         <div className="copyRight">© {year} Vebi. All rights reserved</div>
                         <div className="mail"><a href="mailto:info@vebi.lv">info@vebi.lv</a></div>
                         <div className="terms">
-                            <Link to={"/"}>Privacy Policy</Link>
-                            <Link to={"/"}>User Agreement</Link>
-                            <Link to={"/"}>Cookie Policy</Link>
+                            <button onClick={() => onPoliticsClick("privacy")}>{t("footer:privacy")}</button>
+                            <button onClick={() => onPoliticsClick("userAg")}>{t("footer:userAg")}</button>
+                            <button onClick={() => onPoliticsClick("cookie")}>{t("footer:cookie")}</button>
                         </div>
                     </div>
                 </div>

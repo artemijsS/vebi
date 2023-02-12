@@ -25,3 +25,11 @@ export { default as advantagesRU } from "./ru/advantages.json"
 export { default as contactsEN } from "./en/contacts.json"
 export { default as contactsLV } from "./lv/contacts.json"
 export { default as contactsRU } from "./ru/contacts.json"
+
+export { default as footerEN } from "./en/footer.json"
+export { default as footerLV } from "./lv/footer.json"
+export { default as footerRU } from "./ru/footer.json"
+
+export { default as politicsEN } from "./en/politics.json"
+export { default as politicsLV } from "./lv/politics.json"
+export { default as politicsRU } from "./ru/politics.json"

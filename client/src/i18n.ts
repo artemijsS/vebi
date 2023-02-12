@@ -7,7 +7,9 @@ import { homeEN, homeLV, homeRU,
     servicesEN, servicesLV, servicesRU,
     infoEN, infoLV, infoRU,
     advantagesEN, advantagesLV, advantagesRU,
-    contactsEN, contactsLV, contactsRU
+    contactsEN, contactsLV, contactsRU,
+    footerEN, footerLV, footerRU,
+    politicsEN, politicsLV, politicsRU
 } from './translate';
 
 i18n
@@ -27,7 +29,9 @@ i18n
                 services: servicesEN,
                 info: infoEN,
                 advantages: advantagesEN,
-                contacts: contactsEN
+                contacts: contactsEN,
+                footer: footerEN,
+                politics: politicsEN
             },
             lv: {
                 home: homeLV,
@@ -36,7 +40,9 @@ i18n
                 services: servicesLV,
                 info: infoLV,
                 advantages: advantagesLV,
-                contacts: contactsLV
+                contacts: contactsLV,
+                footer: footerLV,
+                politics: politicsLV
             },
             ru: {
                 home: homeRU,
@@ -45,7 +51,9 @@ i18n
                 services: servicesRU,
                 info: infoRU,
                 advantages: advantagesRU,
-                contacts: contactsRU
+                contacts: contactsRU,
+                footer: footerRU,
+                politics: politicsRU
             },
         }
     });
