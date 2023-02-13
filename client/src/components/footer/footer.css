@@ -96,14 +96,19 @@ footer {
 .footer2 .terms {
     display: flex;
     justify-content: space-between;
-    gap: 5px;
+    gap: 10px;
 }
 .footer2 .terms button {
     font-size: inherit;
     color: #FFFFFF;
     cursor: pointer;
 }
-
+.footer2 .terms button:hover {
+    color: var(--pink);
+}
+.footer2 a:hover {
+    color: var(--pink);
+}
 
 @media screen and (max-width: 1000px) {
     .footer1 .logo svg {
@@ -125,6 +130,9 @@ footer {
     }
 }
 @media screen and (max-width: 720px) {
+    .footer1 .logo .slogan {
+        font-size: 17px !important;
+    }
     .footer2 {
         font-size: 7px;
     }
@@ -184,5 +192,16 @@ footer {
     }
     .footer2 .terms {
         display: none;
+    }
+}
+@media screen and (max-width: 350px) {
+    footer .footer1 .logo .svg {
+        width: 20px !important;
+    }
+    .footer1 .logo .slogan {
+        font-size: 10px !important;
+    }
+    .footer2 {
+        font-size: 7px;
     }
 }

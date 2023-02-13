@@ -211,12 +211,12 @@ footer {
     align-items: center;
   }
   .section .blocks.cubes .block .home-block .heading {
-    width: 20%;
+    width: 15%;
     padding: 7px 0;
     border-right: 2px solid var(--pink);
   }
   .section .blocks.cubes .block .home-block p {
-    width: 70%;
+    flex: 1;
     margin: 0 0 0 5% !important;
   }
   .section .blocks.cubes .block .home-block .heading,
@@ -233,7 +233,7 @@ footer {
     position: absolute;
     font-size: 1.3rem;
     top: -50%;
-    left: 25%;
+    left: 20%;
   }
   .section .blocks.cubes .block .home-block svg {
     /*width: 60%;*/
@@ -1051,11 +1051,17 @@ footer {
 }
 
 .cl-pink {
-  color: #E43172;
+  color: var(--pink);
 }
+
+a:hover {
+  color: var(--pink);
+  border-color: var(--pink) !important;
+}
+
 @media screen and (max-width: 600px) {
   .cl-pink-mobile {
-    color: #E43172;
+    color: var(--pink);
   }
   .capLetter-mobile {
     text-transform: capitalize;

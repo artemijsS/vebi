@@ -33,3 +33,7 @@ export { default as footerRU } from "./ru/footer.json"
 export { default as politicsEN } from "./en/politics.json"
 export { default as politicsLV } from "./lv/politics.json"
 export { default as politicsRU } from "./ru/politics.json"
+
+export { default as cookieNotifyEN } from "./en/cookieNotify.json"
+export { default as cookieNotifyLV } from "./lv/cookieNotify.json"
+export { default as cookieNotifyRU } from "./ru/cookieNotify.json"

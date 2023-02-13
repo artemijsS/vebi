@@ -31,18 +31,7 @@ function Politics(): JSX.Element {
                                     </svg>
                                 </button>
                                 <h1>{t(`politics:${politics}.title`)}</h1>
-                                <p>VEBI is a small team of highly skilled web developers and designers dedicated to delivering exceptional websites and online experiences to our clients.
-                                    Our approach is always collaborative and client-centered, ensuring that every website we build is a true reflection of your brand and meets your specific requirements.
-                                    Whether you're launching a new website, redesigning an existing one, or simply looking for ongoing support and maintenance, we are here to help you succeed online.VEBI is a small team of highly skilled web developers and designers dedicated to delivering exceptional websites and online experiences to our clients.
-                                    Our approach is always collaborative and client-centered, ensuring that every website we build is a true reflection of your brand and meets your specific requirements.
-                                    Whether you're launching a new website, redesigning an existing one, or simply looking for ongoing support and maintenance, we are here to help you succeed online.VEBI is a small team of highly skilled web developers and designers dedicated to delivering exceptional websites and online experiences to our clients.
-                                    Our approach is always collaborative and client-centered, ensuring that every website we build is a true reflection of your brand and meets your specific requirements.
-                                    Whether you're launching a new website, redesigning an existing one, or simply looking for ongoing support and maintenance, we are here to help you succeed online.VEBI is a small team of highly skilled web developers and designers dedicated to delivering exceptional websites and online experiences to our clients.
-                                    Our approach is always collaborative and client-centered, ensuring that every website we build is a true reflection of your brand and meets your specific requirements.
-                                    Whether you're launching a new website, redesigning an existing one, or simply looking for ongoing support and maintenance, we are here to help you succeed online.VEBI is a small team of highly skilled web developers and designers dedicated to delivering exceptional websites and online experiences to our clients.
-                                    Our approach is always collaborative and client-centered, ensuring that every website we build is a true reflection of your brand and meets your specific requirements.
-                                    Whether you're launching a new website, redesigning an existing one, or simply looking for ongoing support and maintenance, we are here to help you succeed online.Our approach is always collaborative and client-centered, ensuring that every website we build is a true reflection of your brand and meets your specific requirements.
-                                    Whether you're launching a new website, redesigning an existing one, or simply looking for ongoing support and maintenance, we are here to help you succeed online.</p>
+                                <p dangerouslySetInnerHTML={{ __html: t("politics:tempText") }}/>
                             </div>
                         </div>
                     </div>

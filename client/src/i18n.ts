@@ -9,7 +9,8 @@ import { homeEN, homeLV, homeRU,
     advantagesEN, advantagesLV, advantagesRU,
     contactsEN, contactsLV, contactsRU,
     footerEN, footerLV, footerRU,
-    politicsEN, politicsLV, politicsRU
+    politicsEN, politicsLV, politicsRU,
+    cookieNotifyEN, cookieNotifyLV, cookieNotifyRU
 } from './translate';
 
 i18n
@@ -31,7 +32,8 @@ i18n
                 advantages: advantagesEN,
                 contacts: contactsEN,
                 footer: footerEN,
-                politics: politicsEN
+                politics: politicsEN,
+                cookieNotify: cookieNotifyEN
             },
             lv: {
                 home: homeLV,
@@ -42,7 +44,8 @@ i18n
                 advantages: advantagesLV,
                 contacts: contactsLV,
                 footer: footerLV,
-                politics: politicsLV
+                politics: politicsLV,
+                cookieNotify: cookieNotifyLV
             },
             ru: {
                 home: homeRU,
@@ -53,7 +56,8 @@ i18n
                 advantages: advantagesRU,
                 contacts: contactsRU,
                 footer: footerRU,
-                politics: politicsRU
+                politics: politicsRU,
+                cookieNotify: cookieNotifyRU
             },
         }
     });

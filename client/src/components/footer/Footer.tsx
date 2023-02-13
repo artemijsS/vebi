@@ -29,14 +29,12 @@ function Footer(): JSX.Element {
                     <div className="footer1">
                         <div className="logo">
                             <Icon/>
-                            <div className="slogan">
-                                Your <span className={"cl-pink"}>success</span> <span className={"capLetter-mobile"}>is</span> our <span className={"cl-pink-mobile"}>aim</span>
-                            </div>
+                            <div className="slogan" dangerouslySetInnerHTML={{ __html: t("footer:slogan") }}/>
                         </div>
                         <div className="socials">
                             <a href="https://www.linkedin.com/company/vebi" target="_blank" rel="noreferrer"><img src={LinkedIn} alt="error"/></a>
                             <a href="https://t.me/vebilv" target="_blank" rel="noreferrer"><img src={Telegram} alt="error"/></a>
-                            <a href="http://facebook.com/vebi.lv" target="_blank" rel="noreferrer"><img src={Facebook} alt="error"/></a>
+                            <a href="http://vebi.lv/facebook" target="_blank" rel="noreferrer"><img src={Facebook} alt="error"/></a>
                         </div>
                     </div>
                 </div>
