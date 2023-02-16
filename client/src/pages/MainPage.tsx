@@ -1,8 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from "react-i18next";
 import { Header, Footer, Home, About, Services, Info, Contacts, Advantages } from '../components';
 
 function MainPage(): JSX.Element {
+
+    const { t } = useTranslation();
 
     const [refs] = useState({
         home: useRef<HTMLElement>(null),
@@ -16,7 +19,7 @@ function MainPage(): JSX.Element {
     return (
         <div>
             <Helmet>
-                <title>VEBI</title>
+                <title>{t("seo:mainPage.title")}</title>
             </Helmet>
             <div className="minusHeader"/>
             <Header refs={refs}/>
