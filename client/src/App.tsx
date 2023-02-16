@@ -5,7 +5,7 @@ import { CookieNotify, Politics } from './components';
 import { useRoutes } from './routes';
 import ReactGA from 'react-ga4';
 
-const TRACKING_ID = "G-YNDBHH9T0M";
+const TRACKING_ID = "G-16M7F4ZJL2";
 ReactGA.initialize(TRACKING_ID);
 
 setCssProperties();
