@@ -768,7 +768,7 @@ footer {
 .section .blocks.contacts .block .contact .connection:after {
   content: "";
   position: absolute;
-  bottom: -15%;
+  bottom: -11px;
   width: 20%;
   border-bottom: 2px solid var(--pink);
 }
