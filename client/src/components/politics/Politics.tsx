@@ -32,6 +32,7 @@ function Politics(): JSX.Element {
                                 </button>
                                 <h1>{t(`politics:${politics}.title`)}</h1>
                                 <p dangerouslySetInnerHTML={{ __html: t("politics:tempText") }}/>
+                                <h3>SIA "A-Level"</h3>
                             </div>
                         </div>
                     </div>

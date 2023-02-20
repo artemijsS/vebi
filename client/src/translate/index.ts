@@ -37,3 +37,7 @@ export { default as politicsRU } from "./ru/politics.json"
 export { default as cookieNotifyEN } from "./en/cookieNotify.json"
 export { default as cookieNotifyLV } from "./lv/cookieNotify.json"
 export { default as cookieNotifyRU } from "./ru/cookieNotify.json"
+
+export { default as seoEN } from "./en/seo.json"
+export { default as seoLV } from "./lv/seo.json"
+export { default as seoRU } from "./ru/seo.json"

@@ -10,7 +10,8 @@ import { homeEN, homeLV, homeRU,
     contactsEN, contactsLV, contactsRU,
     footerEN, footerLV, footerRU,
     politicsEN, politicsLV, politicsRU,
-    cookieNotifyEN, cookieNotifyLV, cookieNotifyRU
+    cookieNotifyEN, cookieNotifyLV, cookieNotifyRU,
+    seoEN, seoLV, seoRU
 } from './translate';
 
 i18n
@@ -33,7 +34,8 @@ i18n
                 contacts: contactsEN,
                 footer: footerEN,
                 politics: politicsEN,
-                cookieNotify: cookieNotifyEN
+                cookieNotify: cookieNotifyEN,
+                seo: seoEN
             },
             lv: {
                 home: homeLV,
@@ -45,7 +47,8 @@ i18n
                 contacts: contactsLV,
                 footer: footerLV,
                 politics: politicsLV,
-                cookieNotify: cookieNotifyLV
+                cookieNotify: cookieNotifyLV,
+                seo: seoLV
             },
             ru: {
                 home: homeRU,
@@ -57,7 +60,8 @@ i18n
                 contacts: contactsRU,
                 footer: footerRU,
                 politics: politicsRU,
-                cookieNotify: cookieNotifyRU
+                cookieNotify: cookieNotifyRU,
+                seo: seoRU
             },
         }
     });
