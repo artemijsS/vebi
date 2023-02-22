@@ -34,7 +34,7 @@ function Footer(): JSX.Element {
                         <div className="socials">
                             <a href="https://www.linkedin.com/company/vebi" target="_blank" rel="noreferrer"><img src={LinkedIn} alt="error"/></a>
                             <a href="https://t.me/vebilv" target="_blank" rel="noreferrer"><img src={Telegram} alt="error"/></a>
-                            <a href="http://vebi.lv/facebook" target="_blank" rel="noreferrer"><img src={Facebook} alt="error"/></a>
+                            <a href="https://vebi.lv/facebook" target="_blank" rel="noreferrer"><img src={Facebook} alt="error"/></a>
                         </div>
                     </div>
                 </div>
