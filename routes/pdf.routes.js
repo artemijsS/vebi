@@ -1,5 +1,5 @@
-const fs = require('fs');
-const {Router} = require('express');
+import fs from 'fs'
+import { Router } from 'express';
 
 const router = Router();
 
@@ -9,7 +9,6 @@ router.get('', async (req, res) => {
     try {
         const filename = req.query.file;
         const language = req.query.language || "en";
-
         if (!filename || !["en","ru","lv"].includes(language)) {
             res.redirect('/');
             return;
@@ -19,7 +18,8 @@ router.get('', async (req, res) => {
 
         try {
             pdf = fs.readFileSync(`./pdfs/${language}/${filename}.pdf`);
-        } catch {
+        } catch (e) {
+            console.log(e)
             res.redirect('/');
             return;
         }
@@ -31,4 +31,4 @@ router.get('', async (req, res) => {
     }
 })
 
-module.exports = router;
+export default router;
