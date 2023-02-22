@@ -1,0 +1,207 @@
+footer {
+    height: 295px;
+    color: #FFFFFF;
+}
+
+.footer1-block {
+    width: 100%;
+    height: 120px;
+    background-color: #272727;
+}
+
+.footer2-block {
+    width: 100%;
+    height: 175px;
+    background-color: #383838;
+}
+
+@media screen and (max-width: 1000px) {
+    footer {
+        height: 178px;
+    }
+    .footer1-block {
+        height: 70px;
+    }
+    .footer1 .logo {
+        gap: 17px !important;
+    }
+    .footer1 .logo svg {
+        width: 39px !important;
+    }
+    .footer1 .logo .slogan {
+        font-size: 25px !important;
+    }
+    .footer2-block {
+        height: 108px;
+    }
+}
+
+.footer1 {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.footer1 .logo {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer1 .logo svg {
+    width: 44px;
+}
+.footer1 .logo .slogan {
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.footer1 .socials {
+    display: flex;
+    gap: 47px;
+}
+
+.footer1 .socials a {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.footer1 .socials a img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    position: relative;
+}
+
+.footer1 .socials a img:hover {
+    filter: invert(24%) sepia(71%) saturate(4639%) hue-rotate(327deg) brightness(97%) contrast(97%);
+}
+
+.footer2 {
+    display: flex;
+    height: 93%;
+    font-size: 13px;
+    font-weight: lighter;
+    color: white;
+    padding: 0 30px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.footer2 .terms {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.footer2 .terms button {
+    font-size: inherit;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.footer2 .terms button:hover {
+    color: var(--pink);
+}
+.footer2 a:hover {
+    color: var(--pink);
+}
+
+@media screen and (max-width: 1000px) {
+    .footer1 .logo svg {
+        width: 91px;
+    }
+    .footer1 .socials {
+        gap: 30px;
+    }
+    .footer1 .socials a {
+        width: 35px;
+        height: 35px;
+    }
+    .footer1 .socials a img {
+        width: 35px;
+        height: 35px;
+    }
+    .footer2 {
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .footer1 .logo .slogan {
+        font-size: 17px !important;
+    }
+    .footer2 {
+        font-size: 7px;
+    }
+}
+@media screen and (max-width: 600px) {
+    footer {
+        height: 136px;
+    }
+    .footer1-block {
+        height: 80px;
+    }
+    .footer1 {
+        padding: 0 10px;
+    }
+    .footer1 .logo .slogan {
+        font-size: 15px !important;
+    }
+    .footer1 .logo .slogan .cl-pink:after {
+        content: ' '; display: block;
+    }
+    .footer1 .socials a {
+        width: 33px;
+        height: 33px;
+    }
+    .footer1 .socials a img {
+        width: 33px;
+        height: 33px;
+    }
+    .footer1 .socials {
+        gap: 18px;
+    }
+    .footer2-block {
+        height: 31px;
+    }
+    .footer2-block {
+        height: 56px;
+    }
+    .footer2 {
+        padding: 0 10px;
+        font-size: 4px;
+    }
+    .footer2 .terms {
+        gap: 4px;
+    }
+    .footer2 {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 7px;
+    }
+    .footer2 .copyRight {
+        font-size: 12px;
+    }
+    .footer2 .mail {
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .footer2 .terms {
+        display: none;
+    }
+}
+@media screen and (max-width: 350px) {
+    footer .footer1 .logo .svg {
+        width: 20px !important;
+    }
+    .footer1 .logo .slogan {
+        font-size: 10px !important;
+    }
+    .footer2 {
+        font-size: 7px;
+    }
+}
