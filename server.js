@@ -6,6 +6,9 @@ import nodeFsBackend from "i18next-node-fs-backend";
 import path from "path";
 import cors from 'cors';
 import { Helmet } from 'react-helmet';
+import { config } from 'dotenv';
+
+config();
 
 //routes
 import router from './routes/pdf.routes.js';
@@ -106,16 +109,6 @@ app.use('*', middleware.handle(i18next, {
       .replace(`<!--app-head-->`, rendered.head ?? '')
       .replace("<!--helmet-->", helmet.title.toString() + helmet.meta.toString())
       .replace(`<!--app-html-->`, rendered.html ?? '')
-      // .replace("</head>",
-      //     "<script>" +
-      //     " var initialI18nStore  = " +
-      //     JSON.stringify(initialI18nStore) +
-      //     ";" +
-      //     " var initialLanguage  = " +
-      //     JSON.stringify(initialLanguage) +
-      //     ";" +
-      //     "</script>" +
-      //     "</head>")
 
     res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
   } catch (e) {
