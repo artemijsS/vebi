@@ -20,7 +20,7 @@
     "title": "Priekšrocības",
     "wide": "Plašs pakalpojumu klāsts",
     "upToDate": "Jaunākie un uzticami risinājumi",
-    "warranty": "Divu gadu garantija mūsu kodam",
+    "warranty": "Bezmaksas tehniskais atbalsts 2 mēnešus",
     "support": "Tehniskais atbalsts",
     "flex": "Elastīga maksājuma iespēja",
     "access": "Piekļuve ir tikai jums",
@@ -79,7 +79,7 @@
     },
     "secondBlock": {
       "title": "Garantija",
-      "text": "Kods, ko mēs Jums uzrakstīsim, tiks nodrošināts ar divu gadu garantiju."
+      "text": "Nodrošinām bezmaksas tehnisko atbalstu 2 mēnešus pēc projekta pabeigšanas."
     },
     "thirdBlock": {
       "title": "Elastīgs maksājums",

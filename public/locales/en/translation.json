@@ -20,7 +20,7 @@
     "title": "Advantages",
     "wide": "A wide range of services",
     "upToDate": "Up-to-date and reliable solutions",
-    "warranty": "Two year warranty on our code",
+    "warranty": "Free technical support for 2 months",
     "support": "Technical support",
     "flex": "Flexible payment option",
     "access": "Access remains for you only",
@@ -79,7 +79,7 @@
     },
     "secondBlock": {
       "title": "Warranty",
-      "text": "The code we will write for you will come with a two-year warranty."
+      "text": "We provide free technical support for 2 months after the completion of the project."
     },
     "thirdBlock": {
       "title": "Flexible Payment",
