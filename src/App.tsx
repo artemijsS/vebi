@@ -7,7 +7,7 @@ import setCssProperties from './utils/cssProperties';
 import ReactGA from 'react-ga4';
 
 if (typeof window !== "undefined") {
-    const TRACKING_ID = "G-YNDBHH9T0M";
+    const TRACKING_ID = "G-16M7F4ZJL2";
     ReactGA.initialize(TRACKING_ID);
     setCssProperties()
 }
