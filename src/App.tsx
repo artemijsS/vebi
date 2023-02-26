@@ -7,7 +7,7 @@ import setCssProperties from './utils/cssProperties';
 import ReactGA from 'react-ga4';
 
 if (typeof window !== "undefined") {
-    const TRACKING_ID = "G-YNDBHH9T0M";
+    const TRACKING_ID = import.meta.env.VITE_GA_ID || "G-YNDBHH9T0M";
     ReactGA.initialize(TRACKING_ID);
     setCssProperties()
 }
