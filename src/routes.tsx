@@ -7,7 +7,7 @@ export const useRoutes = ():JSX.Element => {
     return (
         <Routes>
             <Route path={"/"} element={ <MainPage/> }/>
-            <Route path={"/facebook"} element={ <RedirectPage page={"https://www.facebook.com/people/VEBI/100089967131850"}/> }/>
+            <Route path={"/facebook"} element={ <RedirectPage page={"https://www.facebook.com/vebi.facebook"}/> }/>
             <Route path={"/google"} element={ <RedirectPage page={"https://www.google.com/search?q=VEBI"}/> }/>
             <Route path={"*"} element={ <Navigate to={"/"}/> }/>
         </Routes>
