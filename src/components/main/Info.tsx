@@ -23,7 +23,7 @@ const Info = forwardRef<HTMLElement>((props, ref) => {
     return (
         <div className="wrapper">
             <div className="secondWrapper">
-                <section ref={ref} className={"section info pdf"}>
+                <section ref={ref} className={"section info pdf"} id={"info"}>
                     <h1>{t("info.title")}</h1>
                     <div ref={blockRef} className={"block"}  onClick={() => onInfoClick("VEBI-Website-as-a-business-scaling-tool")}>
                         <button>

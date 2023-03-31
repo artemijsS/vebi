@@ -8,7 +8,7 @@ const Home = forwardRef<HTMLElement>((props, ref) => {
     return (
         <div className="wrapper">
             <div className="secondWrapper">
-                <section ref={ref} className={"section"}>
+                <section ref={ref} className={"section"} id={"home"}>
                     <h1 dangerouslySetInnerHTML={{__html: t('home.title', {interpolation: {escapeValue: false}})}}/>
                     <div className="blocks cubes">
                         <div className="block pink">

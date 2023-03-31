@@ -8,7 +8,7 @@ const Contacts = forwardRef<HTMLElement>((props, ref) => {
     return (
         <div className="wrapper">
             <div className="secondWrapper">
-                <section ref={ref} className={"section"}>
+                <section ref={ref} className={"section"} id={"contacts"}>
                     <h1>{t("contacts.title")}</h1>
                     <div className="blocks contacts">
                         <div className="block b-55-bottom">
