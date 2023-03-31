@@ -8,7 +8,7 @@ const Services = forwardRef<HTMLElement>((props, ref) => {
     return (
         <div className="wrapper">
             <div className="secondWrapper">
-                <section ref={ref} className={"section"}>
+                <section ref={ref} className={"section"} id={"services"}>
                     <h1>{t("services.title")}</h1>
                     <div className="list">
                         <div className="group">

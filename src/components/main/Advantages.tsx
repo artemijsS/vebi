@@ -9,7 +9,7 @@ const Advantages = forwardRef<HTMLElement>((props, ref) => {
     return (
         <div className="wrapper">
             <div className="secondWrapper">
-                <section ref={ref} className={"section info advantages"}>
+                <section ref={ref} className={"section info advantages"} id={"advantages"}>
                     <h1>{t("advantages.title")}</h1>
                     <div className={"block"}>
                         <svg height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
