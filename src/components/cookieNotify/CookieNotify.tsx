@@ -40,9 +40,9 @@ function CookieNotify(): JSX.Element {
     }
 
     const onDeclineClick = () => {
-        Cookies.remove('_ga');
-        Cookies.remove('_gat');
-        Cookies.remove('_gid');
+        Cookies.remove('_ga', { path: '' });
+        Cookies.remove('_gat', { path: '' });
+        Cookies.remove('_gid', { path: '' });
         scrollSet(true);
         setCookieStatus(true);
     }
