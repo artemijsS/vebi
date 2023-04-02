@@ -52,7 +52,8 @@
     "title": "Sīkdatnes",
     "text": "Izmantojot šo vietni, Jūs piekrītat sīkdatņu izmantošanai tikai tīmekļa analītikas vākšanas veikšanai (Google Analytics). Papildinformāciju var apskatit lapā:",
     "link": "\"Sīkdatnes\"",
-    "agree": "Piekrītu"
+    "agree": "Piekrītu",
+    "decline": "Atcelt"
   },
   "footer": {
     "privacy": "Personas datu apstrāde",

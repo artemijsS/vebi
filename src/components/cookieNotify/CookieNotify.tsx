@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useDispatch } from "react-redux";
 import './cookieNotify.css'
 import { setPolitics } from "../../../redux/actions/politics";
+import Cookies from 'js-cookie';
 
 function CookieNotify(): JSX.Element {
 
@@ -38,6 +39,14 @@ function CookieNotify(): JSX.Element {
         setCookieStatus(true);
     }
 
+    const onDeclineClick = () => {
+        Cookies.remove('_ga');
+        Cookies.remove('_gat');
+        Cookies.remove('_gid');
+        scrollSet(true);
+        setCookieStatus(true);
+    }
+
     const onCookieClick = () => {
         dispatch(setPolitics("cookie"))
     }
@@ -54,7 +63,10 @@ function CookieNotify(): JSX.Element {
                             <h1>{t("cookieNotify.title")}</h1>
                         </div>
                         <p>{t("cookieNotify.text")} <span onClick={onCookieClick}>{t("cookieNotify.link")}</span>.</p>
-                        <button onClick={onAgreeClick}>{t("cookieNotify.agree")}</button>
+                        <div className="buttons">
+                            <button onClick={onAgreeClick}>{t("cookieNotify.agree")}</button>
+                            <button onClick={onDeclineClick} className={"decline"}>{t("cookieNotify.decline")}</button>
+                        </div>
                     </div>
                 </div>
             }
