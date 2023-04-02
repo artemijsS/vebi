@@ -54,22 +54,37 @@
     color: var(--pink);
     border-color: var(--pink);
 }
-.cookie .cookie-block button {
+.cookie .cookie-block .buttons {
     margin-top: auto;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px 20px;
+    margin-bottom: 20px;
+}
+.cookie .cookie-block .buttons button {
+    width: 35%;
     height: 40px;
     background-color: var(--pink);
-    margin-bottom: 30px;
-    /*padding: 10px 0;*/
     padding-top: 5px;
     padding-bottom: 5px;
     color: #FFFFFF;
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 30px;
     cursor: pointer;
+    min-width: 145px;
+}
+.cookie .cookie-block .buttons button.decline {
+    background-color: unset;
+    outline: 1px solid var(--pink);
+    color: var(--pink);
 }
 .cookie .cookie-block button:hover {
-    color: var(--block-color);
+    outline: 1px solid white;
+}
+.cookie .cookie-block button.decline:hover {
+    outline: 1px solid white;
 }
 
 @media screen and (max-width: 1000px) {
