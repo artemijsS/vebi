@@ -40,9 +40,9 @@ function CookieNotify(): JSX.Element {
     }
 
     const onDeclineClick = () => {
-        Cookies.remove('_ga', { path: '' });
-        Cookies.remove('_gat', { path: '' });
-        Cookies.remove('_gid', { path: '' });
+        Cookies.remove('_ga', { path: '', domain: '.vebi.lv' });
+        Cookies.remove('_gat', { path: '', domain: '.vebi.lv' });
+        Cookies.remove('_gid', { path: '', domain: '.vebi.lv' });
         scrollSet(true);
         setCookieStatus(true);
     }
