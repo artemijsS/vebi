@@ -18,7 +18,7 @@ function App() {
         <Routes>
             <Route path={"/"} element={ <MainPage/> }/>
             <Route path={"/facebook"} element={ <RedirectPage page={"https://www.facebook.com/vebi.facebook"}/> }/>
-            <Route path={"/google"} element={ <RedirectPage page={"https://www.google.com/search?q=vebi+it+%26+design+services"}/> }/>
+            <Route path={"/google"} element={ <RedirectPage page={"https://goo.gl/maps/EjV2GpRoKEuQKeCr7"}/> }/>
             <Route path={"*"} element={ <RedirectPage page={"https://vebi.lv/"}/> }/>
         </Routes>
     )
