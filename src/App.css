@@ -1029,6 +1029,7 @@ footer {
 
 /*trust*/
 .blockTrust {
+  position: relative;
   margin-top: 25px;
   width: 100%;
   background-color: #272727;
@@ -1037,7 +1038,11 @@ footer {
   align-items: center;
   color: white;
   text-align: center;
-  padding: 2em 0;
+  height: 90px;
+}
+.blockTrust iframe {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /*stuff*/

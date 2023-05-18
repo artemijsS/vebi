@@ -42,7 +42,7 @@ const Home = forwardRef<HTMLElement>((props, ref) => {
                             </div>
                             <p className={"home-block-mob-text left"}>{t("home.secondBlock.text")}</p>
                         </div>
-                        <div className="block b-30-bottom b-30-top">
+                        <div className="block b-30-top">
                             <div className="home-block">
                                 <div className="heading">
                                     <svg width="51" height="90" viewBox="0 0 51 90" fill="none" xmlns="http://www.w3.org/2000/svg">
