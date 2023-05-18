@@ -1110,7 +1110,7 @@ a:hover {
     position: relative;
     border-bottom: none;
   }
-  .b-30-top:before {
+  .b-30-top:before, .b-15-bottom:after {
     border-bottom: none !important;
   }
 }
@@ -1123,13 +1123,13 @@ a:hover {
   width: 55%;
   border-bottom: min(8px, 1vw) solid #E43172;
 }
-.b-60-bottom:after {
+.b-15-bottom:after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 10%;
   bottom: calc(min(8px, 1vw)*(-1));
   height: 8px;
-  width: 60%;
+  width: 15%;
   border-bottom: min(8px, 1vw) solid #E43172;
 }
 .b-30-bottom-right:after {
