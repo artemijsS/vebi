@@ -1027,6 +1027,17 @@ footer {
   }
 }
 
+/*trust*/
+.blockTrust {
+  margin-top: 25px;
+  width: 100%;
+  background-color: #272727;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+}
+
 /*stuff*/
 .all-screen {
   width: 100vw;
