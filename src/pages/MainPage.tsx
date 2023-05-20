@@ -31,7 +31,7 @@ function MainPage(): JSX.Element {
                 <div className="secondWrapper">
                     <div className="blockTrust b-15-bottom">
                         <div style={{ width: "100%" }} className="trustpilot-widget" data-locale="en-US" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="6466112b8598295b662c1faa" data-style-height="24px" data-style-width="100%" data-theme="dark" data-min-review-count="0" data-without-reviews-preferred-string-id="2" data-style-alignment="center">
-                            <a href="https://www.trustpilot.com/review/vebi.lv" target="_blank" rel="noopener">Trustpilot</a>
+                            <a style={{ padding: "30px 0px", display: "block" }} href="https://www.trustpilot.com/review/vebi.lv" target="_blank" rel="noopener">Trustpilot</a>
                         </div>
                     </div>
                 </div>

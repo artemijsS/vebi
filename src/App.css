@@ -1038,11 +1038,11 @@ footer {
   align-items: center;
   color: white;
   text-align: center;
-  height: 90px;
 }
 .blockTrust iframe {
   width: 100% !important;
-  height: 100% !important;
+  padding: 30px 0 !important;
+  height: 40px !important;
 }
 
 /*stuff*/
