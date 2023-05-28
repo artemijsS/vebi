@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import Politics from "./Politics/Politics";
 // import Header from './header/Header';
 // import Footer from './footer/Footer';
 
@@ -44,12 +45,8 @@ const MainContainer = ({ children, title, description, keywords, ogImage }: Main
                 <link rel="alternate" hrefLang="x-default" href="https://vebi.lv"/>
 
             </Head>
-            {/*<Header />*/}
-            <div className="minusHeader"/>
-            <div className={""}>
-                {children}
-            </div>
-            {/*<Footer />*/}
+            <Politics />
+            {children}
         </>
     )
 }
