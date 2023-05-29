@@ -46,6 +46,20 @@
       "text": "Или вы хотели бы проконсультироваться по вопросу дизайна?",
       "tel": "+(371) 29134792",
       "name": "Анджей Р."
+    },
+    "form": {
+      "name": "Имя / фамилия*",
+      "namePlaceholder": "Ваше имя / фамилия",
+      "phone": "Номер телефона",
+      "phonePlaceholder": "Ваш номер телефона",
+      "email": "Email*",
+      "emailPlaceholder": "Ваш email",
+      "message": "Ваше сообщение*",
+      "messagePlaceholder": "Введите ваше сообщение здесь",
+      "button": "Отправить",
+      "buttonLoading": "Загрузка",
+      "buttonSend": "Отправлено",
+      "buttonError": "Ошибка"
     }
   },
   "cookieNotify": {
@@ -56,9 +70,9 @@
     "decline": "Отказаться"
   },
   "footer": {
-    "privacy": "Политика конфиденциальности",
+    "privacy": "Пол. конф.",
     "userAg": "Пользовательское соглашение",
-    "cookie": "Использование Cookie файлов",
+    "cookie": "Исп. Cookie",
     "slogan": "Ваш <span class=\"cl-pink\">успех</span> <span class=\"capLetter-mobile\">это</span> наша <span class=\"cl-pink-mobile\">цель</span>"
   },
   "header": {
@@ -89,7 +103,7 @@
     }
   },
   "info": {
-    "title": "Информация",
+    "title": "Дополнительная информация",
     "scaling": "Сайт как инструмент масштабирования",
     "it": "IT решения",
     "design": "Дизайн решения",
@@ -128,7 +142,7 @@
     "socMedDesign": "Дизайн социальных сетей",
     "photoContent": "Фото контент",
     "iosAndroid": "IOS / ANDROID приложения",
-    "logo": "Создание логотипа",
+    "brandDesign": "Дизайн бренда",
     "custom": "Индивидуальные ИТ проекты",
     "video": "Видео контент"
   }

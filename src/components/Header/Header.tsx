@@ -94,7 +94,6 @@ function Header({refs}:HeaderProps): JSX.Element {
     }
 
     const onPoliticsClick = (politics: string) => {
-        console.log(1)
         updateState({ ...state, politics: politics })
     }
 

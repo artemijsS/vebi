@@ -46,6 +46,20 @@
       "text": "Or would you like to consult on a design question?",
       "tel": "+(371) 29134792",
       "name": "Andzhey R."
+    },
+    "form": {
+      "name": "Name / Surname*",
+      "namePlaceholder": "Your Name / Surname",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Your Phone Number",
+      "email": "Email*",
+      "emailPlaceholder": "Your Email",
+      "message": "Your Message*",
+      "messagePlaceholder": "Type Your Message here",
+      "button": "Submit",
+      "buttonLoading": "Loading",
+      "buttonSend": "Sent",
+      "buttonError": "Error"
     }
   },
   "cookieNotify": {
@@ -89,7 +103,7 @@
     }
   },
   "info": {
-    "title": "Info",
+    "title": "Additional Info",
     "scaling": "Website as a business scaling tool",
     "it": "IT solutions",
     "design": "Design solutions",
@@ -128,7 +142,7 @@
     "socMedDesign": "Social Media Design",
     "photoContent": "Photo Content",
     "iosAndroid": "IOS / ANDROID Dev",
-    "logo": "Logo Creation",
+    "brandDesign": "Brand Design",
     "custom": "Custom IT Projects",
     "video": "Video Content"
   }

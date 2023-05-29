@@ -2,6 +2,7 @@ import '@/styles/reset.css'
 import '@/styles/globals.css'
 import '@/styles/politics.css'
 import '@/styles/header.css'
+import '@/styles/footer.css'
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import { MainContext } from '../context/MainContext';
 import { appWithTranslation } from 'next-i18next';

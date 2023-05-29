@@ -46,6 +46,20 @@
       "text": "Vai vēlaties konsultēties par dizaina jautājumu?",
       "tel": "+(371) 29134792",
       "name": "Andžejs R."
+    },
+    "form": {
+      "name": "Vārds / Uzvārds*",
+      "namePlaceholder": "Jūsu vārds / uzvārds",
+      "phone": "Tālruņa numurs",
+      "phonePlaceholder": "Jūsu tālruņa numurs",
+      "email": "E-pasts*",
+      "emailPlaceholder": "Jūsu e-pasts",
+      "message": "Jūsu ziņojums*",
+      "messagePlaceholder": "Ierakstiet savu ziņojumu šeit",
+      "button": "Iesniegt",
+      "buttonLoading": "Notiek ielāde",
+      "buttonSend": "Nosūtīts",
+      "buttonError": "Kļūda"
     }
   },
   "cookieNotify": {
@@ -89,7 +103,7 @@
     }
   },
   "info": {
-    "title": "Info",
+    "title": "Papildus informācija",
     "scaling": "Tīmekļa vietne, kā uzņēmuma palielināšanas rīks",
     "it": "IT risinājumi",
     "design": "Dizaina risinājumi",
@@ -128,7 +142,7 @@
     "socMedDesign": "Sociālo mediju dizains",
     "photoContent": "Foto kontenta izveide",
     "iosAndroid": "IOS / ANDROID lietotnes",
-    "logo": "Logo izveide",
+    "brandDesign": "Brenda dizains",
     "custom": "Individuālie IT projekti",
     "video": "Video kontenta izveide"
   }

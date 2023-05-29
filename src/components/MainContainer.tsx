@@ -2,8 +2,6 @@ import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Politics from "./Politics/Politics";
-// import Header from './header/Header';
-// import Footer from './footer/Footer';
 
 interface MainContainer {
     children?: React.ReactNode,
