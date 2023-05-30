@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Header, Home, About, Services, Advantages, Contacts, Info, Footer } from '../components';
+import { Header, Home, About, Services, Advantages, Portfolio, Contacts, Info, Footer } from '../components';
 import { useTranslation } from "next-i18next";
 import MainContainer from '../components/MainContainer';
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -18,7 +18,8 @@ export default function HomePage({ emailJSPublic }: HomePageProps) {
     services: useRef<HTMLElement>(null),
     advantages: useRef<HTMLElement>(null),
     info: useRef<HTMLElement>(null),
-    contacts: useRef<HTMLElement>(null)
+    contacts: useRef<HTMLElement>(null),
+    portfolio: useRef<HTMLElement>(null)
   })
 
   useEffect(() => {
@@ -49,6 +50,7 @@ export default function HomePage({ emailJSPublic }: HomePageProps) {
       <About ref={refs.about} />
       <Services ref={refs.services} />
       <Advantages ref={refs.advantages} />
+      <Portfolio ref={refs.portfolio} />
       <Contacts ref={refs.contacts} emailJSPublic={emailJSPublic} />
       <Info ref={refs.info} />
       <Footer />

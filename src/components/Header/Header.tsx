@@ -48,18 +48,35 @@ function Header({refs}:HeaderProps): JSX.Element {
     const onScroll = (e: Event) => {
         const window = e.currentTarget as Window;
         const scrollY = window.scrollY;
-        if (scrollY < Number(refs.about.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
-            setActiveSection("home")
-        } else if (scrollY <= Number(refs.services.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
-            setActiveSection("about")
-        } else if (scrollY <= Number(refs.advantages.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
-            setActiveSection("services")
-        } else if (scrollY <= Number(refs.info.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
-            setActiveSection("advantages")
-        } else if (scrollY <= Number(refs.contacts.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
-            setActiveSection("info")
-        } else if (scrollY >= Number(refs.contacts.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
-            setActiveSection("contacts")
+
+        if (window.innerWidth > 800) {
+            if (scrollY >= 0 && scrollY < Number(refs.about.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
+                setActiveSection("home");
+            } else if (refs.about.current?.getBoundingClientRect().bottom > 0 && refs.about.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
+                setActiveSection("about");
+            } else if (refs.services.current?.getBoundingClientRect().bottom + 10 > 0 && refs.services.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
+                setActiveSection("services");
+            } else if (refs.portfolio.current?.getBoundingClientRect().bottom + 10 > 0 && refs.portfolio.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
+                setActiveSection("portfolio");
+            } else if (refs.contacts.current?.getBoundingClientRect().bottom + 10 > 0 && refs.contacts.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
+                setActiveSection("contacts");
+            } else {
+                setActiveSection("");
+            }
+        } else {
+            if (scrollY >= 0 && scrollY < Number(refs.about.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
+                setActiveSection("home");
+            } else if (refs.about.current?.getBoundingClientRect().bottom - 40 > 0 && refs.about.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
+                setActiveSection("about");
+            } else if (refs.services.current?.getBoundingClientRect().bottom - 40 > 0 && refs.services.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
+                setActiveSection("services");
+            } else if (refs.portfolio.current?.getBoundingClientRect().bottom - 40 > 0 && refs.portfolio.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
+                setActiveSection("portfolio");
+            } else if (refs.contacts.current?.getBoundingClientRect().bottom - 40 > 0 && refs.contacts.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
+                setActiveSection("contacts");
+            } else {
+                setActiveSection("");
+            }
         }
     }
 
@@ -148,7 +165,7 @@ function Header({refs}:HeaderProps): JSX.Element {
                         <nav className={"navBlock"}>
                             <div onClick={() => onSectionBurgerClick("about")} className={activeSection === "about" ? "active link" : " link"}>{t("translation:header.about")}</div>
                             <div onClick={() => onSectionBurgerClick("services")} className={activeSection === "services" ? "active link" : " link"}>{t("translation:header.services")}</div>
-                            <div onClick={() => onSectionBurgerClick("portfolio")} className={activeSection === "advantages" ? "active link" : " link"}>{t("translation:header.portfolio")}</div>
+                            <div onClick={() => onSectionBurgerClick("portfolio")} className={activeSection === "portfolio" ? "active link" : " link"}>{t("translation:header.portfolio")}</div>
                             <div onClick={() => onSectionBurgerClick("contacts")} className={activeSection === "contacts" ? "active link" : " link"}>{t("translation:header.contacts")}</div>
                             <div className="terms">
                                 <button onClick={() => onPoliticsClick("cookie")}>{t("translation:header.cookie")}</button>

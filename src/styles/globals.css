@@ -1264,6 +1264,25 @@ a:hover {
   }
 }
 
+/*PORTFOLIO*/
+.portCube {
+  height: 100%;
+  background-color: var(--block-color);
+}
+.portCube img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .sliderPort .wrapper {
+    margin: 0 !important;
+  }
+  .sliderPort .wrapper .secondWrapper {
+    padding: 0 !important;
+  }
+}
 
 /*BORDERS*/
 .b-full-bottom:before {
