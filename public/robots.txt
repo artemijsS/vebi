@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://vebi.lv
+
+# Sitemaps
+Sitemap: https://vebi.lv/sitemap.xml
+Sitemap: https://vebi.lv/sitemap-1.xml
