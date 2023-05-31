@@ -52,7 +52,7 @@ const Portfolio = forwardRef<HTMLElement>((props, ref) => {
             <div className={"sliderPort"}>
                 <div className="wrapper">
                     <div className="secondWrapper">
-                        <div ref={refSlider} className="keen-slider">
+                        <div ref={refSlider} className="keen-slider portfolio">
                             <Link href={"https://www.energyplus.lv"} target={"_blank"} className="keen-slider__slide portCube">
                                 <Image src={EnergyPlus} alt={"energyplus"} />
                             </Link>

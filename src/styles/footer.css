@@ -1,5 +1,5 @@
 footer {
-    height: 250px;
+    height: 300px;
     color: #FFFFFF;
     background-color: #272727;
 }
@@ -70,6 +70,10 @@ footer .footerSection.second p {
     footer .footerSection.second .links {
         order: 1;
         flex: unset;
+        display: flex;
+        justify-content: center;
+        gap: 4%;
+        margin-top: 2%;
     }
     footer .footerSection.second .links svg {
         width: 30px;
@@ -87,7 +91,7 @@ footer .footerSection.second p {
 @media screen and (max-width: 600px) {
     footer {
         font-size: 0.55em;
-        height: 150px;
+        height: 170px;
     }
 }
 

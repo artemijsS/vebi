@@ -3,6 +3,7 @@ import '@/styles/globals.css'
 import '@/styles/politics.css'
 import '@/styles/header.css'
 import '@/styles/footer.css'
+import '@/styles/cookieNotify.css'
 import 'keen-slider/keen-slider.min.css'
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import { MainContext } from '../context/MainContext';
@@ -25,7 +26,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
       <MainContext>
-          <GoogleAnalytics gaMeasurementId={"G-YNDBHH9T0M"}/>
+          <GoogleAnalytics gaMeasurementId={"G-YNDBHH9T0M"} />
           <Component {...pageProps} />
       </MainContext>
   )

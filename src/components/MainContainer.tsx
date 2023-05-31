@@ -2,6 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Politics from "./Politics/Politics";
+import { CookieNotify } from ".";
 
 interface MainContainer {
     children?: React.ReactNode,
@@ -43,6 +44,7 @@ const MainContainer = ({ children, title, description, keywords, ogImage }: Main
                 <link rel="alternate" hrefLang="x-default" href="https://vebi.lv"/>
 
             </Head>
+            <CookieNotify />
             <Politics />
             {children}
         </>

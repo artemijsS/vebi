@@ -15,10 +15,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg-color);
-  background-image: url("/background/bg.webp");
+  background-image: url("/background/bg2.png");
   background-position: center;
-  background-size: cover;
-  background-repeat: repeat-x;
+  /*background-size: cover;*/
+  background-repeat: repeat;
   min-width: 310px;
 }
 
@@ -622,7 +622,7 @@ footer {
   display: flex;
   justify-content: space-between;
   flex: 1;
-  gap: 26px;
+  gap: 8px;
 }
 .section .list .group .item {
   flex: 1;
@@ -704,7 +704,7 @@ footer {
 
 @media screen and (min-width: 1525px) {
   .section .list {
-    gap: 26px;
+    /*gap: 26px;*/
   }
   .section .list .item {
     width: 245px;
@@ -712,10 +712,10 @@ footer {
 }
 @media screen and (max-width: 1525px) {
   .section .list {
-    gap: 20px;
+    /*gap: 20px;*/
   }
   .section .list .group {
-    gap: 20px;
+    /*gap: 20px;*/
   }
   .section .list .group .item {
     width: 210px;
@@ -784,18 +784,11 @@ footer {
   .section .list .column .item {
     height: 70px;
   }
-  /*.section .list .column.first .big .item:after {*/
-  /*  padding-bottom: 100% !important;*/
-  /*}*/
-  /*.section .list .item:after {*/
-  /*  padding-bottom: 20% !important;*/
-  /*}*/
-  /*.section .list .group .item .service h3 {*/
-  /*  font-size: 0.6em;*/
-  /*}*/
-  /*.section .list .group .item .service svg {*/
-  /*  padding-left: min(4vw, 20px);*/
-  /*}*/
+  .section .list .column .item .service svg {
+    padding-left: 10%;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .formContacts {
