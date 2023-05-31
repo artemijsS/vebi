@@ -24,7 +24,7 @@ const Info = forwardRef<HTMLElement>((props, ref) => {
         <div className="wrapper">
             <div className="secondWrapper">
                 <section ref={ref} className={"section info pdf"} id={"info"}>
-                    <h1>{t("translation:info.title")}</h1>
+                    <h2>{t("translation:info.title")}</h2>
                     <div ref={blockRef} className={"block"}  onClick={() => onInfoClick("VEBI-Website-as-a-business-scaling-tool")}>
                         <button>
                             <svg viewBox="0 0 61 79" fill="none" xmlns="http://www.w3.org/2000/svg">

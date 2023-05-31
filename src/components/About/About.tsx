@@ -11,11 +11,11 @@ const About = forwardRef<HTMLElement>((props, ref) => {
         <div className="wrapper">
             <div className="secondWrapper">
                 <section ref={ref} className={"section"} id={"about"}>
-                    <h1>{t("translation:about.title")}</h1>
+                    <h2>{t("translation:about.title")}</h2>
                     <div className="blocks reverse">
                         <div className="block f2 b-45-top-left">
                             <div className="about b-30-bottom-right">
-                                <h1>{t("translation:about.firstBlock.title")}</h1>
+                                <h3>{t("translation:about.firstBlock.title")}</h3>
                                 <ul>
                                     <li>{t("translation:about.firstBlock.text1")}</li>
                                     <li>{t("translation:about.firstBlock.text2")}</li>

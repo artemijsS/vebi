@@ -53,7 +53,7 @@
 .politics .politics-block svg:hover path {
     fill: var(--pink);
 }
-.politics .politics-block h1 {
+.politics .politics-block h2 {
     font-size: 2.1rem;
     margin: 4.5rem 30px;
     text-align: center;
@@ -85,7 +85,7 @@
         width: 18px;
         height: 18px;
     }
-    .politics .politics-block h1 {
+    .politics .politics-block h2 {
         font-size: 2rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
@@ -95,7 +95,7 @@
     }
 }
 @media screen and (max-width: 450px) {
-    .politics .politics-block h1 {
+    .politics .politics-block h2 {
         font-size: 1.3rem;
         margin-top: 3.3rem;
         margin-bottom: 1.3rem;

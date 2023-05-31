@@ -9,7 +9,7 @@ const Home = forwardRef<HTMLElement>((props, ref) => {
         <div className="wrapper">
             <div className="secondWrapper">
                 <section ref={ref} className={"section"} id={"home"}>
-                    <h1 dangerouslySetInnerHTML={{__html: t('translation:home.title') || "" }}/>
+                    <h2 dangerouslySetInnerHTML={{__html: t('translation:home.title') || "" }}/>
                     <div className="blocks cubes">
                         <div className="block pink">
                             <div className="home-block">
@@ -26,7 +26,7 @@ const Home = forwardRef<HTMLElement>((props, ref) => {
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <h1>{t("translation:home.firstBlock.title")}</h1>
+                                    <h3>{t("translation:home.firstBlock.title")}</h3>
                                 </div>
                                 <p>{t("translation:home.firstBlock.text")}</p>
                             </div>
@@ -40,7 +40,7 @@ const Home = forwardRef<HTMLElement>((props, ref) => {
                                         <path d="M40.104 73.328L38.112 68.96C45.464 65.608 55.864 59.056 63.608 46.856C70.088 36.648 72.072 26.496 72.6 19.776L77.384 20.152C76.816 27.416 74.672 38.392 67.656 49.432C59.288 62.616 48.056 69.704 40.104 73.328Z" fill="white"/>
                                         <path d="M5.52 23.936L2.664 20.08C8.864 15.488 21.952 7.78402 39.928 7.74402C39.976 7.74402 40.024 7.74402 40.064 7.74402C57.984 7.74402 71.056 15.376 77.264 19.936L74.424 23.808C68.688 19.6 56.608 12.552 40.064 12.552C40.024 12.552 39.976 12.552 39.936 12.552C23.336 12.576 11.248 19.696 5.52 23.936Z" fill="white"/>
                                     </svg>
-                                    <h1>{t("translation:home.secondBlock.title")}</h1>
+                                    <h3>{t("translation:home.secondBlock.title")}</h3>
                                 </div>
                                 <p>{t("translation:home.secondBlock.text")}</p>
                             </div>
@@ -66,7 +66,7 @@ const Home = forwardRef<HTMLElement>((props, ref) => {
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <h1>{t("translation:home.thirdBlock.title")}</h1>
+                                    <h3>{t("translation:home.thirdBlock.title")}</h3>
                                 </div>
                                 <p>{t("translation:home.thirdBlock.text")}</p>
                             </div>

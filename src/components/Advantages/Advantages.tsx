@@ -10,7 +10,7 @@ const Advantages = forwardRef<HTMLElement>((props, ref) => {
         <div className="wrapper">
             <div className="secondWrapper">
                 <section ref={ref} className={"section info advantages"} id={"advantages"}>
-                    <h1>{t("translation:advantages.title")}</h1>
+                    <h2>{t("translation:advantages.title")}</h2>
                     <div className={"block"}>
                         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M40 12.3682C43.3137 12.3682 46 9.68187 46 6.36816C46 3.05446 43.3137 0.368164 40 0.368164C36.6863 0.368164 34 3.05446 34 6.36816C34 9.68187 36.6863 12.3682 40 12.3682Z" fill="#E53171"/>

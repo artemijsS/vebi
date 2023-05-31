@@ -38,7 +38,7 @@ function CookieNotify(): JSX.Element {
                 <div className={"secondWrapper"}>
                     <div className="cookie-block">
                         <div className="heading">
-                            <h1>{t("translation:cookieNotify.title")}</h1>
+                            <h2>{t("translation:cookieNotify.title")}</h2>
                         </div>
                         <p>{t("translation:cookieNotify.text")} <span onClick={onCookieClick}>{t("translation:cookieNotify.link")}</span>.</p>
                         <div className="buttons">

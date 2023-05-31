@@ -9,7 +9,7 @@ const Services = forwardRef<HTMLElement>((props, ref) => {
         <div className="wrapper">
             <div className="secondWrapper">
                 <section ref={ref} className={"section"} id={"services"}>
-                    <h1>{t("translation:services.title")}</h1>
+                    <h2>{t("translation:services.title")}</h2>
                     <div className="list">
                         <div className="column first">
                             <div className="group big">
