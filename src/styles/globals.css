@@ -565,7 +565,7 @@ footer {
 .section .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 26px;
   justify-content: space-between;
 }
 .section .list .column {
@@ -624,11 +624,11 @@ footer {
   display: flex;
   justify-content: space-between;
   flex: 1;
-  gap: 8px;
+  gap: 26px;
 }
 .section .list .group .item {
   flex: 1;
-  margin-bottom: 8px;
+  margin-bottom: 26px;
   min-width: 91px;
   max-width: 100%;
   background-color: var(--pink);
@@ -663,7 +663,7 @@ footer {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: min(0.9vw, 20px);
-  border-left: 4px solid #FFFFFF;
+  border-left: 3px solid #FFFFFF;
 }
 
 @media screen and (max-width: 1100px) {
@@ -706,7 +706,7 @@ footer {
 
 @media screen and (min-width: 1525px) {
   .section .list {
-    /*gap: 26px;*/
+    gap: 26px;
   }
   .section .list .item {
     width: 245px;
@@ -725,10 +725,10 @@ footer {
 }
 @media screen and (max-width: 1256px) {
   .section .list {
-    gap: 8px;
+    gap: 26px;
   }
   .section .list .group {
-    gap: 8px;
+    gap: 26px;
   }
   .section .list .item {
     width: 230px;
@@ -736,7 +736,7 @@ footer {
 }
 @media screen and (max-width: 1030px) {
   .section .list {
-    gap: 8px;
+    gap: 26px;
   }
   .section .list .group .item {
     width: 160px;
@@ -748,6 +748,13 @@ footer {
   }
   .section .list .item {
     width: 130px;
+    margin-bottom: 8px !important;
+  }
+  .section .list .group {
+    gap: 8px !important;
+  }
+  .section .list {
+    flex-wrap: nowrap;
   }
 }
 @media screen and (max-width: 845px) {
@@ -757,7 +764,7 @@ footer {
 }
 @media screen and (max-width: 725px) {
   .section .list {
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
   }
   .section .list .item {
     width: 120px !important;
@@ -771,6 +778,12 @@ footer {
   }
   .section .list .column.first .big {
     flex: unset;
+  }
+  .section .list .column .item {
+    margin-bottom: 8px;
+  }
+  .section .list .column .group {
+    gap: 8px;
   }
   .section .list .column.first .big .item {
     height: 200px !important;
@@ -813,7 +826,7 @@ footer {
 .formContacts .row .input label {
   color: white;
   font-size: 0.4em;
-  font-weight: lighter;
+  font-weight: 300;
 }
 .formContacts .row .input input, .formContacts .row .input textarea {
   width: 100%;
@@ -822,6 +835,7 @@ footer {
   outline: none;
   border: none;
   color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 .formContacts .row .input textarea {
   min-height: 200px;
@@ -836,7 +850,7 @@ footer {
 .formContacts .rowButton button {
   margin-top: 50px;
   font-size: 0.7em;
-  font-weight: lighter;
+  font-weight: 300;
   padding: 1% 10%;
   cursor: pointer;
   background-color: var(--pink);

@@ -1,5 +1,5 @@
 footer {
-    height: 300px;
+    height: 220px;
     color: #FFFFFF;
     background-color: #272727;
 }
@@ -28,7 +28,7 @@ footer .footerSection.second {
 }
 footer .footerSection.second .politics {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     color: white;
 }
 footer .footerSection.second .politics button {
@@ -36,6 +36,9 @@ footer .footerSection.second .politics button {
     font-size: 0.9em;
     font-weight: lighter;
     cursor: pointer;
+}
+footer .footerSection.second .politics button:hover {
+    color: var(--pink);
 }
 footer .footerSection.second .links  {
     flex: 1;
