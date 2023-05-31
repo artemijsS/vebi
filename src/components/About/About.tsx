@@ -45,7 +45,7 @@ const About = forwardRef<HTMLElement>((props, ref) => {
                             </div>
                             <div className="block-reverse pink">
                                 <Link href={"#contacts"} className="hiring-card">
-                                    <h2 dangerouslySetInnerHTML={{__html: t('translation:about.thirdBlock.title') || ""}}/>
+                                    <h4 dangerouslySetInnerHTML={{__html: t('translation:about.thirdBlock.title') || ""}}/>
                                     <p dangerouslySetInnerHTML={{__html: t('translation:about.thirdBlock.text') || ""}}/>
                                 </Link>
                             </div>
