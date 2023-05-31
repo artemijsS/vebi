@@ -7,7 +7,7 @@ interface ContactsProps {
     emailJSPublic: string
 }
 
-const Contacts = forwardRef<HTMLElement>((props: ContactsProps, ref) => {
+const Contacts = forwardRef<HTMLElement, ContactsProps>((props: ContactsProps, ref) => {
 
     const { t } = useTranslation();
     const [formStatus, setFormStatus] = useState<String>("button");
@@ -79,9 +79,9 @@ const Contacts = forwardRef<HTMLElement>((props: ContactsProps, ref) => {
                     <div className="blocks contacts">
                         <div className="block b-55-top-right">
                             <div className="contact">
-                                <h2 dangerouslySetInnerHTML={{__html: t("translation:contacts.info.title")}}/>
+                                <h2 dangerouslySetInnerHTML={{__html: t("translation:contacts.info.title") || ""}}/>
                                 <div className="border">
-                                    <p dangerouslySetInnerHTML={{__html: t("translation:contacts.info.text")}}/>
+                                    <p dangerouslySetInnerHTML={{__html: t("translation:contacts.info.text") || ""}}/>
                                     <div className="connection">
                                         <div className="phone">{t("translation:contacts.info.tel")}</div>
                                         <div className="name">{t("translation:contacts.info.name")}</div>
@@ -91,7 +91,7 @@ const Contacts = forwardRef<HTMLElement>((props: ContactsProps, ref) => {
                         </div>
                         <div className="block">
                             <div className="contact">
-                                <h2 dangerouslySetInnerHTML={{__html: t("translation:contacts.support.title")}}/>
+                                <h2 dangerouslySetInnerHTML={{__html: t("translation:contacts.support.title") || ""}}/>
                                 <div className="border">
                                     <p>{t("translation:contacts.support.text")}</p>
                                     <div className="connection">
@@ -103,7 +103,7 @@ const Contacts = forwardRef<HTMLElement>((props: ContactsProps, ref) => {
                         </div>
                         <div className="block">
                             <div className="contact">
-                                <h2 dangerouslySetInnerHTML={{__html: t("translation:contacts.design.title")}}/>
+                                <h2 dangerouslySetInnerHTML={{__html: t("translation:contacts.design.title") || ""}}/>
                                 <div className="border">
                                     <p>{t("translation:contacts.design.text")}</p>
                                     <div className="connection">

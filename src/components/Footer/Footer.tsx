@@ -24,7 +24,7 @@ function Footer(): JSX.Element {
             <div className={"wrapper"}>
                 <div className="footer secondWrapper">
                     <div className="footerSection">
-                        <h3 dangerouslySetInnerHTML={{ __html: t("translation:footer.slogan") }}/>
+                        <h3 dangerouslySetInnerHTML={{ __html: t("translation:footer.slogan") || "" }}/>
                     </div>
                     <div className="footerSection second">
                         <div className={"politics"}>

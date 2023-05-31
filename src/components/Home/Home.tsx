@@ -9,7 +9,7 @@ const Home = forwardRef<HTMLElement>((props, ref) => {
         <div className="wrapper">
             <div className="secondWrapper">
                 <section ref={ref} className={"section"} id={"home"}>
-                    <h1 dangerouslySetInnerHTML={{__html: t('translation:home.title', {interpolation: {escapeValue: false}})}}/>
+                    <h1 dangerouslySetInnerHTML={{__html: t('translation:home.title') || "" }}/>
                     <div className="blocks cubes">
                         <div className="block pink">
                             <div className="home-block">

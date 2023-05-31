@@ -52,12 +52,16 @@ function Header({refs}:HeaderProps): JSX.Element {
         if (window.innerWidth > 800) {
             if (scrollY >= 0 && scrollY < Number(refs.about.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
                 setActiveSection("home");
+                //@ts-ignore
             } else if (refs.about.current?.getBoundingClientRect().bottom > 0 && refs.about.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
                 setActiveSection("about");
+                //@ts-ignore
             } else if (refs.services.current?.getBoundingClientRect().bottom + 10 > 0 && refs.services.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
                 setActiveSection("services");
+                //@ts-ignore
             } else if (refs.portfolio.current?.getBoundingClientRect().bottom + 10 > 0 && refs.portfolio.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
                 setActiveSection("portfolio");
+                //@ts-ignore
             } else if (refs.contacts.current?.getBoundingClientRect().bottom + 10 > 0 && refs.contacts.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
                 setActiveSection("contacts");
             } else {
@@ -66,12 +70,16 @@ function Header({refs}:HeaderProps): JSX.Element {
         } else {
             if (scrollY >= 0 && scrollY < Number(refs.about.current?.offsetTop) - Number(headerRef.current?.offsetHeight) - 5) {
                 setActiveSection("home");
+                //@ts-ignore
             } else if (refs.about.current?.getBoundingClientRect().bottom - 40 > 0 && refs.about.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
                 setActiveSection("about");
+                //@ts-ignore
             } else if (refs.services.current?.getBoundingClientRect().bottom - 40 > 0 && refs.services.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
                 setActiveSection("services");
+                //@ts-ignore
             } else if (refs.portfolio.current?.getBoundingClientRect().bottom - 40 > 0 && refs.portfolio.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
                 setActiveSection("portfolio");
+                //@ts-ignore
             } else if (refs.contacts.current?.getBoundingClientRect().bottom - 40 > 0 && refs.contacts.current?.getBoundingClientRect().top - Number(headerRef.current?.offsetHeight) - 5 < 0) {
                 setActiveSection("contacts");
             } else {

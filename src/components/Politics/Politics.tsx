@@ -25,7 +25,7 @@ function Politics(): JSX.Element {
                                 </svg>
                             </button>
                             <h1>{t(`translation:politics.${state.politics}.title`)}</h1>
-                            <p dangerouslySetInnerHTML={{ __html: t("translation:politics.tempText") }}/>
+                            <p dangerouslySetInnerHTML={{ __html: t("translation:politics.tempText") || "" }}/>
                             <h3>SIA "A-Level"</h3>
                         </div>
                     </div>

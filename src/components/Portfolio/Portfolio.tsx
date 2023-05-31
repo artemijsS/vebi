@@ -41,7 +41,8 @@ const Portfolio = forwardRef<HTMLElement>((props, ref) => {
     }, [slider]);
 
     return (
-        <div ref={ref} id={"about"}>
+        //@ts-ignore
+        <div ref={ref} id={"portfolio"}>
             <div className="wrapper">
                 <div className="secondWrapper">
                     <section ref={ref} className={"section"} id={"portfolio"}>
