@@ -815,13 +815,13 @@ footer {
 .formContacts .row {
   display: flex;
   justify-content: space-between;
-  gap: 26px;
+  gap: 35px;
 }
 .formContacts .row .input {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 5px;
+  gap: 12px;
 }
 .formContacts .row .input label {
   color: white;

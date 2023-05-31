@@ -21,7 +21,14 @@ const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     const lang = Cookies.get('language');
     const { pathname, query } = router;
-    router.push({pathname, query}, {pathname}, { locale: lang });
+    if (router.locale !== lang) {
+        if (window.location.hash) {
+            const sectionId = window.location.hash.substring(1);
+            const pathnameHash: string = pathname + "#" + sectionId;
+            router.push({pathname: pathnameHash, query}, pathnameHash, { locale: lang });
+        } else
+            router.push({pathname, query}, {pathname}, { locale: lang });
+    }
   }, []);
 
   return (
