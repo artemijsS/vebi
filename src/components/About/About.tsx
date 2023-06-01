@@ -17,9 +17,10 @@ const About = forwardRef<HTMLElement>((props, ref) => {
                             <div className="about b-30-bottom-right">
                                 <h3>{t("translation:about.firstBlock.title")}</h3>
                                 <ul>
-                                    <li>{t("translation:about.firstBlock.text1")}</li>
-                                    <li>{t("translation:about.firstBlock.text2")}</li>
-                                    <li>{t("translation:about.firstBlock.text3")}</li>
+                                    <li dangerouslySetInnerHTML={{__html: t("translation:about.firstBlock.text1") || "" }}/>
+                                    {/*<li>{t("translation:about.firstBlock.text1")}</li>*/}
+                                    {/*<li>{t("translation:about.firstBlock.text2")}</li>*/}
+                                    {/*<li>{t("translation:about.firstBlock.text3")}</li>*/}
                                 </ul>
                             </div>
                         </div>
