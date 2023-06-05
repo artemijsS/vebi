@@ -617,9 +617,14 @@ footer {
   width: 20%;
 }
 .section .list .column.first .big .item .service p {
-  font-size: 0.32em;
+  font-size: 0.31em;
   font-weight: 200;
-  line-height: 1.2em;
+  line-height: 1.1em;
+}
+@media screen and (max-width: 1000px) {
+  .section .list .column.first .big .item .service p {
+    font-size: 0.26em;
+  }
 }
 .section .list .group {
   display: flex;

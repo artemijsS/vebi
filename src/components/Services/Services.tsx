@@ -22,7 +22,7 @@ const Services = forwardRef<HTMLElement>((props, ref) => {
                                             <path d="M6.48047 17.2949V57.7049H68.4755V17.2949H6.48047ZM63.983 53.1824H10.973V21.8624H63.983V53.1824Z" fill="white"/>
                                         </svg>
                                         <h3>{t("translation:services.web")}</h3>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                                        <p>Разработка сайтов и приложений любой сложности, для того, чтобы помочь Вашему бизнесу достичь новых высот в веб среде! Если вы хотите привлечь большее внимание к Вашему бренду новым веб-сайтом и разработать визуально привлекательный в использовании веб-сайт для Вашего бизнеса - тогда VEBI это Ваш выбор!</p>
                                     </div>
                                 </div>
                                 <div className="item">
@@ -35,7 +35,7 @@ const Services = forwardRef<HTMLElement>((props, ref) => {
                                             <path d="M26 8.56982L8.5 26.0698L26 43.5698L43.5 26.0698L26 8.56982ZM14.394 26.0698L26 14.4568L37.606 26.0698L26 37.6758L14.394 26.0698Z" fill="white"/>
                                         </svg>
                                         <h3>{t("translation:services.brandDesign")}</h3>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                                        <p>{t("translation:services.brandDesignP")}</p>
                                     </div>
                                 </div>
                             </div>
