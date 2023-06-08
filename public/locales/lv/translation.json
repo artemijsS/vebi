@@ -3,7 +3,7 @@
     "title": "Par mums",
     "firstBlock": {
       "title": "Kas ir VEBI?",
-      "text1": "VEBI ir neliela augsti kvalificētu tīmekļa izstrādātāju un dizaineru komanda, kuras mērķis ir nodrošināt mūsu klientiem izcilas vietnes un tiešsaistes pieredzi.",
+      "text1": "Laipni lūdzam VEBI, kur mēs ticam, ka varam veidot patiesas attiecības, izmantojot izcilus tīmekļa izveides un dizaina pakalpojumus. Mēs cenšamies izveidot jēgpilnus sakarus ar mūsu klientiem, izprotot viņu unikālās vajadzības un piedāvājot ievērojamus risinājumus.<br/><br/>Ņemot vērā mūsu zināšanas un apņemšanos nodrošināt klientu apmierinātību, mēs vēlamies ne tikai iegūt Jūsu uzņēmumu, bet arī kļūt par uzticamiem partneriem Jūsu digitālajos panākumos. Izpētiet mūsu pakalpojumus un mēs palīdzēsim Jums izveidot ilgstošus savienojumus digitālajā pasaulē.",
       "text2": "Mūsu pieeja vienmēr ir uz sadarbību un uz klientu vērsta, nodrošinot, ka katra mūsu izveidotā vietne ir patiess jūsu zīmola atspoguļojums un atbilst jūsu īpašajām prasībām.",
       "text3": "Neatkarīgi no tā, vai atverat jaunu vietni, pārveidojat esošu vai vienkārši meklējat pastāvīgu atbalstu un apkopi, mēs esam šeit, lai palīdzētu jums gūt panākumus tiešsaistē."
     },
@@ -46,6 +46,20 @@
       "text": "Vai vēlaties konsultēties par dizaina jautājumu?",
       "tel": "+(371) 29134792",
       "name": "Andžejs R."
+    },
+    "form": {
+      "name": "Vārds / Uzvārds*",
+      "namePlaceholder": "Jūsu vārds / uzvārds",
+      "phone": "Tālruņa numurs",
+      "phonePlaceholder": "Jūsu tālruņa numurs",
+      "email": "E-pasts*",
+      "emailPlaceholder": "Jūsu e-pasts",
+      "message": "Jūsu ziņojums*",
+      "messagePlaceholder": "Ierakstiet savu ziņojumu šeit",
+      "button": "Iesniegt",
+      "buttonLoading": "Notiek ielāde",
+      "buttonSend": "Nosūtīts",
+      "buttonError": "Kļūda"
     }
   },
   "cookieNotify": {
@@ -66,7 +80,8 @@
     "about": "Par mums",
     "services": "Pakalpojumi",
     "advantages": "Priekšrocības",
-    "info": "Info",
+    "portfolio": "Portfolio",
+    "info": "Papildus informācija",
     "contacts": "Kontakti",
     "cookie": "Sīkdatnes",
     "userAgreement": "Noteikumi",
@@ -88,7 +103,7 @@
     }
   },
   "info": {
-    "title": "Info",
+    "title": "Papildus informācija",
     "scaling": "Tīmekļa vietne, kā uzņēmuma palielināšanas rīks",
     "it": "IT risinājumi",
     "design": "Dizaina risinājumi",
@@ -119,6 +134,7 @@
   "services": {
     "title": "Pakalpojumi",
     "web": "Web Izstrāde",
+    "webP": "Jebkuras sarežģītības vietņu un programmu izstrāde, lai palīdzētu Jūsu biznesam sasniegt jaunus augstumus tīmekļa vidē! Ja vēlaties piesaistīt lielāku uzmanību Jūsu zīmolam ar jaunu tīmekļa vietni un izstrādāt vizuāli pievilcīgu un ērti lietojamu tīmekļa vietni Jūsu biznesam - tad VEBI ir jūsu izvēle!",
     "webDesign": "Mājas lapas dizains",
     "templateDesign": "Veidņu dizains",
     "bot": "BOT izstrāde",
@@ -127,7 +143,8 @@
     "socMedDesign": "Sociālo mediju dizains",
     "photoContent": "Foto kontenta izveide",
     "iosAndroid": "IOS / ANDROID lietotnes",
-    "logo": "Logo izveide",
+    "brandDesign": "Brenda dizains",
+    "brandDesignP": "Viss, kas jums vajadzīgs, lai vizuāli noformētu Jūsu zīmolu. Neatkarīgi no tā, vai Jūs vēlaties logotipu, saukli, zīmola paleti vai varbūt ir nepieciešams izdomāt nosaukumu Jūsu zīmolam -  VEBI noformēs Jūsu zīmolu, ņemot vērā Jūsu vajadzības un vēlmes.",
     "custom": "Individuālie IT projekti",
     "video": "Video kontenta izveide"
   }

@@ -3,7 +3,7 @@
     "title": "About",
     "firstBlock": {
       "title": "What is VEBI?",
-      "text1": "VEBI is a small team of highly skilled web developers and designers dedicated to delivering exceptional websites and online experiences to our clients.",
+      "text1": "Welcome to VEBI, where we believe in the power of building genuine relationships through exceptional web development and design services. We strive to create meaningful connections with our clients by understanding their unique needs and delivering remarkable solutions.<br/><br/>With our expertise and commitment to customer satisfaction, we aim to not only win your business but also become trusted partners in your digital success. Explore our services, and let us help you forge lasting connections in the digital world.",
       "text2": "Our approach is always collaborative and client-centered, ensuring that every website we build is a true reflection of your brand and meets your specific requirements.",
       "text3": "Whether you're launching a new website, redesigning an existing one, or simply looking for ongoing support and maintenance, we are here to help you succeed online."
     },
@@ -46,6 +46,20 @@
       "text": "Or would you like to consult on a design question?",
       "tel": "+(371) 29134792",
       "name": "Andzhey R."
+    },
+    "form": {
+      "name": "Name / Surname*",
+      "namePlaceholder": "Your Name / Surname",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Your Phone Number",
+      "email": "Email*",
+      "emailPlaceholder": "Your Email",
+      "message": "Your Message*",
+      "messagePlaceholder": "Type Your Message here",
+      "button": "Submit",
+      "buttonLoading": "Loading",
+      "buttonSend": "Sent",
+      "buttonError": "Error"
     }
   },
   "cookieNotify": {
@@ -66,7 +80,8 @@
     "about": "About",
     "services": "Services",
     "advantages": "Advantages",
-    "info": "Info",
+    "info": "Additional Info",
+    "portfolio": "Portfolio",
     "contacts": "Contacts",
     "cookie": "Cookie Policy",
     "userAgreement": "User Agreement",
@@ -88,7 +103,7 @@
     }
   },
   "info": {
-    "title": "Info",
+    "title": "Additional Info",
     "scaling": "Website as a business scaling tool",
     "it": "IT solutions",
     "design": "Design solutions",
@@ -119,6 +134,7 @@
   "services": {
     "title": "Services",
     "web": "Web Development",
+    "webP": "Developing sites and programs of any complexity to help your business reach new heights in the web environment! If you want attract more attention to your brand with a new website and developing a visually attractive and user-friendly website for your business - then VEBI is your choice!",
     "webDesign": "Website Design",
     "templateDesign": "Template Design",
     "bot": "BOT Development",
@@ -127,7 +143,8 @@
     "socMedDesign": "Social Media Design",
     "photoContent": "Photo Content",
     "iosAndroid": "IOS / ANDROID Dev",
-    "logo": "Logo Creation",
+    "brandDesign": "Brand Design",
+    "brandDesignP": "All you need for  your brand visual design. Whether you want a logo, slogan, brand palette, or maybe you need to figure out a name for your brand - VEBI will design your brand taking into account your needs and wishes.",
     "custom": "Custom IT Projects",
     "video": "Video Content"
   }

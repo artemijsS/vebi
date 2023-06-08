@@ -1,0 +1,96 @@
+.cookie {
+    z-index: 5;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: flex-end;
+}
+.cookie .cookie-block {
+    /*width: 40%;*/
+    max-width: 580px;
+    min-width: 300px;
+    height: 50%;
+    /*max-height: 680px;*/
+    min-height: 350px;
+    background-color: var(--block-color);
+    border: 4px solid var(--pink);
+    border-bottom: unset;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3%;
+}
+.cookie .cookie-block .heading {
+    font-size: 1.3em;
+    width: 90%;
+    text-align: left;
+    margin-top: 5%;
+    margin-bottom: 6%;
+}
+.cookie .cookie-block p {
+    width: 90%;
+    font-weight: 300;
+    font-size: 1rem;
+}
+.cookie .cookie-block p span {
+    cursor: pointer;
+    border-bottom: 1px solid #FFFFFF;
+}
+.cookie .cookie-block p span:hover {
+    color: var(--pink);
+    border-color: var(--pink);
+}
+.cookie .cookie-block .buttons {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px 20px;
+    margin-bottom: 20px;
+}
+.cookie .cookie-block .buttons button {
+    width: 35%;
+    height: 40px;
+    background-color: var(--pink);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    min-width: 145px;
+}
+.cookie .cookie-block .buttons button.decline {
+    background-color: unset !important;
+    outline: 1px solid var(--pink);
+    color: var(--pink);
+}
+.cookie .cookie-block button:hover {
+    outline: 1px solid white;
+}
+.cookie .cookie-block button.decline:hover {
+    outline: 1px solid white;
+    color: white;
+}
+
+@media screen and (max-width: 1000px) {
+    .cookie .cookie-block {
+        margin-bottom: 25px;
+        border-bottom: 4px solid var(--pink);
+    }
+    .cookie .cookie-block h1 {
+        font-size: 1.5rem;
+    }
+    .cookie .cookie-block .heading svg {
+        width: 40px;
+        height: 40px;
+    }
+    .cookie .cookie-block p {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,42 @@
+import '@/styles/reset.css'
+import '@/styles/globals.css'
+import '@/styles/politics.css'
+import '@/styles/header.css'
+import '@/styles/footer.css'
+import '@/styles/cookieNotify.css'
+import 'keen-slider/keen-slider.min.css'
+import { GoogleAnalytics } from "nextjs-google-analytics";
+import { MainContext } from '../context/MainContext';
+import { appWithTranslation } from 'next-i18next';
+import type { AppProps } from 'next/app';
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import Cookies from 'js-cookie';
+
+
+const App = ({ Component, pageProps }: AppProps) => {
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const lang = Cookies.get('language');
+    const { pathname, query } = router;
+    if (router.locale !== lang) {
+        if (window.location.hash) {
+            const sectionId = window.location.hash.substring(1);
+            const pathnameHash: string = pathname + "#" + sectionId;
+            router.push({pathname: pathnameHash, query}, pathnameHash, { locale: lang });
+        } else
+            router.push({pathname, query}, {pathname}, { locale: lang });
+    }
+  }, []);
+
+  return (
+      <MainContext>
+          <GoogleAnalytics gaMeasurementId={"G-YNDBHH9T0M"} />
+          <Component {...pageProps} />
+      </MainContext>
+  )
+}
+
+export default appWithTranslation(App);
