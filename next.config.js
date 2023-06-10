@@ -13,9 +13,6 @@ const nextConfig = {
       },
     ];
   },
-  api: {
-    responseLimit: false
-  }
 };
 
 module.exports = nextConfig;

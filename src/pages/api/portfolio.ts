@@ -2,6 +2,11 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs'
 const mime = require('mime-types');
 
+export const config = {
+    api: {
+        responseLimit: false,
+    },
+}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
