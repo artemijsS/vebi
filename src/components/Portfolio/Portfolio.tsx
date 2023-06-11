@@ -1,7 +1,15 @@
 import React, { forwardRef, useEffect } from 'react';
 import { useTranslation } from 'next-i18next';
 import {KeenSliderOptions, KeenSliderPlugin, useKeenSlider} from "keen-slider/react"
-import { EnergyPlus, Fam3Flyer, EnergyPlusFlyer } from "../../assets/portfolio"
+import { EnergyPlus,
+    Fam3Flyer,
+    EnergyPlusFlyer,
+    Hashtify,
+    Adventus,
+    MaksV,
+    Paphos,
+    Sweden
+} from "../../assets/portfolio"
 import Link from "next/link";
 import Image from "next/image";
 
@@ -62,6 +70,21 @@ const Portfolio = forwardRef<HTMLElement>((props, ref) => {
                             </Link>
                             <Link href={"/api/portfolio?file=energyplusFlyer.png"} target={"_blank"} className="keen-slider__slide portCube">
                                 <Image src={EnergyPlusFlyer} alt={"energyplusFlyer"} />
+                            </Link>
+                            <Link href={"https://www.maksv.lv"} target={"_blank"} className="keen-slider__slide portCube">
+                                <Image src={MaksV} alt={"MaksV"} />
+                            </Link>
+                            <Link href={"/api/portfolio?file=adventusBaners.jpg"} target={"_blank"} className="keen-slider__slide portCube">
+                                <Image src={Adventus} alt={"Adventus"} />
+                            </Link>
+                            <Link href={"/api/portfolio?file=paphosRedesign.pdf"} target={"_blank"} className="keen-slider__slide portCube">
+                                <Image src={Paphos} alt={"Paphos"} />
+                            </Link>
+                            <Link href={"/api/portfolio?file=hashtify.pdf"} target={"_blank"} className="keen-slider__slide portCube">
+                                <Image src={Hashtify} alt={"Hashtify"} />
+                            </Link>
+                            <Link href={"/api/portfolio?file=sweden.jpg"} target={"_blank"} className="keen-slider__slide portCube">
+                                <Image src={Sweden} alt={"Sweden"} />
                             </Link>
 
                         </div>
