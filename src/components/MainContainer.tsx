@@ -36,7 +36,7 @@ const MainContainer = ({ children, title, description, keywords, ogImage }: Main
                 {title && <meta property="og:title" content={ title } />}
                 {description && <meta property="og:description" content={ description } />}
                 <meta property="og:locale" content={router.locale} />
-                <meta property="og:site_name" content="Maksv Real estate" />
+                <meta property="og:site_name" content="VEBI" />
 
                 <link rel="alternate" hrefLang="en" href={"https://vebi.lv" + router.pathname}/>
                 <link rel="alternate" hrefLang="lv" href={"https://vebi.lv/lv" + router.pathname}/>
