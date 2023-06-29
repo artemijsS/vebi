@@ -1,8 +1,7 @@
 import React, { forwardRef, useEffect } from 'react';
 import { useTranslation } from 'next-i18next';
 import {KeenSliderOptions, KeenSliderPlugin, useKeenSlider} from "keen-slider/react"
-import {
-    EnergyPlus,
+import { EnergyPlus,
     Fam3Flyer,
     EnergyPlusFlyer,
     Hashtify,
