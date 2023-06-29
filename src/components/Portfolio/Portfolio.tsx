@@ -8,7 +8,8 @@ import { EnergyPlus,
     Adventus,
     MaksV,
     Paphos,
-    Sweden
+    Sweden,
+    CalendarEka
 } from "../../assets/portfolio"
 import Link from "next/link";
 import Image from "next/image";
@@ -85,6 +86,9 @@ const Portfolio = forwardRef<HTMLElement>((props, ref) => {
                             </Link>
                             <Link href={"/api/portfolio?file=sweden.jpg"} target={"_blank"} className="keen-slider__slide portCube">
                                 <Image src={Sweden} alt={"Sweden"} />
+                            </Link>
+                            <Link href={"/api/portfolio?file=calendarEkaPortfolio.png"} target={"_blank"} className="keen-slider__slide portCube">
+                                <Image src={CalendarEka} alt={"CalendarEka"} />
                             </Link>
 
                         </div>
