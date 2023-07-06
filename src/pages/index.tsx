@@ -52,7 +52,7 @@ export default function HomePage({ emailJSPublic }: HomePageProps) {
       <Advantages ref={refs.advantages} />
       <Portfolio ref={refs.portfolio} />
       <Contacts ref={refs.contacts} emailJSPublic={emailJSPublic} />
-      <Info ref={refs.info} />
+      {/*<Info ref={refs.info} />*/}
       <Footer />
     </MainContainer>
   )

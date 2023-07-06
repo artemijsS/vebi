@@ -38,6 +38,10 @@ body {
     padding-top: 64px !important;
     margin-bottom: 50px !important;
   }
+  .section .textAfterTitle {
+    margin-top: -15px !important;
+    margin-bottom: 35px !important;
+  }
 }
 @media screen and (max-width: 600px) {
   .minusHeader {
@@ -51,6 +55,10 @@ body {
     font-size: 1em !important;
   }
   .section h2 {
+    margin-top: -30px !important;
+    margin-bottom: 20px !important;
+  }
+  .section .textAfterTitle {
     padding-top: 45px !important;
     margin-bottom: 50px !important;
   }
@@ -107,6 +115,12 @@ footer {
   color: white;
   font-size: 1.9em;
   margin-bottom: 138px;
+}
+.section .textAfterTitle {
+  color: white;
+  font-size: 0.75em;
+  margin-bottom: 60px;
+  margin-top: -78px;
 }
 .section .blocks {
   display: flex;

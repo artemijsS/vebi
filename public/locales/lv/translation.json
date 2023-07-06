@@ -29,11 +29,12 @@
   },
   "contacts": {
     "title": "Kontakti",
+    "textInfo": "Lai saņemtu plašāku informāciju un atbildes uz Jums interesējošiem jautājumiem, lūdzu, sazinieties ar mums caur kontaktformu vai zvaniet uz zemāk norādītajiem tālruņa numuriem:",
     "info": {
       "title": "INF<span class=\"info\">O</span>",
       "text": "Mēs ar prieku atbildēsim uz jebkuru Jūsu jautājumu: <a href=\"mailto:info@vebi.lv\">info@vebi.lv</a>",
-      "tel": "+(371) 22045255",
-      "name": "Roberts K."
+      "tel": "+(371) 26062431",
+      "name": "Nikolajs V."
     },
     "support": {
       "title": "ATB<span class=\"sup-a\">A</span><span class=\"sup-l\">L</span>ST<span class=\"sup-s\">S</span>",

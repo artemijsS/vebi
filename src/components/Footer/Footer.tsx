@@ -67,7 +67,7 @@ function Footer(): JSX.Element {
                                 </svg>
                             </Link>
                         </div>
-                        <p>© {year} Vebi. All rights reserved</p>
+                        <p>© {year} VEBI. All rights reserved</p>
                     </div>
                 </div>
             </div>

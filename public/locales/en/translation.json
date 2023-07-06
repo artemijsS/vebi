@@ -29,11 +29,12 @@
   },
   "contacts": {
     "title": "Contacts",
+    "textInfo": "For more information and answers to your questions, please contact us via the contact form or call the phone numbers below:",
     "info": {
       "title": "INF<span class=\"info\">O</span>",
       "text": "We will happily answer any question you have: <a href=\"mailto:info@vebi.lv\">info@vebi.lv</a>",
-      "tel": "+(371) 22045255",
-      "name": "Robert K."
+      "tel": "+(371) 26062431",
+      "name": "Nikolai V."
     },
     "support": {
       "title": "SUP<span class=\"sup-p\">P</span><span class=\"sup-o\">O</span>RT",
