@@ -55,7 +55,8 @@ const Portfolio = forwardRef<HTMLElement>((props, ref) => {
             <div className="wrapper">
                 <div className="secondWrapper">
                     <section ref={ref} className={"section"} id={"portfolio"}>
-                        <h2>{t("translation:header.portfolio")}</h2>
+                        <h2>{t("translation:portfolio.title")}</h2>
+                        <p className={"textAfterTitle"}>{t("translation:portfolio.textInfo")}</p>
                     </section>
                 </div>
             </div>
