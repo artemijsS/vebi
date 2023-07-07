@@ -29,11 +29,12 @@
   },
   "contacts": {
     "title": "Contacts",
+    "textInfo": "For more information and answers to your questions, please contact us via the contact form or call the phone numbers below:",
     "info": {
       "title": "INF<span class=\"info\">O</span>",
       "text": "We will happily answer any question you have: <a href=\"mailto:info@vebi.lv\">info@vebi.lv</a>",
-      "tel": "+(371) 22045255",
-      "name": "Robert K."
+      "tel": "+(371) 26062431",
+      "name": "Nikolai V."
     },
     "support": {
       "title": "SUP<span class=\"sup-p\">P</span><span class=\"sup-o\">O</span>RT",
@@ -133,12 +134,25 @@
   },
   "services": {
     "title": "Services",
-    "web": "Web Development",
+    "textInfo": "Your success is our aim, therefore, in VEBI you will find all the services that your business may need in the Internet environment.",
+    "itSer": "IT services",
+    "itSerText": "Everything your business needs to implement technical needs. If you are interested in creating websites of any type of complexity, applications and web environment management systems for your business, taking into account all your wishes and goals - VEBI is your choice!",
+    "desSer": "Design services",
+    "desSerText": "Everything you need for the design of your business. It doesn't matter if you want a logo, slogan, brand palette or maybe come up with a name for your brand - VEBI will design your brand taking into account your needs and wishes.",
+    "marSer": "Marketing services",
+    "marSerText": "After realizing all your technical needs, if you need promotion services, VEBI will be happy to make your target audience know about you, because your success is our aim!",
+    "web": "Web Page Dev",
     "webP": "Developing sites and programs of any complexity to help your business reach new heights in the web environment! If you want attract more attention to your brand with a new website and developing a visually attractive and user-friendly website for your business - then VEBI is your choice!",
     "webDesign": "Website Design",
     "templateDesign": "Template Design",
     "bot": "BOT Development",
     "cmsCrm": "CMS / CRM Systems",
+    "hosting": "Hosting & Domains",
+    "sup": "Technical Support",
+    "instruction": "Use Instructions Creation",
+    "tests": "Testing",
+    "dataTransfer": "Data Transfer",
+    "itConsulting": "IT Consulting",
     "uiUx": "UX / UI Design",
     "socMedDesign": "Social Media Design",
     "photoContent": "Photo Content",
@@ -146,6 +160,25 @@
     "brandDesign": "Brand Design",
     "brandDesignP": "All you need for  your brand visual design. Whether you want a logo, slogan, brand palette, or maybe you need to figure out a name for your brand - VEBI will design your brand taking into account your needs and wishes.",
     "custom": "Custom IT Projects",
-    "video": "Video Content"
+    "video": "Video Content",
+    "brandBook": "Brand Book Creation",
+    "webDes": "Website Design",
+    "logoDes": "Logo Design",
+    "socDes": "Social Media Design",
+    "tempDes": "Template Design",
+    "photoDes": "Photo Content",
+    "videoDes": "Video Content",
+    "uiUxDes": "UX / UI Design",
+    "customDes": "Custom Design Projects",
+    "semMar": "Google search promotion",
+    "emailMar": "E-mail marketing",
+    "metaMar": "Meta (Facebook, Instagram) Ads",
+    "seoMar": "SEO",
+    "copyMar": "Сopywriting",
+    "customMar": "Custom Marketing Projects"
+  },
+  "portfolio": {
+    "title": "Our clients",
+    "textInfo": "We value every customer and are open to long-term cooperation with everyone. You can become one of them!"
   }
 }

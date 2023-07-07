@@ -51,6 +51,7 @@ const Contacts = forwardRef<HTMLElement, ContactsProps>((props: ContactsProps, r
             <div className="secondWrapper">
                 <section ref={ref} className={"section"} id={"contacts"}>
                     <h2>{t("translation:contacts.title")}</h2>
+                    <p className={"textAfterTitle"}>{t("translation:contacts.textInfo")}</p>
                     <form onSubmit={e => onSubmit(e)} className={"formContacts"} ref={formRef}>
                         <div className={"row"}>
                             <div className={"input"}>

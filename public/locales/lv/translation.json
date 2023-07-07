@@ -29,11 +29,12 @@
   },
   "contacts": {
     "title": "Kontakti",
+    "textInfo": "Lai saņemtu plašāku informāciju un atbildes uz Jums interesējošiem jautājumiem, lūdzu, sazinieties ar mums caur kontaktformu vai zvaniet uz zemāk norādītajiem tālruņa numuriem:",
     "info": {
       "title": "INF<span class=\"info\">O</span>",
       "text": "Mēs ar prieku atbildēsim uz jebkuru Jūsu jautājumu: <a href=\"mailto:info@vebi.lv\">info@vebi.lv</a>",
-      "tel": "+(371) 22045255",
-      "name": "Roberts K."
+      "tel": "+(371) 26062431",
+      "name": "Nikolajs V."
     },
     "support": {
       "title": "ATB<span class=\"sup-a\">A</span><span class=\"sup-l\">L</span>ST<span class=\"sup-s\">S</span>",
@@ -133,19 +134,51 @@
   },
   "services": {
     "title": "Pakalpojumi",
-    "web": "Web Izstrāde",
+    "textInfo": "Jūsu panākumi ir mūsu mērķis, tāpēc, VEBI atradīsiet visus pakalpojumus, kas Jūsu biznesam var būt nepieciešami interneta vidē.",
+    "itSer": "IT pakalpojumi",
+    "itSerText": "Viss, kas nepieciešams jūsu biznesam tehnisko vajadzību realizēšanai. Ja Jūs esat ieinteresēts veidot jebkura veida sarežģītības vietnes, lietojumprogrammas un Jūsu biznesa tīmekļa vides pārvaldības sistēmas, ņemot vērā visas Jūsu vēlmes un mērķus - VEBI Jūsu izvēle!",
+    "desSer": "Dizains",
+    "desSerText": "Viss, kas Jums nepieciešams Jūsu biznesa noformējuma dizainam. Vienalga vēlaties Jūs logo, saukli, zīmola paleti vai var izdomāt nosaukumu Jūsu zīmolam - VEBI noformēs Jūsu zīmolu ņemot vērā Jūsu vajadzības un vēlmes.",
+    "marSer": "Mārketinga pakalpojumi",
+    "marSerText": "Pēc visu Jūsu tehnisko vajadzību realizēšanas, ja Jums būs nepieciešami bīdīšanas pakalpojumi - VEBI ar prieku darīs tā, lai par Jums uzzina Jūsu mērķauditorija, jo Jūsu panākumi ir mūsu mērķis!",
+    "web": "Web lapas izstrāde",
     "webP": "Jebkuras sarežģītības vietņu un programmu izstrāde, lai palīdzētu Jūsu biznesam sasniegt jaunus augstumus tīmekļa vidē! Ja vēlaties piesaistīt lielāku uzmanību Jūsu zīmolam ar jaunu tīmekļa vietni un izstrādāt vizuāli pievilcīgu un ērti lietojamu tīmekļa vietni Jūsu biznesam - tad VEBI ir jūsu izvēle!",
     "webDesign": "Mājas lapas dizains",
     "templateDesign": "Veidņu dizains",
     "bot": "BOT izstrāde",
     "cmsCrm": "CMS / CRM sistēmas",
+    "hosting": "Hostings & Domeni",
+    "sup": "Tehniskais atbalsts",
+    "instruction": "Instrukcijas izstrāde",
+    "tests": "Testēšana",
+    "dataTransfer": "Datu pārnešana",
+    "itConsulting": "IT konsultācijas",
     "uiUx": "UX / UI dizains",
     "socMedDesign": "Sociālo mediju dizains",
     "photoContent": "Foto kontenta izveide",
-    "iosAndroid": "IOS / ANDROID lietotnes",
+    "iosAndroid": "IOS / ANDROID izstrāde",
     "brandDesign": "Brenda dizains",
     "brandDesignP": "Viss, kas jums vajadzīgs, lai vizuāli noformētu Jūsu zīmolu. Neatkarīgi no tā, vai Jūs vēlaties logotipu, saukli, zīmola paleti vai varbūt ir nepieciešams izdomāt nosaukumu Jūsu zīmolam -  VEBI noformēs Jūsu zīmolu, ņemot vērā Jūsu vajadzības un vēlmes.",
     "custom": "Individuālie IT projekti",
-    "video": "Video kontenta izveide"
+    "video": "Video kontenta izveide",
+    "brandBook": "Brand Book izveide",
+    "webDes": "Mājaslapu dizains",
+    "logoDes": "Logotipu dizains",
+    "socDes": "Sociālo mēdiju noformēšana",
+    "tempDes": "Veidņu dizains",
+    "photoDes": "Foto kontents",
+    "videoDes": "Video kontents",
+    "uiUxDes": "UX / UI dizains",
+    "customDes": "Individuālie dizaina projekti",
+    "semMar": "Google meklēšanas veicināšana",
+    "emailMar": "E-mail marketings",
+    "metaMar": "Meta (Facebook, Instagram) Ads",
+    "seoMar": "SEO",
+    "copyMar": "Сopywriting",
+    "customMar": "Individuālie marketinga projekti"
+  },
+  "portfolio": {
+    "title": "Mūsu klienti",
+    "textInfo": "Mēs novērtējam katru klientu un esam atvērti ilgtermiņa sadarbībai ar katru. Jūs varat kļūt par vienu no viņiem!"
   }
 }

@@ -27,6 +27,9 @@ function Politics(): JSX.Element {
                             <h2>{t(`translation:politics.${state.politics}.title`)}</h2>
                             <p dangerouslySetInnerHTML={{ __html: t("translation:politics.tempText") || "" }}/>
                             <h3>SIA "A-Level"</h3>
+                            <h3>Reģ. Nr.: 40003762776</h3>
+                            <h3>PVN Nr.: LV40003762776</h3>
+                            <h3>Jur. adrese: Rīga, Baltā iela 16 - 7, LV-1055</h3>
                         </div>
                     </div>
                 </div>
