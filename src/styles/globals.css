@@ -577,6 +577,182 @@ footer {
 }
 
 
+.section .services {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.section .serviceBlock {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 25px;
+  color: white;
+}
+.section .serviceBlock .mainBlock {
+  max-width: 300px;
+  width: 35%;
+  background-color: var(--block-color);
+  position: relative;
+}
+.section .serviceBlock .mainBlock:before {
+  content: "";
+  position: absolute;
+  border-top: 7px solid var(--pink);
+  top:0;
+  width: 100%;
+}
+.section .serviceBlock .mainBlock .infoBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 17px 25px;
+}
+.section .serviceBlock .mainBlock .infoBlock svg {
+  border-left: unset;
+  padding-left: unset;
+  width: 60px;
+  height: 60px;
+}
+.section .serviceBlock .mainBlock .infoBlock h3 {
+  margin-top: 17px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  font-size: 0.6em;
+  font-weight: 300;
+  position: relative;
+}
+.section .serviceBlock .mainBlock .infoBlock h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid white;
+  width: 25%;
+}
+.section .serviceBlock .mainBlock .infoBlock p {
+  font-size: 0.42em;
+  font-weight: 300;
+  line-height: 1.3em;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 800px) {
+  .section .services {
+    gap: 40px;
+  }
+  .section .serviceBlock {
+    gap: 15px;
+  }
+  .section .serviceBlock .mainBlock .infoBlock {
+    padding: 20px 18px;
+  }
+  .section .serviceBlock .mainBlock .infoBlock svg {
+    width: 35px;
+    height: 35px;
+  }
+  .section .serviceBlock .mainBlock .infoBlock h3 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    font-size: 0.8em;
+  }
+  .section .serviceBlock .mainBlock .infoBlock p {
+    font-size: 0.65em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section .services {
+    gap: 30px;
+  }
+  .section .serviceBlock {
+    gap: 8px;
+  }
+  .section .serviceBlock .mainBlock .infoBlock {
+    padding: 20px 15px;
+  }
+  .section .serviceBlock .mainBlock {
+    width: calc(50% - 4px);
+  }
+  .section .serviceBlock .mainBlock .infoBlock h3 {
+    margin-top: 20px;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .section .serviceBlock .mainBlock .infoBlock p {
+    font-size: 0.75em;
+  }
+}
+.section .serviceBlock .serBlock {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.section .serviceBlock .serBlock .service {
+  background-color: var(--pink);
+  max-width: 340px;
+  min-width: 140px;
+  width: calc((100% - 100px)/3);
+  height: 70px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1100px) {
+  .section .serviceBlock .serBlock .service {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 900px) {
+  .section .serviceBlock .serBlock .service {
+    width: calc((100% - 60px)/2) !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .section .serviceBlock .serBlock {
+    gap: 15px;
+  }
+  .section .serviceBlock .serBlock .service {
+    font-size: 1.3em;
+    height: 60px;
+  }
+  .section .serviceBlock .serBlock .service svg {
+    width: 25px !important;
+    height: 25px !important;
+    padding-left: 4% !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section .serviceBlock .serBlock {
+    gap: 8px;
+    width: calc(50% - 4px);
+  }
+  .section .serviceBlock .serBlock .service {
+    width: 100% !important;
+    font-size: 1.3em;
+    height: 50px;
+  }
+  .section .serviceBlock .serBlock .service svg {
+    padding-left: 5%;
+  }
+}
+.section .serviceBlock .serBlock .service h4 {
+  font-size: 0.5em;
+  font-weight: 300;
+  width: 80%;
+}
+.section .serviceBlock .serBlock .service svg {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding-left: 5%;
+  margin-left: 1%;
+  border-left: 2px solid #FFFFFF;
+}
 
 .section .list {
   display: flex;
