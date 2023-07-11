@@ -43,6 +43,8 @@ const MainContainer = ({ children, title, description, keywords, ogImage }: Main
                 <link rel="alternate" hrefLang="ru" href={"https://vebi.lv/ru" + router.pathname}/>
                 <link rel="alternate" hrefLang="x-default" href="https://vebi.lv"/>
 
+                <meta name="facebook-domain-verification" content="gjpq1gzsoh1tomokqtss57j6e58e5y" />
+
             </Head>
             <CookieNotify />
             <Politics />
