@@ -341,6 +341,12 @@ const Services = forwardRef<HTMLElement>((props, ref) => {
                                     </svg>
                                 </div>
                                 <div className="service">
+                                    <h4>{t("translation:services.googleProfMar")}</h4>
+                                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M39.7567 22.6753C39.8946 23.4214 40 24.1675 40 25.1407C40 33.5909 34.3314 39.5839 25.7919 39.5839C17.6174 39.5839 11 32.9664 11 24.7919C11 16.6175 17.6174 10 25.7919 10C29.79 10 33.1149 11.4516 35.7019 13.8764L31.6876 17.7285C30.601 16.6823 28.679 15.4497 25.8001 15.4497C20.7559 15.4497 16.6362 19.6261 16.6362 24.7919C16.6362 29.9578 20.7559 34.1342 25.8001 34.1342C31.6552 34.1342 33.8529 29.9172 34.1935 27.7601H25.8001V22.6753H39.7567Z" fill="white"/>
+                                    </svg>
+                                </div>
+                                <div className="service">
                                     <h4>{t("translation:services.customMar")}</h4>
                                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.2002 11.5552V38.5802H45.6652V11.5552H4.2002ZM42.6602 35.5552H7.2052V14.6102H42.6602V35.5552Z" fill="white"/>
