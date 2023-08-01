@@ -91,7 +91,7 @@ body {
   height: 1px;
   width: 7%;
   min-width: 30px;
-  border-bottom: 3px solid #E43172;
+  border-bottom: 3px solid var(--pink);
 }
 footer {
   margin-top: 150px !important;
@@ -106,7 +106,7 @@ footer {
     margin-top: 60px !important;
   }
   .section:before {
-    border-bottom: 1px solid #E43172;
+    border-bottom: 1px solid var(--pink);
   }
 }
 
@@ -1366,6 +1366,9 @@ footer {
 .section.info.advantages .block svg {
   width: 10%;
 }
+.section.info.advantages .block svg path {
+  fill: var(--pink);
+}
 .section.info.pdf .block svg {
   height: 100%;
 }
@@ -1497,7 +1500,7 @@ a:hover {
   left: 0;
   bottom: calc(min(8px, 1vw)*(-1));
   width: 100%;
-  border-bottom: min(8px, 1vw) solid #E43172;
+  border-bottom: min(8px, 1vw) solid var(--pink);
 }
 .b-30-bottom:after {
   content: "";
@@ -1506,7 +1509,7 @@ a:hover {
   bottom: calc(min(8px, 1vw)*(-1));
   height: 8px;
   width: 30%;
-  border-bottom: min(8px, 1vw) solid #E43172;
+  border-bottom: min(8px, 1vw) solid var(--pink);
 }
 @media screen and (max-width: 600px) {
   .b-30-bottom:after {
@@ -1524,7 +1527,7 @@ a:hover {
   bottom: calc(min(8px, 1vw)*(-1));
   height: 8px;
   width: 55%;
-  border-bottom: min(8px, 1vw) solid #E43172;
+  border-bottom: min(8px, 1vw) solid var(--pink);
 }
 .b-15-bottom:after {
   content: "";
@@ -1533,7 +1536,7 @@ a:hover {
   bottom: calc(min(8px, 1vw)*(-1));
   height: 8px;
   width: 15%;
-  border-bottom: min(8px, 1vw) solid #E43172;
+  border-bottom: min(8px, 1vw) solid var(--pink);
 }
 .b-30-bottom-right:after {
   content: "";
@@ -1541,7 +1544,7 @@ a:hover {
   right: 0;
   bottom: calc(min(8px, 1vw)*(-1));
   width: 30%;
-  border-bottom: min(8px, 1vw) solid #E43172;
+  border-bottom: min(8px, 1vw) solid var(--pink);
 }
 .b-30-top:before {
   content: "";
@@ -1549,7 +1552,7 @@ a:hover {
   right: 0;
   top: calc(min(8px, 1vw)*(-1));
   width: 30%;
-  border-bottom: min(8px, 1vw) solid #E43172;
+  border-bottom: min(8px, 1vw) solid var(--pink);
 }
 .b-45-top-left:before {
   content: "";
@@ -1557,7 +1560,7 @@ a:hover {
   left: 0;
   top: calc(min(8px, 1vw)*(-1));
   width: 45%;
-  border-bottom: min(8px, 1vw) solid #E43172;
+  border-bottom: min(8px, 1vw) solid var(--pink);
 }
 .b-55-top-right:before {
   content: "";
@@ -1565,7 +1568,7 @@ a:hover {
   right: 0;
   top: calc(min(8px, 1vw)*(-1));
   width: 55%;
-  border-bottom: min(8px, 1vw) solid #E43172;
+  border-bottom: min(8px, 1vw) solid var(--pink);
 }
 .b-75-top:before {
   content: "";
@@ -1573,7 +1576,7 @@ a:hover {
   right: 0;
   top: calc(min(8px, 1vw)*(-1));
   width: 75%;
-  border-bottom: min(8px, 1vw) solid #E43172;
+  border-bottom: min(8px, 1vw) solid var(--pink);
 }
 
 @media screen and (max-width: 600px) {

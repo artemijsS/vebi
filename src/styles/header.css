@@ -121,7 +121,7 @@
     bottom  : 0;
     height  : 1px;
     width   : 70%;
-    border-bottom: 1px solid #E43172;
+    border-bottom: 1px solid var(--pink);
     animation: none;
 }
 
@@ -132,7 +132,7 @@
     bottom  : 0;
     height  : 1px;
     width   : 70%;
-    border-bottom: 1px solid #E43172;
+    border-bottom: 1px solid var(--pink);
     animation: 0.5s draw-slow ease;
 }
 
@@ -170,7 +170,7 @@
     content: "";
     position: absolute;
     width: 50px;
-    border-top: 1px solid #E43172;
+    border-top: 1px solid var(--pink);
     left: 0;
     top: 0;
 }
@@ -182,13 +182,13 @@
 }
 
 .burgerOpen .navBlock .link.active {
-    color: #E43172;
+    color: var(--pink);
 }
 .burgerOpen .navBlock .link:hover:before, .burgerOpen .navBlock .link.active:before {
     content: "";
     position: absolute;
     width: 50px;
-    border-top: 1px solid #E43172;
+    border-top: 1px solid var(--pink);
     left: 0;
     top: 0;
     bottom: unset;
@@ -210,7 +210,7 @@
     content: "";
     position: absolute;
     width: 50px;
-    border-top: 1px solid #E43172;
+    border-top: 1px solid var(--pink);
     left: 0;
     top: 0;
 }
@@ -225,7 +225,7 @@
     content: "";
     position: absolute;
     width: 50px;
-    border-bottom: 1px solid #E43172;
+    border-bottom: 1px solid var(--pink);
     left: 0;
     bottom: 0;
 }
