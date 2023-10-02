@@ -9,7 +9,8 @@ import { EnergyPlus,
     MaksV,
     Paphos,
     Sweden,
-    CalendarEka
+    CalendarEka,
+    Cblok
 } from "../../assets/portfolio"
 import Link from "next/link";
 import Image from "next/image";
@@ -67,14 +68,17 @@ const Portfolio = forwardRef<HTMLElement>((props, ref) => {
                             <Link href={"https://www.energyplus.lv"} target={"_blank"} className="keen-slider__slide portCube">
                                 <Image src={EnergyPlus} alt={"energyplus"} />
                             </Link>
+                            <Link href={"https://www.cblok.lv"} target={"_blank"} className="keen-slider__slide portCube">
+                                <Image src={Cblok} alt={"Cblok"} />
+                            </Link>
+                            <Link href={"https://www.maksv.lv"} target={"_blank"} className="keen-slider__slide portCube">
+                                <Image src={MaksV} alt={"MaksV"} />
+                            </Link>
                             <Link href={"/api/portfolio?file=fam3flyer.png"} target={"_blank"} className="keen-slider__slide portCube">
                                 <Image src={Fam3Flyer} alt={"fam3Flyer"} />
                             </Link>
                             <Link href={"/api/portfolio?file=energyplusFlyer.png"} target={"_blank"} className="keen-slider__slide portCube">
                                 <Image src={EnergyPlusFlyer} alt={"energyplusFlyer"} />
-                            </Link>
-                            <Link href={"https://www.maksv.lv"} target={"_blank"} className="keen-slider__slide portCube">
-                                <Image src={MaksV} alt={"MaksV"} />
                             </Link>
                             <Link href={"/api/portfolio?file=adventusBaners.jpg"} target={"_blank"} className="keen-slider__slide portCube">
                                 <Image src={Adventus} alt={"Adventus"} />

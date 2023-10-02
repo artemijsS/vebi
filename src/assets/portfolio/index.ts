@@ -7,4 +7,5 @@ export { default as MaksV } from "./maksV.jpg"
 export { default as Hashtify } from "./hashtify.jpg"
 export { default as Adventus } from "./adventus.jpg"
 export { default as CalendarEka } from "./calendarEka.png"
+export { default as Cblok } from "./cblok.png"
 
